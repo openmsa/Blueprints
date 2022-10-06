@@ -5,20 +5,20 @@
    <bpmnPath>/Blueprints/AZURE_WORDPRESS.bpmn</bpmnPath>
    <owner>UBIqube</owner>
    <createdBy>UBIqube</createdBy>
-   <designPreviewPath>/Blueprints/thumbnail/AWS_LB.png</designPreviewPath>
+   <dateCreation>1663660401</dateCreation>
+   <designPreviewPath>/Blueprints/thumbnail/AZURE_WORDPRESS.png</designPreviewPath>
    <type>monocloud</type>
    <providers>
-      <provider>AWS</provider>
+      <provider>AZURE</provider>
    </providers>
    <applications>
-      <application>nginx</application>
+      <application>wordpress</application>
    </applications>
    <compliance>
-      <standard>HIPAA</standard>
-      <standard>PCI</standard>
+      <standard>CIS</standard>
    </compliance>
    <tags>
-      <tag name="service">EKS</tag>
+      <tag name="service">AKS</tag>
    </tags>
    <tfPathForEnv>myENVPath.tf</tfPathForEnv>
    <tfPathForApp>myAPPPath.tf</tfPathForApp>
