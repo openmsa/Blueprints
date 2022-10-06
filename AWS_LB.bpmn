@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="PLACEHOLDER_PROCESS_ID" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_061yjs3</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_0wjz58j">
+      <bpmn:incoming>Flow_0u8bjed</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_061yjs3" sourceRef="StartEvent_1" targetRef="Activity_1fgjis4" />
+    <bpmn:sequenceFlow id="Flow_0f4gqlb" sourceRef="Activity_1fgjis4" targetRef="Activity_05e4h24" />
+    <bpmn:sequenceFlow id="Flow_024r4v3" sourceRef="Activity_05e4h24" targetRef="Activity_1589cdv" />
+    <bpmn:sequenceFlow id="Flow_0idljrg" sourceRef="Activity_1589cdv" targetRef="Activity_1mtjjjp" />
+    <bpmn:sequenceFlow id="Flow_1hrx5rh" sourceRef="Activity_1mtjjjp" targetRef="Activity_151jquc" />
+    <bpmn:sequenceFlow id="Flow_0vr8ap9" sourceRef="Activity_151jquc" targetRef="Activity_1cll7t4" />
+    <bpmn:sequenceFlow id="Flow_0u8bjed" sourceRef="Activity_1cll7t4" targetRef="Event_0wjz58j" />
+    <bpmn:serviceTask id="Activity_1fgjis4" name="azure-k8s-management-scale" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">{"ubiqubeId":"PLACEHOLDER_UBIQUBE_ID","serviceName":"Process/azure-k8s-management-scale/azure-k8s-management-scale","serviceInstanceId":"2490","processName":"Process/azure-k8s-management-scale/_2__DEPLOY_AZURE_ENVIRONMENT","processVariables":{},"resumeOnFail":false}</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_061yjs3</bpmn:incoming>
+      <bpmn:outgoing>Flow_0f4gqlb</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_05e4h24" name="azure-k8s-management-scale" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">{"ubiqubeId":"PLACEHOLDER_UBIQUBE_ID","serviceName":"Process/azure-k8s-management-scale/azure-k8s-management-scale","serviceInstanceId":"2490","processName":"Process/azure-k8s-management-scale/_3__FETCH_AZURE_VM_INFO","processVariables":{},"resumeOnFail":false}</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0f4gqlb</bpmn:incoming>
+      <bpmn:outgoing>Flow_024r4v3</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_1589cdv" name="azure-k8s-management-scale" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">{"ubiqubeId":"PLACEHOLDER_UBIQUBE_ID","serviceName":"Process/azure-k8s-management-scale/azure-k8s-management-scale","serviceInstanceId":"2490","processName":"Process/azure-k8s-management-scale/_4__REGISTER_K8S_VMs","processVariables":{},"resumeOnFail":false}</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_024r4v3</bpmn:incoming>
+      <bpmn:outgoing>Flow_0idljrg</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_1mtjjjp" name="azure-k8s-management-scale" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">{"ubiqubeId":"PLACEHOLDER_UBIQUBE_ID","serviceName":"Process/azure-k8s-management-scale/azure-k8s-management-scale","serviceInstanceId":"2490","processName":"Process/azure-k8s-management-scale/_5__DEPLOY_K8S_CLUSTER","processVariables":{},"resumeOnFail":false}</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0idljrg</bpmn:incoming>
+      <bpmn:outgoing>Flow_1hrx5rh</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_151jquc" name="azure-k8s-management-scale" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">{"ubiqubeId":"PLACEHOLDER_UBIQUBE_ID","serviceName":"Process/azure-k8s-management-scale/azure-k8s-management-scale","serviceInstanceId":"2490","processName":"Process/azure-k8s-management-scale/_6__SETUP_K8S","processVariables":{},"resumeOnFail":false}</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1hrx5rh</bpmn:incoming>
+      <bpmn:outgoing>Flow_0vr8ap9</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_1cll7t4" name="azure-k8s-management-scale" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">{"ubiqubeId":"PLACEHOLDER_UBIQUBE_ID","serviceName":"Process/azure-k8s-management-scale/azure-k8s-management-scale","serviceInstanceId":"2490","processName":"Process/azure-k8s-management-scale/______JIRA_TICKET","processVariables":{},"resumeOnFail":false}</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0vr8ap9</bpmn:incoming>
+      <bpmn:outgoing>Flow_0u8bjed</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:textAnnotation id="TextAnnotation_1salukc">
+      <bpmn:text>Virtual Machines Deployment, Security Settings</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_05wj5pu" sourceRef="Activity_1fgjis4" targetRef="TextAnnotation_1salukc" />
+    <bpmn:textAnnotation id="TextAnnotation_0gxe6xe">
+      <bpmn:text>Getting Public and Private IP addresses from the Virtual Machines</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1xxkbg5" sourceRef="Activity_05e4h24" targetRef="TextAnnotation_0gxe6xe" />
+    <bpmn:textAnnotation id="TextAnnotation_14pbxxu">
+      <bpmn:text>Registering VMs in MSA as Managed Entities. Starting from this step you can control VMs.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0rjyeva" sourceRef="Activity_1589cdv" targetRef="TextAnnotation_14pbxxu" />
+    <bpmn:textAnnotation id="TextAnnotation_0k5nfa2">
+      <bpmn:text>Kubernetes and Loadbalancer software installation</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0z24mdb" sourceRef="Activity_1mtjjjp" targetRef="TextAnnotation_0k5nfa2" />
+    <bpmn:textAnnotation id="TextAnnotation_0ouooyj">
+      <bpmn:text>Setting up K8S</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0t0bmjy" sourceRef="Activity_151jquc" targetRef="TextAnnotation_0ouooyj" />
+    <bpmn:textAnnotation id="TextAnnotation_1y9g08l">
+      <bpmn:text>Create JIRA Ticket</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1x2hntn" sourceRef="Activity_1cll7t4" targetRef="TextAnnotation_1y9g08l" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="PLACEHOLDER_PROCESS_ID">
+      <bpmndi:BPMNEdge id="Flow_0u8bjed_di" bpmnElement="Flow_0u8bjed">
+        <di:waypoint x="1420" y="120" />
+        <di:waypoint x="1502" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vr8ap9_di" bpmnElement="Flow_0vr8ap9">
+        <di:waypoint x="1200" y="120" />
+        <di:waypoint x="1320" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1hrx5rh_di" bpmnElement="Flow_1hrx5rh">
+        <di:waypoint x="1000" y="120" />
+        <di:waypoint x="1100" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0idljrg_di" bpmnElement="Flow_0idljrg">
+        <di:waypoint x="780" y="120" />
+        <di:waypoint x="900" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_024r4v3_di" bpmnElement="Flow_024r4v3">
+        <di:waypoint x="570" y="120" />
+        <di:waypoint x="680" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0f4gqlb_di" bpmnElement="Flow_0f4gqlb">
+        <di:waypoint x="360" y="120" />
+        <di:waypoint x="470" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_061yjs3_di" bpmnElement="Flow_061yjs3">
+        <di:waypoint x="209" y="120" />
+        <di:waypoint x="260" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="173" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0wjz58j_di" bpmnElement="Event_0wjz58j">
+        <dc:Bounds x="1502" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1salukc_di" bpmnElement="TextAnnotation_1salukc">
+        <dc:Bounds x="360" y="0" width="207" height="39" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0gxe6xe_di" bpmnElement="TextAnnotation_0gxe6xe">
+        <dc:Bounds x="500" y="220" width="220" height="40" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_14pbxxu_di" bpmnElement="TextAnnotation_14pbxxu">
+        <dc:Bounds x="780" y="0" width="260" height="39" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0k5nfa2_di" bpmnElement="TextAnnotation_0k5nfa2">
+        <dc:Bounds x="1000" y="220" width="230" height="40" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0ouooyj_di" bpmnElement="TextAnnotation_0ouooyj">
+        <dc:Bounds x="1240" y="0" width="100" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1y9g08l_di" bpmnElement="TextAnnotation_1y9g08l">
+        <dc:Bounds x="1420" y="0" width="100" height="41" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1605779418544_di" bpmnElement="Activity_1fgjis4">
+        <dc:Bounds x="260" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1605779421411_di" bpmnElement="Activity_05e4h24">
+        <dc:Bounds x="470" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1605779424213_di" bpmnElement="Activity_1589cdv">
+        <dc:Bounds x="680" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1605779426913_di" bpmnElement="Activity_1mtjjjp">
+        <dc:Bounds x="900" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1605779429621_di" bpmnElement="Activity_151jquc">
+        <dc:Bounds x="1100" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1605779432014_di" bpmnElement="Activity_1cll7t4">
+        <dc:Bounds x="1320" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_05wj5pu_di" bpmnElement="Association_05wj5pu">
+        <di:waypoint x="348" y="80" />
+        <di:waypoint x="387" y="39" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1xxkbg5_di" bpmnElement="Association_1xxkbg5">
+        <di:waypoint x="530" y="160" />
+        <di:waypoint x="546" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0rjyeva_di" bpmnElement="Association_0rjyeva">
+        <di:waypoint x="768" y="80" />
+        <di:waypoint x="807" y="39" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0z24mdb_di" bpmnElement="Association_0z24mdb">
+        <di:waypoint x="983" y="160" />
+        <di:waypoint x="1033" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0t0bmjy_di" bpmnElement="Association_0t0bmjy">
+        <di:waypoint x="1198" y="84" />
+        <di:waypoint x="1270" y="30" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1x2hntn_di" bpmnElement="Association_1x2hntn">
+        <di:waypoint x="1408" y="80" />
+        <di:waypoint x="1445" y="41" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
