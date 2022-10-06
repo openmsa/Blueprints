@@ -1,1 +1,25 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<Blueprint>
+   <name>Wordpress on Azure</name>
+   <description>A wordpress application deployed on a AKS cluster</description>
+   <bpmnPath>/Blueprints/AZURE_WORDPRESS.bpmn</bpmnPath>
+   <owner>UBIqube</owner>
+   <createdBy>UBIqube</createdBy>
+   <designPreviewPath>/Blueprints/thumbnail/AWS_LB.png</designPreviewPath>
+   <type>monocloud</type>
+   <providers>
+      <provider>AWS</provider>
+   </providers>
+   <applications>
+      <application>nginx</application>
+   </applications>
+   <compliance>
+      <standard>HIPAA</standard>
+      <standard>PCI</standard>
+   </compliance>
+   <tags>
+      <tag name="service">EKS</tag>
+   </tags>
+   <tfPathForEnv>myENVPath.tf</tfPathForEnv>
+   <tfPathForApp>myAPPPath.tf</tfPathForApp>
+</Blueprint>
