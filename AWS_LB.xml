@@ -5,6 +5,7 @@
    <bpmnPath>/Blueprints/AWS_LB.bpmn</bpmnPath>
    <owner>UBIqube</owner>
    <createdBy>UBIqube</createdBy>
+   <dateCreation>1663660401</dateCreation>
    <designPreviewPath>/Blueprints/thumbnail/AWS_LB.png</designPreviewPath>
    <type>monocloud</type>
    <providers>
