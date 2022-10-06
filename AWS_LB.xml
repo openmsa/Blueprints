@@ -2,7 +2,7 @@
 <Blueprint>
    <name>AWS Load Balancer</name>
    <description>A simple load balancer configure on EKS cluster</description>
-   <blueprintPath>/Blueprints/AWS_LB.xml</blueprintPath>
+   <bpmnPath>/Blueprints/AWS_LB.bpmn</bpmnPath>
    <owner>UBIqube</owner>
    <createdBy>UBIqube</createdBy>
    <designPreviewPath>/Blueprints/thumbnail/AWS_LB.png</designPreviewPath>
