@@ -62,16 +62,12 @@
             <value>1666345390972</value>
         </entry>
         <entry>
-            <key>TAG</key>
-            <value>AKS</value>
-        </entry>
-        <entry>
             <key>TYPE</key>
             <value>monocloud</value>
         </entry>
         <entry>
             <key>TAGS</key>
-            <value>tag2,tag3</value>
+            <value>AKS</value>
         </entry>
     </map>
 </metadata>
