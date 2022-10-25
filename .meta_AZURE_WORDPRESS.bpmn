@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata>
+    <map>
+        <entry>
+            <key>DISPLAYNAME</key>
+            <value>Wordpress on Azure</value>
+        </entry>
+        <entry>
+            <key>PREVIEW</key>
+            <value>/Blueprints/thumbnail/AZURE_WORDPRESS.png</value>
+        </entry>
+        <entry>
+            <key>OWNNER</key>
+            <value>Ubiqube</value>
+        </entry>
+        <entry>
+            <key>ORG_ID</key>
+            <value>1</value>
+        </entry>
+        <entry>
+            <key>COMPLIANCES</key>
+            <value>CIS,NIST</value>
+        </entry>
+        <entry>
+            <key>TF_PATH_ENV</key>
+            <value>/tf/path/for/env</value>
+        </entry>
+        <entry>
+            <key>TF_PATH_APP</key>
+            <value>/tf/path/for/app</value>
+        </entry>
+        <entry>
+            <key>CLOUD_TYPE</key>
+            <value>monocloud</value>
+        </entry>
+        <entry>
+            <key>COMMENT</key>
+            <value>Blueprint delivered by OpenMSA</value>
+        </entry>
+        <entry>
+            <key>DATE_MODIFICATION</key>
+            <value>1666345390974</value>
+        </entry>
+        <entry>
+            <key>DESCRIPTION</key>
+            <value>A wordpress application deployed on a AKS cluster</value>
+        </entry>
+        <entry>
+            <key>PROVIDERS</key>
+            <value>AZURE</value>
+        </entry>
+        <entry>
+            <key>APPLICATIONS</key>
+            <value>wordpress</value>
+        </entry>
+        <entry>
+            <key>REPOSITORY</key>
+            <value>Blueprints</value>
+        </entry>
+        <entry>
+            <key>DATE_CREATION</key>
+            <value>1666345390972</value>
+        </entry>
+        <entry>
+            <key>TAG</key>
+            <value>AKS</value>
+        </entry>
+        <entry>
+            <key>TYPE</key>
+            <value>monocloud</value>
+        </entry>
+        <entry>
+            <key>TAGS</key>
+            <value>tag2,tag3</value>
+        </entry>
+    </map>
+</metadata>
