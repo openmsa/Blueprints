@@ -3,11 +3,11 @@
     <map>
         <entry>
             <key>DISPLAYNAME</key>
-            <value>MSactivator</value>
+            <value>MSactivator v2.8.3</value>
         </entry>
         <entry>
             <key>PREVIEW</key>
-            <value>/Blueprints/Catalog/thumbnail/DesignPreview.png</value>
+            <value>Blueprints/Catalog/thumbnail/MSA-2.8.3.png</value>
         </entry>
         <entry>
             <key>OWNER</key>
@@ -39,7 +39,7 @@
         </entry>
         <entry>
             <key>DESCRIPTION</key>
-            <value>MSactivator application which it could be deployed on any cloud providers supporting Kubernetes cluster</value>
+            <value>MSactivator application which it could be deployed on any cloud providers supporting Kubernetes cluster. Version 2.8.3</value>
         </entry>
         <entry>
             <key>PROVIDERS</key>
