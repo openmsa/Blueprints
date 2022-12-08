@@ -1,0 +1,3160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <bpmn:process id="PLACEHOLDER_PROCESS_ID" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="">
+      <bpmn:outgoing>Flow_0dd439i</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EndEvent_1" name="">
+      <bpmn:incoming>Flow_0i47kzh</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:subProcess id="SubProcess_1668697086844" name="AZURE_CUSTOM_APP" $type="bpmn:SubProcess">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="provider_data">
+            <camunda:map>
+              <camunda:entry key="type">
+                <camunda:value>PROVIDER</camunda:value>
+              </camunda:entry>
+              <camunda:entry key="data">
+                <camunda:map>
+                  <camunda:entry key="value">
+                    <camunda:map>
+                      <camunda:entry key="displayName">
+                        <camunda:value>AZURE_CUSTOM_APP</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="category">
+                        <camunda:value>Public Cloud</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="logo">
+                        <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/azure.logo</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="helper">
+                        <camunda:value>https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="services">
+                        <camunda:map>
+                          <camunda:entry key="aks">
+                            <camunda:map>
+                              <camunda:entry key="displayName">
+                                <camunda:value>Azure Kubernetes Service</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="logo">
+                                <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/azure_aks.logo</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="workflow">
+                                <camunda:map>
+                                  <camunda:entry key="env">
+                                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="appsDeployment">
+                                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="scanApp">
+                                    <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="scanWebApp">
+                                    <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="envImport">
+                                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                                  </camunda:entry>
+                                </camunda:map>
+                              </camunda:entry>
+                              <camunda:entry key="imageType">
+                                <camunda:value>docker</camunda:value>
+                              </camunda:entry>
+                            </camunda:map>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="credentials_required">
+                        <camunda:list>
+                          <camunda:value>service_principal_client_id</camunda:value>
+                          <camunda:value>service_principal_client_secret</camunda:value>
+                          <camunda:value>service_principal_subscription_id</camunda:value>
+                          <camunda:value>service_principal_tenant_id</camunda:value>
+                        </camunda:list>
+                      </camunda:entry>
+                      <camunda:entry key="cloudVendor">
+                        <camunda:value>azure_custom</camunda:value>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="label">
+                    <camunda:value>AZURE_CUSTOM_APP</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="workflowPath">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:entry>
+              <camunda:entry key="extraProps" />
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0dd439i</bpmn:incoming>
+      <bpmn:outgoing>Flow_0i47kzh</bpmn:outgoing>
+      <bpmn:subProcess id="SubProcess_1668697087055" name="" $type="bpmn:SubProcess">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="region_data">
+              <camunda:map>
+                <camunda:entry key="type">
+                  <camunda:value>REGION</camunda:value>
+                </camunda:entry>
+                <camunda:entry key="data">
+                  <camunda:map>
+                    <camunda:entry key="workflowPath">
+                      <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                    </camunda:entry>
+                  </camunda:map>
+                </camunda:entry>
+                <camunda:entry key="extraProps" />
+              </camunda:map>
+            </camunda:inputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1nm6swh</bpmn:incoming>
+        <bpmn:outgoing>Flow_1qkzp3e</bpmn:outgoing>
+        <bpmn:startEvent id="Event_09fgek9">
+          <bpmn:outgoing>Flow_00nxad7</bpmn:outgoing>
+        </bpmn:startEvent>
+        <bpmn:serviceTask id="ServiceTask_1668697110943" name="K8 Cluster" camunda:type="external" camunda:topic="msa_workflow" $type="bpmn:ServiceTask">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Process_Provision_New_fresh_ENV</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="azure_region">
+                        <camunda:value>West US 2</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="service_principal_client_id">
+                        <camunda:value>eee99be0-96ee-450e-9c32-03de46599407</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="service_principal_client_secret">
+                        <camunda:value>RWtyUT0oosl0-uj0PJ7buJ5kiOcR7CwXqh</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="service_principal_subscription_id">
+                        <camunda:value>2e49859a-2bdb-4230-8d53-1a267e71c3c6</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="service_principal_tenant_id">
+                        <camunda:value>302c4541-94f4-42a4-930c-96cbb2ca8a5e</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="use_org_cloud_credentials" />
+                      <camunda:entry key="access_k8s_dashboard" />
+                      <camunda:entry key="cluster_status" />
+                      <camunda:entry key="deploy_prometheus_grafana" />
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="k8_cluster_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>K8_CLUSTER</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="processName">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Process_Provision_New_fresh_ENV</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="workflowPath">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="processVariables">
+                        <camunda:map>
+                          <camunda:entry key="azure_region">
+                            <camunda:value>West US 2</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="service_principal_client_id">
+                            <camunda:value>eee99be0-96ee-450e-9c32-03de46599407</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="service_principal_client_secret">
+                            <camunda:value>RWtyUT0oosl0-uj0PJ7buJ5kiOcR7CwXqh</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="service_principal_subscription_id">
+                            <camunda:value>2e49859a-2bdb-4230-8d53-1a267e71c3c6</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="service_principal_tenant_id">
+                            <camunda:value>302c4541-94f4-42a4-930c-96cbb2ca8a5e</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="use_org_cloud_credentials" />
+                          <camunda:entry key="access_k8s_dashboard" />
+                          <camunda:entry key="cluster_status" />
+                          <camunda:entry key="deploy_prometheus_grafana" />
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps">
+                    <camunda:map>
+                      <camunda:entry key="cloudVendor" />
+                      <camunda:entry key="cloudService" />
+                    </camunda:map>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_00nxad7</bpmn:incoming>
+          <bpmn:outgoing>Flow_1kyrcsp</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1plexy3</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1xc4zv2</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1mgsbwi</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1t03txm</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0eix434</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0bi0o2w</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0mwdum5</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0ezemk3</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0q7y9db</bpmn:outgoing>
+          <bpmn:outgoing>Flow_00ml5hd</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1tyh931</bpmn:outgoing>
+          <bpmn:outgoing>Flow_08tvvw5</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1mc7mf0</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0ayj4jr</bpmn:outgoing>
+          <bpmn:outgoing>Flow_13spkyp</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_00nxad7" sourceRef="Event_09fgek9" targetRef="ServiceTask_1668697110943" />
+        <bpmn:endEvent id="Event_1lqpcj6">
+          <bpmn:incoming>Flow_15vpo9f</bpmn:incoming>
+          <bpmn:incoming>Flow_0tfwm55</bpmn:incoming>
+          <bpmn:incoming>Flow_1e3tw50</bpmn:incoming>
+          <bpmn:incoming>Flow_12xlwcv</bpmn:incoming>
+          <bpmn:incoming>Flow_0dgclva</bpmn:incoming>
+          <bpmn:incoming>Flow_1oo3s39</bpmn:incoming>
+          <bpmn:incoming>Flow_0frdntd</bpmn:incoming>
+          <bpmn:incoming>Flow_11o7ite</bpmn:incoming>
+          <bpmn:incoming>Flow_02tzgem</bpmn:incoming>
+          <bpmn:incoming>Flow_108p6ce</bpmn:incoming>
+          <bpmn:incoming>Flow_0st3j74</bpmn:incoming>
+          <bpmn:incoming>Flow_0829o1h</bpmn:incoming>
+          <bpmn:incoming>Flow_0gbmjxh</bpmn:incoming>
+          <bpmn:incoming>Flow_0u0nue9</bpmn:incoming>
+          <bpmn:incoming>Flow_1x1bf21</bpmn:incoming>
+          <bpmn:incoming>Flow_0rey3wu</bpmn:incoming>
+          <bpmn:incoming>Flow_0od0hn2</bpmn:incoming>
+          <bpmn:incoming>Flow_12cibea</bpmn:incoming>
+          <bpmn:incoming>Flow_1h475wy</bpmn:incoming>
+          <bpmn:incoming>Flow_0bdxho2</bpmn:incoming>
+          <bpmn:incoming>Flow_09b714y</bpmn:incoming>
+          <bpmn:incoming>Flow_19thfy7</bpmn:incoming>
+          <bpmn:incoming>Flow_13b3h7w</bpmn:incoming>
+          <bpmn:incoming>Flow_05ua4ty</bpmn:incoming>
+          <bpmn:incoming>Flow_1aqmn9z</bpmn:incoming>
+          <bpmn:incoming>Flow_1u940j0</bpmn:incoming>
+          <bpmn:incoming>Flow_1hclsjw</bpmn:incoming>
+          <bpmn:incoming>Flow_143ev65</bpmn:incoming>
+          <bpmn:incoming>Flow_1u3lpq3</bpmn:incoming>
+          <bpmn:incoming>Flow_1n0fjbv</bpmn:incoming>
+          <bpmn:incoming>Flow_0id068n</bpmn:incoming>
+          <bpmn:incoming>Flow_1gj5o5q</bpmn:incoming>
+          <bpmn:incoming>Flow_0i3sxut</bpmn:incoming>
+          <bpmn:incoming>Flow_14asf7a</bpmn:incoming>
+          <bpmn:incoming>Flow_01i4eme</bpmn:incoming>
+          <bpmn:incoming>Flow_1ookfm3</bpmn:incoming>
+          <bpmn:incoming>Flow_1u8felu</bpmn:incoming>
+          <bpmn:incoming>Flow_05epi2j</bpmn:incoming>
+          <bpmn:incoming>Flow_130btzg</bpmn:incoming>
+          <bpmn:incoming>Flow_1w97lxp</bpmn:incoming>
+          <bpmn:incoming>Flow_0zf376w</bpmn:incoming>
+          <bpmn:incoming>Flow_1qzy7s2</bpmn:incoming>
+          <bpmn:incoming>Flow_1wew375</bpmn:incoming>
+          <bpmn:incoming>Flow_03g0vqm</bpmn:incoming>
+          <bpmn:incoming>Flow_14jo9ui</bpmn:incoming>
+          <bpmn:incoming>Flow_18ibmvu</bpmn:incoming>
+          <bpmn:incoming>Flow_12dvolo</bpmn:incoming>
+          <bpmn:incoming>Flow_0ok6e2x</bpmn:incoming>
+          <bpmn:incoming>Flow_1d5rh35</bpmn:incoming>
+          <bpmn:incoming>Flow_0s99otu</bpmn:incoming>
+          <bpmn:incoming>Flow_0usmxql</bpmn:incoming>
+          <bpmn:incoming>Flow_0dgfmci</bpmn:incoming>
+          <bpmn:incoming>Flow_1h5i6y9</bpmn:incoming>
+          <bpmn:incoming>Flow_193wxas</bpmn:incoming>
+          <bpmn:incoming>Flow_0km72v4</bpmn:incoming>
+          <bpmn:incoming>Flow_0p6r78w</bpmn:incoming>
+          <bpmn:incoming>Flow_0mpj13i</bpmn:incoming>
+          <bpmn:incoming>Flow_1phasg8</bpmn:incoming>
+          <bpmn:incoming>Flow_0v2geff</bpmn:incoming>
+          <bpmn:incoming>Flow_0coddcn</bpmn:incoming>
+          <bpmn:incoming>Flow_051yhjj</bpmn:incoming>
+          <bpmn:incoming>Flow_1vdgt6h</bpmn:incoming>
+          <bpmn:incoming>Flow_0oo7i9q</bpmn:incoming>
+          <bpmn:incoming>Flow_1jnfhrt</bpmn:incoming>
+          <bpmn:incoming>Flow_01yx0i4</bpmn:incoming>
+          <bpmn:incoming>Flow_0ad38cg</bpmn:incoming>
+          <bpmn:incoming>Flow_0nize8b</bpmn:incoming>
+          <bpmn:incoming>Flow_1mcyegh</bpmn:incoming>
+          <bpmn:incoming>Flow_1dyz71s</bpmn:incoming>
+          <bpmn:incoming>Flow_0mixyq4</bpmn:incoming>
+          <bpmn:incoming>Flow_035s2ir</bpmn:incoming>
+          <bpmn:incoming>Flow_1ew5pfm</bpmn:incoming>
+          <bpmn:incoming>Flow_1qbqry3</bpmn:incoming>
+          <bpmn:incoming>Flow_1w21veo</bpmn:incoming>
+          <bpmn:incoming>Flow_1afppi6</bpmn:incoming>
+          <bpmn:incoming>Flow_06k71bq</bpmn:incoming>
+          <bpmn:incoming>Flow_1ptnied</bpmn:incoming>
+          <bpmn:incoming>Flow_0gc7128</bpmn:incoming>
+        </bpmn:endEvent>
+        <bpmn:sequenceFlow id="Flow_15vpo9f" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1kyrcsp" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493787937" />
+        <bpmn:sequenceFlow id="Flow_0tfwm55" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1e3tw50" sourceRef="ServiceTask_1670493787984" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1plexy3" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493787984" />
+        <bpmn:sequenceFlow id="Flow_12xlwcv" sourceRef="ServiceTask_1670493787984" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0dgclva" sourceRef="ServiceTask_1670493788034" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1xc4zv2" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493788034" />
+        <bpmn:sequenceFlow id="Flow_1oo3s39" sourceRef="ServiceTask_1670493788034" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0frdntd" sourceRef="ServiceTask_1670493788090" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1mgsbwi" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493788090" />
+        <bpmn:sequenceFlow id="Flow_11o7ite" sourceRef="ServiceTask_1670493788090" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_02tzgem" sourceRef="ServiceTask_1670493788145" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1t03txm" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493788145" />
+        <bpmn:sequenceFlow id="Flow_108p6ce" sourceRef="ServiceTask_1670493788145" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0st3j74" sourceRef="ServiceTask_1670493788200" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0eix434" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493788200" />
+        <bpmn:sequenceFlow id="Flow_0829o1h" sourceRef="ServiceTask_1670493788200" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0gbmjxh" sourceRef="ServiceTask_1670493788255" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0bi0o2w" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493788255" />
+        <bpmn:sequenceFlow id="Flow_0u0nue9" sourceRef="ServiceTask_1670493788255" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1x1bf21" sourceRef="ServiceTask_1670493788313" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0mwdum5" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493788313" />
+        <bpmn:sequenceFlow id="Flow_0rey3wu" sourceRef="ServiceTask_1670493788313" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0od0hn2" sourceRef="ServiceTask_1670493788374" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0ezemk3" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493788374" />
+        <bpmn:sequenceFlow id="Flow_12cibea" sourceRef="ServiceTask_1670493788374" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1h475wy" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0bdxho2" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_09b714y" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_19thfy7" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_13b3h7w" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_05ua4ty" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1aqmn9z" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1u940j0" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1hclsjw" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_143ev65" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1u3lpq3" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1n0fjbv" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0id068n" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493787937" name="msa2-front" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-front</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-front</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-front:08e53c48d4a10f028480675e8c19d46a35301438</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_port">
+                              <camunda:value>443</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_node_port">
+                              <camunda:value>30043</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-front</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-front:08e53c48d4a10f028480675e8c19d46a35301438</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-front</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-front:08e53c48d4a10f028480675e8c19d46a35301438</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-front</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_1kyrcsp</bpmn:incoming>
+          <bpmn:outgoing>Flow_1gj5o5q</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0id068n</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1n0fjbv</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1u3lpq3</bpmn:outgoing>
+          <bpmn:outgoing>Flow_143ev65</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1hclsjw</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1u940j0</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1aqmn9z</bpmn:outgoing>
+          <bpmn:outgoing>Flow_05ua4ty</bpmn:outgoing>
+          <bpmn:outgoing>Flow_13b3h7w</bpmn:outgoing>
+          <bpmn:outgoing>Flow_19thfy7</bpmn:outgoing>
+          <bpmn:outgoing>Flow_09b714y</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0bdxho2</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1h475wy</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0tfwm55</bpmn:outgoing>
+          <bpmn:outgoing>Flow_15vpo9f</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_1gj5o5q" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0i3sxut" sourceRef="ServiceTask_1670493787984" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493787984" name="msa2-sms" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-sms</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-sms</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-sms:ebc35b20ca0bb366a2bbac5c44c498dbd8c4f86f</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-sms</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-sms:ebc35b20ca0bb366a2bbac5c44c498dbd8c4f86f</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-sms</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-sms:ebc35b20ca0bb366a2bbac5c44c498dbd8c4f86f</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-sms</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_1plexy3</bpmn:incoming>
+          <bpmn:outgoing>Flow_14asf7a</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0i3sxut</bpmn:outgoing>
+          <bpmn:outgoing>Flow_12xlwcv</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1e3tw50</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_14asf7a" sourceRef="ServiceTask_1670493787984" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_01i4eme" sourceRef="ServiceTask_1670493788034" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493788034" name="msa2-alarm" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-alarm</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-alarm</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-alarm:7f9c48a4d903ceb982b856668f5c09980d1eb777</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-alarm</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-alarm:7f9c48a4d903ceb982b856668f5c09980d1eb777</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-alarm</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-alarm:7f9c48a4d903ceb982b856668f5c09980d1eb777</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-alarm</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_1xc4zv2</bpmn:incoming>
+          <bpmn:outgoing>Flow_1ookfm3</bpmn:outgoing>
+          <bpmn:outgoing>Flow_01i4eme</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1oo3s39</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0dgclva</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_1ookfm3" sourceRef="ServiceTask_1670493788034" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1u8felu" sourceRef="ServiceTask_1670493788090" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493788090" name="msa2-ui" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-ui</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-ui</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-ui:ae104a51ba147d246769de4cbd55066626ca1998</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-ui</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-ui:ae104a51ba147d246769de4cbd55066626ca1998</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-ui</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-ui:ae104a51ba147d246769de4cbd55066626ca1998</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-ui</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_1mgsbwi</bpmn:incoming>
+          <bpmn:outgoing>Flow_05epi2j</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1u8felu</bpmn:outgoing>
+          <bpmn:outgoing>Flow_11o7ite</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0frdntd</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_05epi2j" sourceRef="ServiceTask_1670493788090" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_130btzg" sourceRef="ServiceTask_1670493788145" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493788145" name="msa2-api" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-api</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-api</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-api:c4b7a097d533bdeb0c4aea62ef4ba92582cf2bf6</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-api</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-api:c4b7a097d533bdeb0c4aea62ef4ba92582cf2bf6</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-api</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-api:c4b7a097d533bdeb0c4aea62ef4ba92582cf2bf6</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-api</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_1t03txm</bpmn:incoming>
+          <bpmn:outgoing>Flow_1w97lxp</bpmn:outgoing>
+          <bpmn:outgoing>Flow_130btzg</bpmn:outgoing>
+          <bpmn:outgoing>Flow_108p6ce</bpmn:outgoing>
+          <bpmn:outgoing>Flow_02tzgem</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_1w97lxp" sourceRef="ServiceTask_1670493788145" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0zf376w" sourceRef="ServiceTask_1670493788200" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493788200" name="msa2-linuxme" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-linuxme</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-linuxme</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-linuxme:7ebf88e805de70562ac837f06e6f7430a4b21ad3</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-linuxme</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-linuxme:7ebf88e805de70562ac837f06e6f7430a4b21ad3</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-linuxme</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-linuxme:7ebf88e805de70562ac837f06e6f7430a4b21ad3</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-linuxme</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_0eix434</bpmn:incoming>
+          <bpmn:outgoing>Flow_1qzy7s2</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0zf376w</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0829o1h</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0st3j74</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_1qzy7s2" sourceRef="ServiceTask_1670493788200" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1wew375" sourceRef="ServiceTask_1670493788255" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493788255" name="msa2-bud" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-bud</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-bud</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-bud:3450bd12fa42a763c80a247a46b290ad1ae55d20</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-bud</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-bud:3450bd12fa42a763c80a247a46b290ad1ae55d20</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-bud</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-bud:3450bd12fa42a763c80a247a46b290ad1ae55d20</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-bud</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_0bi0o2w</bpmn:incoming>
+          <bpmn:outgoing>Flow_03g0vqm</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1wew375</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0u0nue9</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0gbmjxh</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_03g0vqm" sourceRef="ServiceTask_1670493788255" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_14jo9ui" sourceRef="ServiceTask_1670493788313" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493788313" name="msa2-monitoring" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-monitoring</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-monitoring</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-monitoring:27c2314db84f057c4d0eb7494ee5a44dbaaa63e0</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-monitoring</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-monitoring:27c2314db84f057c4d0eb7494ee5a44dbaaa63e0</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-monitoring</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-monitoring:27c2314db84f057c4d0eb7494ee5a44dbaaa63e0</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-monitoring</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_0mwdum5</bpmn:incoming>
+          <bpmn:outgoing>Flow_18ibmvu</bpmn:outgoing>
+          <bpmn:outgoing>Flow_14jo9ui</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0rey3wu</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1x1bf21</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_18ibmvu" sourceRef="ServiceTask_1670493788313" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_12dvolo" sourceRef="ServiceTask_1670493788374" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493788374" name="msa2-db" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-db</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-db</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-db:9dffc61633161c778fd0d31ccb9c1011bee798c8</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-db</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-db:9dffc61633161c778fd0d31ccb9c1011bee798c8</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-db</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-db:9dffc61633161c778fd0d31ccb9c1011bee798c8</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-db</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_0ezemk3</bpmn:incoming>
+          <bpmn:outgoing>Flow_0ok6e2x</bpmn:outgoing>
+          <bpmn:outgoing>Flow_12dvolo</bpmn:outgoing>
+          <bpmn:outgoing>Flow_12cibea</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0od0hn2</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_0ok6e2x" sourceRef="ServiceTask_1670493788374" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1d5rh35" sourceRef="ServiceTask_1670493985191" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0q7y9db" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493985191" />
+        <bpmn:sequenceFlow id="Flow_0s99otu" sourceRef="ServiceTask_1670493985191" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0usmxql" sourceRef="ServiceTask_1670493985265" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_00ml5hd" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493985265" />
+        <bpmn:sequenceFlow id="Flow_0dgfmci" sourceRef="ServiceTask_1670493985265" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1h5i6y9" sourceRef="ServiceTask_1670493985355" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1tyh931" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493985355" />
+        <bpmn:sequenceFlow id="Flow_193wxas" sourceRef="ServiceTask_1670493985355" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0km72v4" sourceRef="ServiceTask_1670493985443" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_08tvvw5" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493985443" />
+        <bpmn:sequenceFlow id="Flow_0p6r78w" sourceRef="ServiceTask_1670493985443" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0mpj13i" sourceRef="ServiceTask_1670493985547" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1mc7mf0" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493985547" />
+        <bpmn:sequenceFlow id="Flow_1phasg8" sourceRef="ServiceTask_1670493985547" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0v2geff" sourceRef="ServiceTask_1670493985657" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0ayj4jr" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493985657" />
+        <bpmn:sequenceFlow id="Flow_0coddcn" sourceRef="ServiceTask_1670493985657" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_051yhjj" sourceRef="ServiceTask_1670493985764" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_13spkyp" sourceRef="ServiceTask_1668697110943" targetRef="ServiceTask_1670493985764" />
+        <bpmn:sequenceFlow id="Flow_1vdgt6h" sourceRef="ServiceTask_1670493985764" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0oo7i9q" sourceRef="ServiceTask_1670493985191" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493985191" name="msa2-linuxdev" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-linuxdev</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-linuxdev</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-linuxdev:5844d2a8e891a1c9f1fc4359017512b55985d5d0</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-linuxdev</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-linuxdev:5844d2a8e891a1c9f1fc4359017512b55985d5d0</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-linuxdev</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-linuxdev:5844d2a8e891a1c9f1fc4359017512b55985d5d0</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-linuxdev</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_0q7y9db</bpmn:incoming>
+          <bpmn:outgoing>Flow_1jnfhrt</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0oo7i9q</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0s99otu</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1d5rh35</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_1jnfhrt" sourceRef="ServiceTask_1670493985191" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_01yx0i4" sourceRef="ServiceTask_1670493985265" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493985265" name="msa2-kibana" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-kibana</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-kibana</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-kibana:0105b30d9cf0d00219b2996c2abb5a1d03a0c9ec</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-kibana</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-kibana:0105b30d9cf0d00219b2996c2abb5a1d03a0c9ec</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-kibana</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-kibana:0105b30d9cf0d00219b2996c2abb5a1d03a0c9ec</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-kibana</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_00ml5hd</bpmn:incoming>
+          <bpmn:outgoing>Flow_0ad38cg</bpmn:outgoing>
+          <bpmn:outgoing>Flow_01yx0i4</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0dgfmci</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0usmxql</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_0ad38cg" sourceRef="ServiceTask_1670493985265" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_0nize8b" sourceRef="ServiceTask_1670493985355" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493985355" name="msa2-es" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-es</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-es</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-es:5f5287a3b8c9a4a14735df0624759ceb78371edb</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-es</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-es:5f5287a3b8c9a4a14735df0624759ceb78371edb</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-es</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-es:5f5287a3b8c9a4a14735df0624759ceb78371edb</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-es</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_1tyh931</bpmn:incoming>
+          <bpmn:outgoing>Flow_1mcyegh</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0nize8b</bpmn:outgoing>
+          <bpmn:outgoing>Flow_193wxas</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1h5i6y9</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_1mcyegh" sourceRef="ServiceTask_1670493985355" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1dyz71s" sourceRef="ServiceTask_1670493985443" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493985443" name="msa2-cerebro" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-cerebro</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-cerebro</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-cerebro:7144f86eec3b2a326066046446187f86a75515b1</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-cerebro</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-cerebro:7144f86eec3b2a326066046446187f86a75515b1</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-cerebro</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-cerebro:7144f86eec3b2a326066046446187f86a75515b1</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-cerebro</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_08tvvw5</bpmn:incoming>
+          <bpmn:outgoing>Flow_0mixyq4</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1dyz71s</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0p6r78w</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0km72v4</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_0mixyq4" sourceRef="ServiceTask_1670493985443" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_035s2ir" sourceRef="ServiceTask_1670493985547" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493985547" name="msa2-camunda" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-camunda</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-camunda</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-camunda:507b2c9b8361821915c4bd9255bafb47ace89079</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-camunda</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-camunda:507b2c9b8361821915c4bd9255bafb47ace89079</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-camunda</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-camunda:507b2c9b8361821915c4bd9255bafb47ace89079</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-camunda</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_1mc7mf0</bpmn:incoming>
+          <bpmn:outgoing>Flow_1ew5pfm</bpmn:outgoing>
+          <bpmn:outgoing>Flow_035s2ir</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1phasg8</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0mpj13i</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_1ew5pfm" sourceRef="ServiceTask_1670493985547" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1qbqry3" sourceRef="ServiceTask_1670493985657" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493985657" name="msa2-ai-ml" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-ai-ml</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-ai-ml</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-ai-ml:63c7fab8c111b6cc85da049f45ebc6175a9b269a</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_replicas">
+                              <camunda:value>1</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-ai-ml</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-ai-ml:63c7fab8c111b6cc85da049f45ebc6175a9b269a</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-ai-ml</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-ai-ml:63c7fab8c111b6cc85da049f45ebc6175a9b269a</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-ai-ml</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_0ayj4jr</bpmn:incoming>
+          <bpmn:outgoing>Flow_1w21veo</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1qbqry3</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0coddcn</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0v2geff</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_1w21veo" sourceRef="ServiceTask_1670493985657" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1afppi6" sourceRef="ServiceTask_1670493985764" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_06k71bq" sourceRef="ServiceTask_1670493985764" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1ptnied" sourceRef="ServiceTask_1670493985764" targetRef="Event_1lqpcj6" />
+        <bpmn:serviceTask id="ServiceTask_1670493985764" name="msa2-rsyslog" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Custom_Apps_AKS_Cluster/Provision_Custom_Apps_AKS_Cluster</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>msa2-pvc</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc" />
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="app_namespace" />
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>msa2-pvc</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>ubiqube/msa2-rsyslog:54a250d9ef49db2454c5ed9111d43cebc8e9ef9a</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description">
+                              <camunda:value>ubiqube</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>msa2-rsyslog</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>ubiqube/msa2-rsyslog:54a250d9ef49db2454c5ed9111d43cebc8e9ef9a</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description">
+                            <camunda:value>ubiqube</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="app_namespace" />
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>msa2-rsyslog</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>ubiqube/msa2-rsyslog:54a250d9ef49db2454c5ed9111d43cebc8e9ef9a</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description">
+                                  <camunda:value>ubiqube</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>msa2-rsyslog</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_13spkyp</bpmn:incoming>
+          <bpmn:outgoing>Flow_0gc7128</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1ptnied</bpmn:outgoing>
+          <bpmn:outgoing>Flow_06k71bq</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1afppi6</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1vdgt6h</bpmn:outgoing>
+          <bpmn:outgoing>Flow_051yhjj</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_0gc7128" sourceRef="ServiceTask_1670493985764" targetRef="Event_1lqpcj6" />
+      </bpmn:subProcess>
+      <bpmn:startEvent id="Event_14ieze8">
+        <bpmn:outgoing>Flow_1nm6swh</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:endEvent id="Event_0clpmzn">
+        <bpmn:incoming>Flow_1qkzp3e</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:sequenceFlow id="Flow_1nm6swh" sourceRef="Event_14ieze8" targetRef="SubProcess_1668697087055" />
+      <bpmn:sequenceFlow id="Flow_1qkzp3e" sourceRef="SubProcess_1668697087055" targetRef="Event_0clpmzn" />
+    </bpmn:subProcess>
+    <bpmn:sequenceFlow id="Flow_0dd439i" sourceRef="StartEvent_1" targetRef="SubProcess_1668697086844" />
+    <bpmn:sequenceFlow id="Flow_0i47kzh" sourceRef="SubProcess_1668697086844" targetRef="EndEvent_1" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="PLACEHOLDER_PROCESS_ID">
+      <bpmndi:BPMNEdge id="Flow_0i47kzh_di" bpmnElement="Flow_0i47kzh">
+        <di:waypoint x="990" y="420" />
+        <di:waypoint x="1000" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0dd439i_di" bpmnElement="Flow_0dd439i">
+        <di:waypoint x="136" y="118" />
+        <di:waypoint x="140" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="100" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0rpe2j4_di" bpmnElement="EndEvent_1">
+        <dc:Bounds x="1000" y="402" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1668697086844_di" bpmnElement="SubProcess_1668697086844" isExpanded="true">
+        <dc:Bounds x="140" y="100" width="850" height="1950" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1qkzp3e_di" bpmnElement="Flow_1qkzp3e">
+        <di:waypoint x="900" y="460" />
+        <di:waypoint x="932" y="460" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1nm6swh_di" bpmnElement="Flow_1nm6swh">
+        <di:waypoint x="290" y="222" />
+        <di:waypoint x="290" y="151" />
+        <di:waypoint x="310" y="151" />
+        <di:waypoint x="310" y="120" />
+        <di:waypoint x="290" y="120" />
+        <di:waypoint x="290" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="SubProcess_1668697087055_di" bpmnElement="SubProcess_1668697087055" isExpanded="true">
+        <dc:Bounds x="160" y="140" width="740" height="1850" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_00nxad7_di" bpmnElement="Flow_00nxad7">
+        <di:waypoint x="218" y="240" />
+        <di:waypoint x="260" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_15vpo9f_di" bpmnElement="Flow_15vpo9f">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1kyrcsp_di" bpmnElement="Flow_1kyrcsp">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="410" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0tfwm55_di" bpmnElement="Flow_0tfwm55">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1e3tw50_di" bpmnElement="Flow_1e3tw50">
+        <di:waypoint x="510" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1plexy3_di" bpmnElement="Flow_1plexy3">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="350" />
+        <di:waypoint x="410" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12xlwcv_di" bpmnElement="Flow_12xlwcv">
+        <di:waypoint x="510" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0dgclva_di" bpmnElement="Flow_0dgclva">
+        <di:waypoint x="510" y="460" />
+        <di:waypoint x="540" y="460" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1xc4zv2_di" bpmnElement="Flow_1xc4zv2">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="460" />
+        <di:waypoint x="410" y="460" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1oo3s39_di" bpmnElement="Flow_1oo3s39">
+        <di:waypoint x="510" y="460" />
+        <di:waypoint x="540" y="460" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0frdntd_di" bpmnElement="Flow_0frdntd">
+        <di:waypoint x="510" y="570" />
+        <di:waypoint x="540" y="570" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1mgsbwi_di" bpmnElement="Flow_1mgsbwi">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="570" />
+        <di:waypoint x="410" y="570" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11o7ite_di" bpmnElement="Flow_11o7ite">
+        <di:waypoint x="510" y="570" />
+        <di:waypoint x="540" y="570" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02tzgem_di" bpmnElement="Flow_02tzgem">
+        <di:waypoint x="510" y="680" />
+        <di:waypoint x="540" y="680" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1t03txm_di" bpmnElement="Flow_1t03txm">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="680" />
+        <di:waypoint x="410" y="680" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_108p6ce_di" bpmnElement="Flow_108p6ce">
+        <di:waypoint x="510" y="680" />
+        <di:waypoint x="540" y="680" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0st3j74_di" bpmnElement="Flow_0st3j74">
+        <di:waypoint x="510" y="790" />
+        <di:waypoint x="540" y="790" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0eix434_di" bpmnElement="Flow_0eix434">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="790" />
+        <di:waypoint x="410" y="790" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0829o1h_di" bpmnElement="Flow_0829o1h">
+        <di:waypoint x="510" y="790" />
+        <di:waypoint x="540" y="790" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0gbmjxh_di" bpmnElement="Flow_0gbmjxh">
+        <di:waypoint x="510" y="900" />
+        <di:waypoint x="540" y="900" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bi0o2w_di" bpmnElement="Flow_0bi0o2w">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="900" />
+        <di:waypoint x="410" y="900" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0u0nue9_di" bpmnElement="Flow_0u0nue9">
+        <di:waypoint x="510" y="900" />
+        <di:waypoint x="540" y="900" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1x1bf21_di" bpmnElement="Flow_1x1bf21">
+        <di:waypoint x="510" y="1010" />
+        <di:waypoint x="540" y="1010" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0mwdum5_di" bpmnElement="Flow_0mwdum5">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="1010" />
+        <di:waypoint x="410" y="1010" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0rey3wu_di" bpmnElement="Flow_0rey3wu">
+        <di:waypoint x="510" y="1010" />
+        <di:waypoint x="540" y="1010" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0od0hn2_di" bpmnElement="Flow_0od0hn2">
+        <di:waypoint x="510" y="1120" />
+        <di:waypoint x="540" y="1120" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ezemk3_di" bpmnElement="Flow_0ezemk3">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="1120" />
+        <di:waypoint x="410" y="1120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12cibea_di" bpmnElement="Flow_12cibea">
+        <di:waypoint x="510" y="1120" />
+        <di:waypoint x="540" y="1120" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1h475wy_di" bpmnElement="Flow_1h475wy">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0bdxho2_di" bpmnElement="Flow_0bdxho2">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09b714y_di" bpmnElement="Flow_09b714y">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_19thfy7_di" bpmnElement="Flow_19thfy7">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13b3h7w_di" bpmnElement="Flow_13b3h7w">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05ua4ty_di" bpmnElement="Flow_05ua4ty">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1aqmn9z_di" bpmnElement="Flow_1aqmn9z">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1u940j0_di" bpmnElement="Flow_1u940j0">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1hclsjw_di" bpmnElement="Flow_1hclsjw">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_143ev65_di" bpmnElement="Flow_143ev65">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1u3lpq3_di" bpmnElement="Flow_1u3lpq3">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1n0fjbv_di" bpmnElement="Flow_1n0fjbv">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0id068n_di" bpmnElement="Flow_0id068n">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gj5o5q_di" bpmnElement="Flow_1gj5o5q">
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0i3sxut_di" bpmnElement="Flow_0i3sxut">
+        <di:waypoint x="510" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14asf7a_di" bpmnElement="Flow_14asf7a">
+        <di:waypoint x="510" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01i4eme_di" bpmnElement="Flow_01i4eme">
+        <di:waypoint x="510" y="460" />
+        <di:waypoint x="540" y="460" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ookfm3_di" bpmnElement="Flow_1ookfm3">
+        <di:waypoint x="510" y="460" />
+        <di:waypoint x="540" y="460" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1u8felu_di" bpmnElement="Flow_1u8felu">
+        <di:waypoint x="510" y="570" />
+        <di:waypoint x="540" y="570" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05epi2j_di" bpmnElement="Flow_05epi2j">
+        <di:waypoint x="510" y="570" />
+        <di:waypoint x="540" y="570" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_130btzg_di" bpmnElement="Flow_130btzg">
+        <di:waypoint x="510" y="680" />
+        <di:waypoint x="540" y="680" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1w97lxp_di" bpmnElement="Flow_1w97lxp">
+        <di:waypoint x="510" y="680" />
+        <di:waypoint x="540" y="680" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0zf376w_di" bpmnElement="Flow_0zf376w">
+        <di:waypoint x="510" y="790" />
+        <di:waypoint x="540" y="790" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qzy7s2_di" bpmnElement="Flow_1qzy7s2">
+        <di:waypoint x="510" y="790" />
+        <di:waypoint x="540" y="790" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wew375_di" bpmnElement="Flow_1wew375">
+        <di:waypoint x="510" y="900" />
+        <di:waypoint x="540" y="900" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03g0vqm_di" bpmnElement="Flow_03g0vqm">
+        <di:waypoint x="510" y="900" />
+        <di:waypoint x="540" y="900" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_14jo9ui_di" bpmnElement="Flow_14jo9ui">
+        <di:waypoint x="510" y="1010" />
+        <di:waypoint x="540" y="1010" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18ibmvu_di" bpmnElement="Flow_18ibmvu">
+        <di:waypoint x="510" y="1010" />
+        <di:waypoint x="540" y="1010" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12dvolo_di" bpmnElement="Flow_12dvolo">
+        <di:waypoint x="510" y="1120" />
+        <di:waypoint x="540" y="1120" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ok6e2x_di" bpmnElement="Flow_0ok6e2x">
+        <di:waypoint x="510" y="1120" />
+        <di:waypoint x="540" y="1120" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1d5rh35_di" bpmnElement="Flow_1d5rh35">
+        <di:waypoint x="510" y="1230" />
+        <di:waypoint x="540" y="1230" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q7y9db_di" bpmnElement="Flow_0q7y9db">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="1230" />
+        <di:waypoint x="410" y="1230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0s99otu_di" bpmnElement="Flow_0s99otu">
+        <di:waypoint x="510" y="1230" />
+        <di:waypoint x="540" y="1230" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0usmxql_di" bpmnElement="Flow_0usmxql">
+        <di:waypoint x="510" y="1340" />
+        <di:waypoint x="540" y="1340" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_00ml5hd_di" bpmnElement="Flow_00ml5hd">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="1340" />
+        <di:waypoint x="410" y="1340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0dgfmci_di" bpmnElement="Flow_0dgfmci">
+        <di:waypoint x="510" y="1340" />
+        <di:waypoint x="540" y="1340" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1h5i6y9_di" bpmnElement="Flow_1h5i6y9">
+        <di:waypoint x="510" y="1450" />
+        <di:waypoint x="540" y="1450" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1tyh931_di" bpmnElement="Flow_1tyh931">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="1450" />
+        <di:waypoint x="410" y="1450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_193wxas_di" bpmnElement="Flow_193wxas">
+        <di:waypoint x="510" y="1450" />
+        <di:waypoint x="540" y="1450" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0km72v4_di" bpmnElement="Flow_0km72v4">
+        <di:waypoint x="510" y="1560" />
+        <di:waypoint x="540" y="1560" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08tvvw5_di" bpmnElement="Flow_08tvvw5">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="1560" />
+        <di:waypoint x="410" y="1560" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0p6r78w_di" bpmnElement="Flow_0p6r78w">
+        <di:waypoint x="510" y="1560" />
+        <di:waypoint x="540" y="1560" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0mpj13i_di" bpmnElement="Flow_0mpj13i">
+        <di:waypoint x="510" y="1670" />
+        <di:waypoint x="540" y="1670" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1mc7mf0_di" bpmnElement="Flow_1mc7mf0">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="1670" />
+        <di:waypoint x="410" y="1670" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1phasg8_di" bpmnElement="Flow_1phasg8">
+        <di:waypoint x="510" y="1670" />
+        <di:waypoint x="540" y="1670" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0v2geff_di" bpmnElement="Flow_0v2geff">
+        <di:waypoint x="510" y="1780" />
+        <di:waypoint x="540" y="1780" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ayj4jr_di" bpmnElement="Flow_0ayj4jr">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="1780" />
+        <di:waypoint x="410" y="1780" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0coddcn_di" bpmnElement="Flow_0coddcn">
+        <di:waypoint x="510" y="1780" />
+        <di:waypoint x="540" y="1780" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_051yhjj_di" bpmnElement="Flow_051yhjj">
+        <di:waypoint x="510" y="1890" />
+        <di:waypoint x="540" y="1890" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13spkyp_di" bpmnElement="Flow_13spkyp">
+        <di:waypoint x="360" y="240" />
+        <di:waypoint x="390" y="240" />
+        <di:waypoint x="390" y="1890" />
+        <di:waypoint x="410" y="1890" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1vdgt6h_di" bpmnElement="Flow_1vdgt6h">
+        <di:waypoint x="510" y="1890" />
+        <di:waypoint x="540" y="1890" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0oo7i9q_di" bpmnElement="Flow_0oo7i9q">
+        <di:waypoint x="510" y="1230" />
+        <di:waypoint x="540" y="1230" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1jnfhrt_di" bpmnElement="Flow_1jnfhrt">
+        <di:waypoint x="510" y="1230" />
+        <di:waypoint x="540" y="1230" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01yx0i4_di" bpmnElement="Flow_01yx0i4">
+        <di:waypoint x="510" y="1340" />
+        <di:waypoint x="540" y="1340" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ad38cg_di" bpmnElement="Flow_0ad38cg">
+        <di:waypoint x="510" y="1340" />
+        <di:waypoint x="540" y="1340" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0nize8b_di" bpmnElement="Flow_0nize8b">
+        <di:waypoint x="510" y="1450" />
+        <di:waypoint x="540" y="1450" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1mcyegh_di" bpmnElement="Flow_1mcyegh">
+        <di:waypoint x="510" y="1450" />
+        <di:waypoint x="540" y="1450" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dyz71s_di" bpmnElement="Flow_1dyz71s">
+        <di:waypoint x="510" y="1560" />
+        <di:waypoint x="540" y="1560" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0mixyq4_di" bpmnElement="Flow_0mixyq4">
+        <di:waypoint x="510" y="1560" />
+        <di:waypoint x="540" y="1560" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_035s2ir_di" bpmnElement="Flow_035s2ir">
+        <di:waypoint x="510" y="1670" />
+        <di:waypoint x="540" y="1670" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ew5pfm_di" bpmnElement="Flow_1ew5pfm">
+        <di:waypoint x="510" y="1670" />
+        <di:waypoint x="540" y="1670" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qbqry3_di" bpmnElement="Flow_1qbqry3">
+        <di:waypoint x="510" y="1780" />
+        <di:waypoint x="540" y="1780" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1w21veo_di" bpmnElement="Flow_1w21veo">
+        <di:waypoint x="510" y="1780" />
+        <di:waypoint x="540" y="1780" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1afppi6_di" bpmnElement="Flow_1afppi6">
+        <di:waypoint x="510" y="1890" />
+        <di:waypoint x="540" y="1890" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_06k71bq_di" bpmnElement="Flow_06k71bq">
+        <di:waypoint x="510" y="1890" />
+        <di:waypoint x="540" y="1890" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ptnied_di" bpmnElement="Flow_1ptnied">
+        <di:waypoint x="510" y="1890" />
+        <di:waypoint x="540" y="1890" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0gc7128_di" bpmnElement="Flow_0gc7128">
+        <di:waypoint x="510" y="1890" />
+        <di:waypoint x="540" y="1890" />
+        <di:waypoint x="540" y="350" />
+        <di:waypoint x="562" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_09fgek9_di" bpmnElement="Event_09fgek9">
+        <dc:Bounds x="182" y="222" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1668697110943_di" bpmnElement="ServiceTask_1668697110943">
+        <dc:Bounds x="260" y="200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1lqpcj6_di" bpmnElement="Event_1lqpcj6">
+        <dc:Bounds x="562" y="332" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670493858428_di" bpmnElement="ServiceTask_1670493787937">
+        <dc:Bounds x="410" y="200" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670493869255_di" bpmnElement="ServiceTask_1670493787984">
+        <dc:Bounds x="410" y="310" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670493882974_di" bpmnElement="ServiceTask_1670493788034">
+        <dc:Bounds x="410" y="420" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670493896604_di" bpmnElement="ServiceTask_1670493788090">
+        <dc:Bounds x="410" y="530" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670493909230_di" bpmnElement="ServiceTask_1670493788145">
+        <dc:Bounds x="410" y="640" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670493923750_di" bpmnElement="ServiceTask_1670493788200">
+        <dc:Bounds x="410" y="750" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670493935177_di" bpmnElement="ServiceTask_1670493788255">
+        <dc:Bounds x="410" y="860" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670493944815_di" bpmnElement="ServiceTask_1670493788313">
+        <dc:Bounds x="410" y="970" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670493953762_di" bpmnElement="ServiceTask_1670493788374">
+        <dc:Bounds x="410" y="1080" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670494019452_di" bpmnElement="ServiceTask_1670493985191">
+        <dc:Bounds x="410" y="1190" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670494029690_di" bpmnElement="ServiceTask_1670493985265">
+        <dc:Bounds x="410" y="1300" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670494037999_di" bpmnElement="ServiceTask_1670493985355">
+        <dc:Bounds x="410" y="1410" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670494047857_di" bpmnElement="ServiceTask_1670493985443">
+        <dc:Bounds x="410" y="1520" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670494058028_di" bpmnElement="ServiceTask_1670493985547">
+        <dc:Bounds x="410" y="1630" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670494071681_di" bpmnElement="ServiceTask_1670493985657">
+        <dc:Bounds x="410" y="1740" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1670494082218_di" bpmnElement="ServiceTask_1670493985764">
+        <dc:Bounds x="410" y="1850" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_14ieze8_di" bpmnElement="Event_14ieze8">
+        <dc:Bounds x="272" y="222" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0clpmzn_di" bpmnElement="Event_0clpmzn">
+        <dc:Bounds x="932" y="442" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
