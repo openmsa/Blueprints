@@ -381,6 +381,14 @@
                             <camunda:entry key="app_port">443</camunda:entry>
                             <camunda:entry key="app_node_port">30043</camunda:entry>
                           </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-ui</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-ui:ae104a51ba147d246769de4cbd55066626ca1998</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
                         </camunda:list>
                       </camunda:entry>
                     </camunda:map>
