@@ -389,6 +389,117 @@
                             <camunda:entry key="is_private">true</camunda:entry>
                             <camunda:entry key="app_replicas">1</camunda:entry>
                           </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-sms</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-sms:ebc35b20ca0bb366a2bbac5c44c498dbd8c4f86f</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-alarm</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-alarm:7f9c48a4d903ceb982b856668f5c09980d1eb777</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-api</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-api:c4b7a097d533bdeb0c4aea62ef4ba92582cf2bf6</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-linuxme</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-linuxme:7ebf88e805de70562ac837f06e6f7430a4b21ad3</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-bud</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-bud:3450bd12fa42a763c80a247a46b290ad1ae55d20</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-monitoring</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-monitoring:27c2314db84f057c4d0eb7494ee5a44dbaaa63e0</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-db</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-db:9dffc61633161c778fd0d31ccb9c1011bee798c8</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-linuxdev</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-linuxdev:5844d2a8e891a1c9f1fc4359017512b55985d5d0</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-kibana</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-kibana:0105b30d9cf0d00219b2996c2abb5a1d03a0c9ec</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-es</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-es:5f5287a3b8c9a4a14735df0624759ceb78371edb</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-cerebro</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-cerebro:7144f86eec3b2a326066046446187f86a75515b1</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-camunda</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-camunda:507b2c9b8361821915c4bd9255bafb47ace89079</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-ai-ml</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-ai-ml:63c7fab8c111b6cc85da049f45ebc6175a9b269a</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                            <camunda:entry key="app_replicas">1</camunda:entry>
+                          </camunda:map>
+                          <camunda:map>
+                            <camunda:entry key="app_name">msa2-pvc</camunda:entry>
+                            <camunda:entry key="app_image">ubiqube/msa2-rsyslog:54a250d9ef49db2454c5ed9111d43cebc8e9ef9a</camunda:entry>
+                            <camunda:entry key="short_description">ubiqube</camunda:entry>
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="is_private">true</camunda:entry>
+                          </camunda:map>
                         </camunda:list>
                       </camunda:entry>
                     </camunda:map>
