@@ -220,7 +220,7 @@
         <bpmn:sequenceFlow id="Flow_1scq7rg" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
         <bpmn:sequenceFlow id="Flow_08r3k0a" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
         <bpmn:sequenceFlow id="Flow_14sux7r" sourceRef="ServiceTask_1670493787937" targetRef="Event_1lqpcj6" />
-        <bpmn:serviceTask id="ServiceTask_1670493787937" name="msa2-front" camunda:type="external" camunda:topic="msa_workflow">
+        <bpmn:serviceTask id="ServiceTask_1670493787937" name="MSA" camunda:type="external" camunda:topic="msa_workflow">
           <bpmn:extensionElements>
             <camunda:inputOutput>
               <camunda:inputParameter name="workflow_data">
