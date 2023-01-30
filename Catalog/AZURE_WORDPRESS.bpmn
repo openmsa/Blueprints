@@ -53,6 +53,9 @@
                     </camunda:map>
                   </camunda:entry>
                   <camunda:entry key="label">AZURE</camunda:entry>
+                  <camunda:entry key="workflowPath">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                  </camunda:entry>
                 </camunda:map>
               </camunda:entry>
               <camunda:entry key="extraProps" />
