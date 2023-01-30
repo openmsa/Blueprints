@@ -65,7 +65,7 @@
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0dd439i</bpmn:incoming>
       <bpmn:outgoing>Flow_0i47kzh</bpmn:outgoing>
-      <bpmn:subProcess id="SubProcess_1668697087055" name="North Europe">
+      <bpmn:subProcess id="SubProcess_1668697087055" name="Japan West" $type="bpmn:SubProcess">
         <bpmn:extensionElements>
           <camunda:inputOutput>
             <camunda:inputParameter name="region_data">
@@ -73,8 +73,8 @@
                 <camunda:entry key="type">REGION</camunda:entry>
                 <camunda:entry key="data">
                   <camunda:map>
-                    <camunda:entry key="label">North Europe</camunda:entry>
-                    <camunda:entry key="value">North Europe</camunda:entry>
+                    <camunda:entry key="label">Japan West</camunda:entry>
+                    <camunda:entry key="value">Japan West</camunda:entry>
                   </camunda:map>
                 </camunda:entry>
                 <camunda:entry key="extraProps" />
@@ -98,7 +98,7 @@
                   <camunda:entry key="processType">CREATE</camunda:entry>
                   <camunda:entry key="processVariables">
                     <camunda:map>
-                      <camunda:entry key="azure_region">West US 2</camunda:entry>
+                      <camunda:entry key="azure_region">Japan West</camunda:entry>
                       <camunda:entry key="service_principal_client_id">eee99be0-96ee-450e-9c32-03de46599407</camunda:entry>
                       <camunda:entry key="service_principal_client_secret">RWtyUT0oosl0-uj0PJ7buJ5kiOcR7CwXqh</camunda:entry>
                       <camunda:entry key="service_principal_subscription_id">2e49859a-2bdb-4230-8d53-1a267e71c3c6</camunda:entry>
@@ -121,7 +121,7 @@
                       <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:entry>
                       <camunda:entry key="processVariables">
                         <camunda:map>
-                          <camunda:entry key="azure_region">West US 2</camunda:entry>
+                          <camunda:entry key="azure_region">Japan West</camunda:entry>
                           <camunda:entry key="service_principal_client_id">eee99be0-96ee-450e-9c32-03de46599407</camunda:entry>
                           <camunda:entry key="service_principal_client_secret">RWtyUT0oosl0-uj0PJ7buJ5kiOcR7CwXqh</camunda:entry>
                           <camunda:entry key="service_principal_subscription_id">2e49859a-2bdb-4230-8d53-1a267e71c3c6</camunda:entry>
