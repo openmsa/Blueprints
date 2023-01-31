@@ -266,8 +266,8 @@
               <camunda:inputParameter name="workflow_data">
                 <camunda:map>
                   <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
-                  <camunda:entry key="serviceName">Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Provision_Apps_EKS_Cluster</camunda:entry>
-                  <camunda:entry key="processName">Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Process_Generate_Application_WF</camunda:entry>
+                  <camunda:entry key="serviceName">Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Provision_Apps_AKS_Cluster</camunda:entry>
+                  <camunda:entry key="processName">Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:entry>
                   <camunda:entry key="processType">CREATE</camunda:entry>
                   <camunda:entry key="processVariables">
                     <camunda:map>
@@ -388,8 +388,8 @@
               <camunda:inputParameter name="workflow_data">
                 <camunda:map>
                   <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
-                  <camunda:entry key="serviceName">Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Provision_Apps_EKS_Cluster</camunda:entry>
-                  <camunda:entry key="processName">Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Process_Generate_Application_WF</camunda:entry>
+                  <camunda:entry key="serviceName">Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Provision_Apps_AKS_Cluster</camunda:entry>
+                  <camunda:entry key="processName">Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Process_generate_Application_WF</camunda:entry>
                   <camunda:entry key="processType">CREATE</camunda:entry>
                   <camunda:entry key="processVariables">
                     <camunda:map>
