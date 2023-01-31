@@ -284,6 +284,7 @@
                             <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-wordpress-logo.png</camunda:entry>
                             <camunda:entry key="app_replicas">1</camunda:entry>
                             <camunda:entry key="app_port">80</camunda:entry>
+                            <camunda:entry key="app_node_port">30000</camunda:entry>
                             <camunda:entry key="vars">
                               <camunda:list>
                                 <camunda:map>
