@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata>
+    <map>
+        <entry>
+            <key>DISPLAYNAME</key>
+            <value>MSactivator v2.8.3</value>
+        </entry>
+        <entry>
+            <key>PREVIEW</key>
+            <value>Blueprints/Catalog/thumbnail/MSA-2.8.3_TRANS.png</value>
+        </entry>
+        <entry>
+            <key>OWNER</key>
+            <value>UBIqube</value>
+        </entry>
+        <entry>
+            <key>ORG_ID</key>
+            <value>1</value>
+        </entry>
+        <entry>
+            <key>COMPLIANCES</key>
+            <value></value>
+        </entry>
+        <entry>
+            <key>TF_PATH_ENV</key>
+            <value></value>
+        </entry>
+        <entry>
+            <key>TF_PATH_APP</key>
+            <value></value>
+        </entry>
+        <entry>
+            <key>CLOUD_TYPE</key>
+            <value>monocloud</value>
+        </entry>
+        <entry>
+            <key>DATE_MODIFICATION</key>
+            <value>1666345390974</value>
+        </entry>
+        <entry>
+            <key>DESCRIPTION</key>
+            <value>MSactivator application which it could be deployed on any cloud providers supporting Kubernetes cluster. Version 2.8.3</value>
+        </entry>
+        <entry>
+            <key>PROVIDERS</key>
+            <value>ALL</value>
+        </entry>
+        <entry>
+            <key>APPLICATIONS</key>
+            <value>MSA</value>
+        </entry>
+        <entry>
+            <key>REPOSITORY</key>
+            <value>Blueprints</value>
+        </entry>
+        <entry>
+            <key>DATE_CREATION</key>
+            <value>1666345390972</value>
+        </entry>
+        <entry>
+            <key>TYPE</key>
+            <value>BLUEPRINT</value>
+        </entry>
+        <entry>
+            <key>TAGS</key>
+            <value>Provider Agnostic</value>
+        </entry>
+    </map>
+</metadata>
