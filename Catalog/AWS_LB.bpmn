@@ -272,7 +272,7 @@
                       <camunda:entry key="deployment_desc">
                         <camunda:value>My LB</camunda:value>
                       </camunda:entry>
-                      <camunda:entry key="use_private_docker" />
+                      <camunda:entry key="use_private_docker">false</camunda:entry>
                       <camunda:entry key="app_namespace" />
                       <camunda:entry key="apps_to_deploy">
                         <camunda:list>
@@ -336,7 +336,7 @@
                           <camunda:entry key="env_infrastructure_me" />
                           <camunda:entry key="deployment_name" />
                           <camunda:entry key="deployment_desc" />
-                          <camunda:entry key="use_private_docker" />
+                          <camunda:entry key="use_private_docker">false</camunda:entry>
                           <camunda:entry key="app_namespace" />
                           <camunda:entry key="apps_to_deploy">
                             <camunda:list>
