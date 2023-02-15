@@ -274,7 +274,7 @@
                       <camunda:entry key="env_infrastructure_me">${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:entry>
                       <camunda:entry key="deployment_name">wordpress</camunda:entry>
                       <camunda:entry key="deployment_desc">wp</camunda:entry>
-                      <camunda:entry key="use_private_docker">false</camunda:entry>
+                      <camunda:entry key="use_private_docker"></camunda:entry>
                       <camunda:entry key="app_namespace">webapp</camunda:entry>
                       <camunda:entry key="apps_to_deploy">
                         <camunda:list>
@@ -332,7 +332,7 @@
                           <camunda:entry key="env_infrastructure_me" />
                           <camunda:entry key="deployment_name">wordpress</camunda:entry>
                           <camunda:entry key="deployment_desc">wp</camunda:entry>
-                          <camunda:entry key="use_private_docker">false</camunda:entry>
+                          <camunda:entry key="use_private_docker"></camunda:entry>
                           <camunda:entry key="app_namespace">webapp</camunda:entry>
                           <camunda:entry key="apps_to_deploy">
                             <camunda:list>
@@ -398,7 +398,7 @@
                       <camunda:entry key="env_infrastructure_me">${JSON(ServiceTask_1668697110943).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:entry>
                       <camunda:entry key="deployment_name">mysql for wp</camunda:entry>
                       <camunda:entry key="deployment_desc">w</camunda:entry>
-                      <camunda:entry key="use_private_docker">false</camunda:entry>
+                      <camunda:entry key="use_private_docker"></camunda:entry>
                       <camunda:entry key="app_namespace">webapp</camunda:entry>
                       <camunda:entry key="apps_to_deploy">
                         <camunda:list>
@@ -455,7 +455,7 @@
                           <camunda:entry key="env_infrastructure_me" />
                           <camunda:entry key="deployment_name">mysql for wp</camunda:entry>
                           <camunda:entry key="deployment_desc">w</camunda:entry>
-                          <camunda:entry key="use_private_docker">false</camunda:entry>
+                          <camunda:entry key="use_private_docker"></camunda:entry>
                           <camunda:entry key="app_namespace">webapp</camunda:entry>
                           <camunda:entry key="apps_to_deploy">
                             <camunda:list>
