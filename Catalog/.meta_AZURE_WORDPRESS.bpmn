@@ -47,7 +47,7 @@
         </entry>
         <entry>
             <key>APPLICATIONS</key>
-            <value>wordpress</value>
+            <value>wordpress,mysql</value>
         </entry>
         <entry>
             <key>REPOSITORY</key>
