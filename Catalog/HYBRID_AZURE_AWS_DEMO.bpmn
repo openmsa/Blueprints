@@ -2,69 +2,44 @@
 <bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
   <bpmn:process id="PLACEHOLDER_PROCESS_ID" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1" name="">
-      <bpmn:outgoing>Flow_1n2hg7c</bpmn:outgoing>
-      <bpmn:outgoing>Flow_1ebyiu9</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0dd439i</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1v1igbb</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:endEvent id="EndEvent_1" name="">
-      <bpmn:incoming>Flow_1tt642u</bpmn:incoming>
-      <bpmn:incoming>Flow_0swmsnw</bpmn:incoming>
-      <bpmn:incoming>Flow_0plt5no</bpmn:incoming>
-      <bpmn:incoming>Flow_06oqwkw</bpmn:incoming>
+      <bpmn:incoming>Flow_0i47kzh</bpmn:incoming>
+      <bpmn:incoming>Flow_01rkxeu</bpmn:incoming>
+      <bpmn:incoming>Flow_0y7vwve</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:subProcess id="SubProcess_1676898921119" name="AZURE" $type="bpmn:SubProcess">
+    <bpmn:subProcess id="SubProcess_1668697086844" name="AZURE">
       <bpmn:extensionElements>
         <camunda:inputOutput>
           <camunda:inputParameter name="provider_data">
             <camunda:map>
-              <camunda:entry key="type">
-                <camunda:value>PROVIDER</camunda:value>
-              </camunda:entry>
+              <camunda:entry key="type">PROVIDER</camunda:entry>
               <camunda:entry key="data">
                 <camunda:map>
                   <camunda:entry key="value">
                     <camunda:map>
-                      <camunda:entry key="displayName">
-                        <camunda:value>AZURE</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="category">
-                        <camunda:value>Public Cloud</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="logo">
-                        <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/azure.logo</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="helper">
-                        <camunda:value>https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</camunda:value>
-                      </camunda:entry>
+                      <camunda:entry key="displayName">AZURE</camunda:entry>
+                      <camunda:entry key="category">Public Cloud</camunda:entry>
+                      <camunda:entry key="logo">Process/cloudclapp-wf/CCLA_Adapters/logos/azure.logo</camunda:entry>
+                      <camunda:entry key="helper">https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</camunda:entry>
                       <camunda:entry key="services">
                         <camunda:map>
                           <camunda:entry key="aks">
                             <camunda:map>
-                              <camunda:entry key="displayName">
-                                <camunda:value>Azure Kubernetes Service</camunda:value>
-                              </camunda:entry>
-                              <camunda:entry key="logo">
-                                <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/azure_aks.logo</camunda:value>
-                              </camunda:entry>
+                              <camunda:entry key="displayName">Azure Kubernetes Service</camunda:entry>
+                              <camunda:entry key="logo">Process/cloudclapp-wf/CCLA_Adapters/logos/azure_aks.logo</camunda:entry>
                               <camunda:entry key="workflow">
                                 <camunda:map>
-                                  <camunda:entry key="env">
-                                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="appsDeployment">
-                                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Provision_Apps_AKS_Cluster</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="scanApp">
-                                    <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="scanWebApp">
-                                    <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
-                                  </camunda:entry>
+                                  <camunda:entry key="env">Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:entry>
+                                  <camunda:entry key="appsDeployment">Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Provision_Apps_AKS_Cluster</camunda:entry>
+                                  <camunda:entry key="scanApp">Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:entry>
+                                  <camunda:entry key="scanWebApp">Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:entry>
                                   <camunda:entry key="envImport" />
                                 </camunda:map>
                               </camunda:entry>
-                              <camunda:entry key="imageType">
-                                <camunda:value>docker</camunda:value>
-                              </camunda:entry>
+                              <camunda:entry key="imageType">docker</camunda:entry>
                             </camunda:map>
                           </camunda:entry>
                         </camunda:map>
@@ -77,17 +52,11 @@
                           <camunda:value>service_principal_tenant_id</camunda:value>
                         </camunda:list>
                       </camunda:entry>
-                      <camunda:entry key="cloudVendor">
-                        <camunda:value>azure</camunda:value>
-                      </camunda:entry>
+                      <camunda:entry key="cloudVendor">azure</camunda:entry>
                     </camunda:map>
                   </camunda:entry>
-                  <camunda:entry key="label">
-                    <camunda:value>AZURE</camunda:value>
-                  </camunda:entry>
-                  <camunda:entry key="workflowPath">
-                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
-                  </camunda:entry>
+                  <camunda:entry key="label">AZURE</camunda:entry>
+                  <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:entry>
                 </camunda:map>
               </camunda:entry>
               <camunda:entry key="extraProps" />
@@ -95,27 +64,18 @@
           </camunda:inputParameter>
         </camunda:inputOutput>
       </bpmn:extensionElements>
-      <bpmn:incoming>Flow_1n2hg7c</bpmn:incoming>
-      <bpmn:outgoing>Flow_1tt642u</bpmn:outgoing>
-      <bpmn:outgoing>Flow_0swmsnw</bpmn:outgoing>
-      <bpmn:startEvent id="Event_0qiuc6y" />
-      <bpmn:endEvent id="Event_139k3zj" />
-      <bpmn:subProcess id="SubProcess_1676898927338" name="Japan East" $type="bpmn:SubProcess">
+      <bpmn:incoming>Flow_0dd439i</bpmn:incoming>
+      <bpmn:outgoing>Flow_0i47kzh</bpmn:outgoing>
+      <bpmn:subProcess id="SubProcess_1668697087055" name="Japan West">
         <bpmn:extensionElements>
           <camunda:inputOutput>
             <camunda:inputParameter name="region_data">
               <camunda:map>
-                <camunda:entry key="type">
-                  <camunda:value>REGION</camunda:value>
-                </camunda:entry>
+                <camunda:entry key="type">REGION</camunda:entry>
                 <camunda:entry key="data">
                   <camunda:map>
-                    <camunda:entry key="workflowPath">
-                      <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
-                    </camunda:entry>
-                    <camunda:entry key="azure_region">
-                      <camunda:value>Japan East</camunda:value>
-                    </camunda:entry>
+                    <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:entry>
+                    <camunda:entry key="azure_region">Japan West</camunda:entry>
                   </camunda:map>
                 </camunda:entry>
                 <camunda:entry key="extraProps" />
@@ -123,242 +83,12 @@
             </camunda:inputParameter>
           </camunda:inputOutput>
         </bpmn:extensionElements>
-        <bpmn:startEvent id="Event_0psjldi">
-          <bpmn:outgoing>Flow_0eop2rh</bpmn:outgoing>
+        <bpmn:incoming>Flow_1nm6swh</bpmn:incoming>
+        <bpmn:outgoing>Flow_1qkzp3e</bpmn:outgoing>
+        <bpmn:startEvent id="Event_09fgek9">
+          <bpmn:outgoing>Flow_00nxad7</bpmn:outgoing>
         </bpmn:startEvent>
-        <bpmn:endEvent id="Event_0gx64cw">
-          <bpmn:incoming>Flow_09hcill</bpmn:incoming>
-        </bpmn:endEvent>
-        <bpmn:serviceTask id="ServiceTask_1676898961404" name="K8 Cluster" camunda:type="external" camunda:topic="msa_workflow" $type="bpmn:ServiceTask">
-          <bpmn:extensionElements>
-            <camunda:inputOutput>
-              <camunda:inputParameter name="workflow_data">
-                <camunda:map>
-                  <camunda:entry key="ubiqubeId">
-                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
-                  </camunda:entry>
-                  <camunda:entry key="serviceName">
-                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
-                  </camunda:entry>
-                  <camunda:entry key="processName">
-                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Process_Provision_New_fresh_ENV</camunda:value>
-                  </camunda:entry>
-                  <camunda:entry key="processType">
-                    <camunda:value>CREATE</camunda:value>
-                  </camunda:entry>
-                  <camunda:entry key="processVariables">
-                    <camunda:map>
-                      <camunda:entry key="azure_region">
-                        <camunda:value>Japan East</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="service_principal_client_id" />
-                      <camunda:entry key="service_principal_client_secret" />
-                      <camunda:entry key="service_principal_subscription_id" />
-                      <camunda:entry key="service_principal_tenant_id" />
-                      <camunda:entry key="use_org_cloud_credentials">
-                        <camunda:value>true</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="is_demo_env">
-                        <camunda:value>true</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="access_k8s_dashboard" />
-                      <camunda:entry key="cluster_status" />
-                      <camunda:entry key="deploy_prometheus_grafana" />
-                      <camunda:entry key="useTag" />
-                      <camunda:entry key="workflowPath">
-                        <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
-                      </camunda:entry>
-                    </camunda:map>
-                  </camunda:entry>
-                  <camunda:entry key="resumeOnFail">
-                    <camunda:value>false</camunda:value>
-                  </camunda:entry>
-                </camunda:map>
-              </camunda:inputParameter>
-              <camunda:inputParameter name="k8_cluster_data">
-                <camunda:map>
-                  <camunda:entry key="type">
-                    <camunda:value>K8_CLUSTER</camunda:value>
-                  </camunda:entry>
-                  <camunda:entry key="data">
-                    <camunda:map>
-                      <camunda:entry key="processName">
-                        <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Process_Provision_New_fresh_ENV</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="workflowPath">
-                        <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="processVariables">
-                        <camunda:map>
-                          <camunda:entry key="azure_region">
-                            <camunda:value>Japan East</camunda:value>
-                          </camunda:entry>
-                          <camunda:entry key="service_principal_client_id" />
-                          <camunda:entry key="service_principal_client_secret" />
-                          <camunda:entry key="service_principal_subscription_id" />
-                          <camunda:entry key="service_principal_tenant_id" />
-                          <camunda:entry key="use_org_cloud_credentials">
-                            <camunda:value>true</camunda:value>
-                          </camunda:entry>
-                          <camunda:entry key="is_demo_env">
-                            <camunda:value>true</camunda:value>
-                          </camunda:entry>
-                          <camunda:entry key="access_k8s_dashboard" />
-                          <camunda:entry key="cluster_status" />
-                          <camunda:entry key="deploy_prometheus_grafana" />
-                          <camunda:entry key="useTag" />
-                          <camunda:entry key="workflowPath">
-                            <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
-                          </camunda:entry>
-                        </camunda:map>
-                      </camunda:entry>
-                    </camunda:map>
-                  </camunda:entry>
-                  <camunda:entry key="extraProps">
-                    <camunda:map>
-                      <camunda:entry key="cloudVendor" />
-                      <camunda:entry key="cloudService" />
-                    </camunda:map>
-                  </camunda:entry>
-                </camunda:map>
-              </camunda:inputParameter>
-            </camunda:inputOutput>
-          </bpmn:extensionElements>
-          <bpmn:incoming>Flow_0eop2rh</bpmn:incoming>
-          <bpmn:outgoing>Flow_09hcill</bpmn:outgoing>
-        </bpmn:serviceTask>
-        <bpmn:sequenceFlow id="Flow_0eop2rh" sourceRef="Event_0psjldi" targetRef="ServiceTask_1676898961404" />
-        <bpmn:sequenceFlow id="Flow_09hcill" sourceRef="ServiceTask_1676898961404" targetRef="Event_0gx64cw" />
-      </bpmn:subProcess>
-    </bpmn:subProcess>
-    <bpmn:sequenceFlow id="Flow_1n2hg7c" sourceRef="StartEvent_1" targetRef="SubProcess_1676898921119" />
-    <bpmn:sequenceFlow id="Flow_1tt642u" sourceRef="SubProcess_1676898921119" targetRef="EndEvent_1" />
-    <bpmn:sequenceFlow id="Flow_0swmsnw" sourceRef="SubProcess_1676898921119" targetRef="EndEvent_1" />
-    <bpmn:subProcess id="SubProcess_1676898942078" name="AZURE" $type="bpmn:SubProcess">
-      <bpmn:extensionElements>
-        <camunda:inputOutput>
-          <camunda:inputParameter name="provider_data">
-            <camunda:map>
-              <camunda:entry key="type">
-                <camunda:value>PROVIDER</camunda:value>
-              </camunda:entry>
-              <camunda:entry key="data">
-                <camunda:map>
-                  <camunda:entry key="value">
-                    <camunda:map>
-                      <camunda:entry key="displayName">
-                        <camunda:value>AZURE</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="category">
-                        <camunda:value>Public Cloud</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="logo">
-                        <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/azure.logo</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="helper">
-                        <camunda:value>https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="services">
-                        <camunda:map>
-                          <camunda:entry key="aks">
-                            <camunda:map>
-                              <camunda:entry key="displayName">
-                                <camunda:value>Azure Kubernetes Service</camunda:value>
-                              </camunda:entry>
-                              <camunda:entry key="logo">
-                                <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/azure_aks.logo</camunda:value>
-                              </camunda:entry>
-                              <camunda:entry key="workflow">
-                                <camunda:map>
-                                  <camunda:entry key="env">
-                                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="appsDeployment">
-                                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Provision_Apps_AKS_Cluster</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="scanApp">
-                                    <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="scanWebApp">
-                                    <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="envImport" />
-                                </camunda:map>
-                              </camunda:entry>
-                              <camunda:entry key="imageType">
-                                <camunda:value>docker</camunda:value>
-                              </camunda:entry>
-                            </camunda:map>
-                          </camunda:entry>
-                        </camunda:map>
-                      </camunda:entry>
-                      <camunda:entry key="credentials_required">
-                        <camunda:list>
-                          <camunda:value>service_principal_client_id</camunda:value>
-                          <camunda:value>service_principal_client_secret</camunda:value>
-                          <camunda:value>service_principal_subscription_id</camunda:value>
-                          <camunda:value>service_principal_tenant_id</camunda:value>
-                        </camunda:list>
-                      </camunda:entry>
-                      <camunda:entry key="cloudVendor">
-                        <camunda:value>azure</camunda:value>
-                      </camunda:entry>
-                    </camunda:map>
-                  </camunda:entry>
-                  <camunda:entry key="label">
-                    <camunda:value>AZURE</camunda:value>
-                  </camunda:entry>
-                  <camunda:entry key="workflowPath">
-                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
-                  </camunda:entry>
-                </camunda:map>
-              </camunda:entry>
-              <camunda:entry key="extraProps" />
-            </camunda:map>
-          </camunda:inputParameter>
-        </camunda:inputOutput>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_1ebyiu9</bpmn:incoming>
-      <bpmn:outgoing>Flow_0plt5no</bpmn:outgoing>
-      <bpmn:outgoing>Flow_06oqwkw</bpmn:outgoing>
-      <bpmn:startEvent id="Event_0h2ynkx">
-        <bpmn:outgoing>Flow_1p22tbj</bpmn:outgoing>
-      </bpmn:startEvent>
-      <bpmn:endEvent id="Event_0nx6ssb">
-        <bpmn:incoming>Flow_07y9cpi</bpmn:incoming>
-      </bpmn:endEvent>
-      <bpmn:subProcess id="SubProcess_1676898947688" name="Japan West" $type="bpmn:SubProcess">
-        <bpmn:extensionElements>
-          <camunda:inputOutput>
-            <camunda:inputParameter name="region_data">
-              <camunda:map>
-                <camunda:entry key="type">
-                  <camunda:value>REGION</camunda:value>
-                </camunda:entry>
-                <camunda:entry key="data">
-                  <camunda:map>
-                    <camunda:entry key="workflowPath">
-                      <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
-                    </camunda:entry>
-                    <camunda:entry key="azure_region">
-                      <camunda:value>Japan West</camunda:value>
-                    </camunda:entry>
-                  </camunda:map>
-                </camunda:entry>
-                <camunda:entry key="extraProps" />
-              </camunda:map>
-            </camunda:inputParameter>
-          </camunda:inputOutput>
-        </bpmn:extensionElements>
-        <bpmn:incoming>Flow_1p22tbj</bpmn:incoming>
-        <bpmn:outgoing>Flow_07y9cpi</bpmn:outgoing>
-        <bpmn:startEvent id="Event_188nlzo">
-          <bpmn:outgoing>Flow_1tr2bwd</bpmn:outgoing>
-        </bpmn:startEvent>
-        <bpmn:endEvent id="Event_1hqjkwg">
-          <bpmn:incoming>Flow_1vtffko</bpmn:incoming>
-        </bpmn:endEvent>
-        <bpmn:serviceTask id="ServiceTask_1676898973745" name="K8 Cluster" camunda:type="external" camunda:topic="msa_workflow" $type="bpmn:ServiceTask">
+        <bpmn:serviceTask id="ServiceTask_1668697110943" name="K8 Cluster" camunda:type="external" camunda:topic="msa_workflow" $type="bpmn:ServiceTask">
           <bpmn:extensionElements>
             <camunda:inputOutput>
               <camunda:inputParameter name="workflow_data">
@@ -443,6 +173,236 @@
                       </camunda:entry>
                     </camunda:map>
                   </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_00nxad7</bpmn:incoming>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_00nxad7" sourceRef="Event_09fgek9" targetRef="ServiceTask_1668697110943" />
+        <bpmn:endEvent id="Event_1lqpcj6" />
+      </bpmn:subProcess>
+      <bpmn:startEvent id="Event_14ieze8">
+        <bpmn:outgoing>Flow_1nm6swh</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:endEvent id="Event_0clpmzn">
+        <bpmn:incoming>Flow_1qkzp3e</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:sequenceFlow id="Flow_1nm6swh" sourceRef="Event_14ieze8" targetRef="SubProcess_1668697087055" />
+      <bpmn:sequenceFlow id="Flow_1qkzp3e" sourceRef="SubProcess_1668697087055" targetRef="Event_0clpmzn" />
+    </bpmn:subProcess>
+    <bpmn:sequenceFlow id="Flow_0dd439i" sourceRef="StartEvent_1" targetRef="SubProcess_1668697086844" />
+    <bpmn:sequenceFlow id="Flow_0i47kzh" sourceRef="SubProcess_1668697086844" targetRef="EndEvent_1" />
+    <bpmn:subProcess id="SubProcess_1676639699810" name="AZURE" $type="bpmn:SubProcess">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="provider_data">
+            <camunda:map>
+              <camunda:entry key="type">
+                <camunda:value>PROVIDER</camunda:value>
+              </camunda:entry>
+              <camunda:entry key="data">
+                <camunda:map>
+                  <camunda:entry key="value">
+                    <camunda:map>
+                      <camunda:entry key="displayName">
+                        <camunda:value>AZURE</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="category">
+                        <camunda:value>Public Cloud</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="logo">
+                        <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/azure.logo</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="helper">
+                        <camunda:value>https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="services">
+                        <camunda:map>
+                          <camunda:entry key="aks">
+                            <camunda:map>
+                              <camunda:entry key="displayName">
+                                <camunda:value>Azure Kubernetes Service</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="logo">
+                                <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/azure_aks.logo</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="workflow">
+                                <camunda:map>
+                                  <camunda:entry key="env">
+                                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="appsDeployment">
+                                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_AKS_Cluster/Provision_Apps_AKS_Cluster</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="scanApp">
+                                    <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="scanWebApp">
+                                    <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="envImport" />
+                                </camunda:map>
+                              </camunda:entry>
+                              <camunda:entry key="imageType">
+                                <camunda:value>docker</camunda:value>
+                              </camunda:entry>
+                            </camunda:map>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="credentials_required">
+                        <camunda:list>
+                          <camunda:value>service_principal_client_id</camunda:value>
+                          <camunda:value>service_principal_client_secret</camunda:value>
+                          <camunda:value>service_principal_subscription_id</camunda:value>
+                          <camunda:value>service_principal_tenant_id</camunda:value>
+                        </camunda:list>
+                      </camunda:entry>
+                      <camunda:entry key="cloudVendor">
+                        <camunda:value>azure</camunda:value>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="label">
+                    <camunda:value>AZURE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="workflowPath">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:entry>
+              <camunda:entry key="extraProps" />
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1v1igbb</bpmn:incoming>
+      <bpmn:outgoing>Flow_01rkxeu</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0y7vwve</bpmn:outgoing>
+      <bpmn:startEvent id="Event_0p1ctsi">
+        <bpmn:outgoing>Flow_0ip2dmh</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:endEvent id="Event_13dm6mf">
+        <bpmn:incoming>Flow_06p2fd9</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:subProcess id="SubProcess_1676639704495" name="Central India" $type="bpmn:SubProcess">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="region_data">
+              <camunda:map>
+                <camunda:entry key="type">
+                  <camunda:value>REGION</camunda:value>
+                </camunda:entry>
+                <camunda:entry key="data">
+                  <camunda:map>
+                    <camunda:entry key="workflowPath">
+                      <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                    </camunda:entry>
+                    <camunda:entry key="azure_region">
+                      <camunda:value>Central India</camunda:value>
+                    </camunda:entry>
+                  </camunda:map>
+                </camunda:entry>
+                <camunda:entry key="extraProps" />
+              </camunda:map>
+            </camunda:inputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_0ip2dmh</bpmn:incoming>
+        <bpmn:outgoing>Flow_06p2fd9</bpmn:outgoing>
+        <bpmn:startEvent id="Event_0t1dknc">
+          <bpmn:outgoing>Flow_1k2mns8</bpmn:outgoing>
+        </bpmn:startEvent>
+        <bpmn:endEvent id="Event_1f4x1mp">
+          <bpmn:incoming>Flow_05fm8ge</bpmn:incoming>
+        </bpmn:endEvent>
+        <bpmn:serviceTask id="ServiceTask_1676639723523" name="K8 Cluster" camunda:type="external" camunda:topic="msa_workflow" $type="bpmn:ServiceTask">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Process_Provision_New_fresh_ENV</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="azure_region">
+                        <camunda:value>Central India</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="service_principal_client_id" />
+                      <camunda:entry key="service_principal_client_secret" />
+                      <camunda:entry key="service_principal_subscription_id" />
+                      <camunda:entry key="service_principal_tenant_id" />
+                      <camunda:entry key="use_org_cloud_credentials">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="is_demo_env">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="access_k8s_dashboard" />
+                      <camunda:entry key="cluster_status" />
+                      <camunda:entry key="deploy_prometheus_grafana" />
+                      <camunda:entry key="useTag" />
+                      <camunda:entry key="workflowPath">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="k8_cluster_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>K8_CLUSTER</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="processName">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Process_Provision_New_fresh_ENV</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="workflowPath">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="processVariables">
+                        <camunda:map>
+                          <camunda:entry key="azure_region">
+                            <camunda:value>Central India</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="service_principal_client_id" />
+                          <camunda:entry key="service_principal_client_secret" />
+                          <camunda:entry key="service_principal_subscription_id" />
+                          <camunda:entry key="service_principal_tenant_id" />
+                          <camunda:entry key="use_org_cloud_credentials">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="is_demo_env">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="access_k8s_dashboard" />
+                          <camunda:entry key="cluster_status" />
+                          <camunda:entry key="deploy_prometheus_grafana" />
+                          <camunda:entry key="useTag" />
+                          <camunda:entry key="workflowPath">
+                            <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
                   <camunda:entry key="extraProps">
                     <camunda:map>
                       <camunda:entry key="cloudVendor" />
@@ -453,49 +413,45 @@
               </camunda:inputParameter>
             </camunda:inputOutput>
           </bpmn:extensionElements>
-          <bpmn:incoming>Flow_1tr2bwd</bpmn:incoming>
-          <bpmn:outgoing>Flow_1vtffko</bpmn:outgoing>
+          <bpmn:incoming>Flow_1k2mns8</bpmn:incoming>
+          <bpmn:outgoing>Flow_05fm8ge</bpmn:outgoing>
         </bpmn:serviceTask>
-        <bpmn:sequenceFlow id="Flow_1tr2bwd" sourceRef="Event_188nlzo" targetRef="ServiceTask_1676898973745" />
-        <bpmn:sequenceFlow id="Flow_1vtffko" sourceRef="ServiceTask_1676898973745" targetRef="Event_1hqjkwg" />
+        <bpmn:sequenceFlow id="Flow_1k2mns8" sourceRef="Event_0t1dknc" targetRef="ServiceTask_1676639723523" />
+        <bpmn:sequenceFlow id="Flow_05fm8ge" sourceRef="ServiceTask_1676639723523" targetRef="Event_1f4x1mp" />
       </bpmn:subProcess>
-      <bpmn:sequenceFlow id="Flow_1p22tbj" sourceRef="Event_0h2ynkx" targetRef="SubProcess_1676898947688" />
-      <bpmn:sequenceFlow id="Flow_07y9cpi" sourceRef="SubProcess_1676898947688" targetRef="Event_0nx6ssb" />
+      <bpmn:sequenceFlow id="Flow_0ip2dmh" sourceRef="Event_0p1ctsi" targetRef="SubProcess_1676639704495" />
+      <bpmn:sequenceFlow id="Flow_06p2fd9" sourceRef="SubProcess_1676639704495" targetRef="Event_13dm6mf" />
     </bpmn:subProcess>
-    <bpmn:sequenceFlow id="Flow_1ebyiu9" sourceRef="StartEvent_1" targetRef="SubProcess_1676898942078" />
-    <bpmn:sequenceFlow id="Flow_0plt5no" sourceRef="SubProcess_1676898942078" targetRef="EndEvent_1" />
-    <bpmn:sequenceFlow id="Flow_06oqwkw" sourceRef="SubProcess_1676898942078" targetRef="EndEvent_1" />
+    <bpmn:sequenceFlow id="Flow_1v1igbb" sourceRef="StartEvent_1" targetRef="SubProcess_1676639699810" />
+    <bpmn:sequenceFlow id="Flow_01rkxeu" sourceRef="SubProcess_1676639699810" targetRef="EndEvent_1" />
+    <bpmn:sequenceFlow id="Flow_0y7vwve" sourceRef="SubProcess_1676639699810" targetRef="EndEvent_1" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="PLACEHOLDER_PROCESS_ID">
-      <bpmndi:BPMNEdge id="Flow_1n2hg7c_di" bpmnElement="Flow_1n2hg7c">
-        <di:waypoint x="136" y="118" />
-        <di:waypoint x="160" y="118" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1tt642u_di" bpmnElement="Flow_1tt642u">
-        <di:waypoint x="550" y="140" />
-        <di:waypoint x="770" y="140" />
-        <di:waypoint x="770" y="420" />
+      <bpmndi:BPMNEdge id="Flow_0i47kzh_di" bpmnElement="Flow_0i47kzh">
+        <di:waypoint x="960" y="210" />
+        <di:waypoint x="980" y="210" />
+        <di:waypoint x="980" y="420" />
         <di:waypoint x="1000" y="420" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0swmsnw_di" bpmnElement="Flow_0swmsnw">
-        <di:waypoint x="550" y="140" />
-        <di:waypoint x="770" y="140" />
-        <di:waypoint x="770" y="420" />
+      <bpmndi:BPMNEdge id="Flow_0dd439i_di" bpmnElement="Flow_0dd439i">
+        <di:waypoint x="118" y="100" />
+        <di:waypoint x="118" y="-67" />
+        <di:waypoint x="138" y="-67" />
+        <di:waypoint x="138" y="-130" />
+        <di:waypoint x="118" y="-130" />
+        <di:waypoint x="118" y="-109" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1v1igbb_di" bpmnElement="Flow_1v1igbb">
+        <di:waypoint x="118" y="136" />
+        <di:waypoint x="118" y="311" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01rkxeu_di" bpmnElement="Flow_01rkxeu">
+        <di:waypoint x="960" y="420" />
         <di:waypoint x="1000" y="420" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1ebyiu9_di" bpmnElement="Flow_1ebyiu9">
-        <di:waypoint x="136" y="118" />
-        <di:waypoint x="151" y="118" />
-        <di:waypoint x="151" y="470" />
-        <di:waypoint x="165" y="470" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0plt5no_di" bpmnElement="Flow_0plt5no">
-        <di:waypoint x="560" y="420" />
-        <di:waypoint x="1000" y="420" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_06oqwkw_di" bpmnElement="Flow_06oqwkw">
-        <di:waypoint x="560" y="420" />
+      <bpmndi:BPMNEdge id="Flow_0y7vwve_di" bpmnElement="Flow_0y7vwve">
+        <di:waypoint x="960" y="420" />
         <di:waypoint x="1000" y="420" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
@@ -504,83 +460,89 @@
       <bpmndi:BPMNShape id="Event_0rpe2j4_di" bpmnElement="EndEvent_1">
         <dc:Bounds x="1000" y="402" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="SubProcess_1676898921119_di" bpmnElement="SubProcess_1676898921119" isExpanded="true">
-        <dc:Bounds x="160" y="40" width="390" height="300" />
+      <bpmndi:BPMNShape id="SubProcess_1668697086844_di" bpmnElement="SubProcess_1668697086844" isExpanded="true">
+        <dc:Bounds x="110" y="-110" width="850" height="400" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0qiuc6y_di" bpmnElement="Event_0qiuc6y">
-        <dc:Bounds x="212" y="88.66666666666667" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_139k3zj_di" bpmnElement="Event_139k3zj">
-        <dc:Bounds x="317" y="88.66666666666667" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="SubProcess_1676898927338_di" bpmnElement="SubProcess_1676898927338" isExpanded="true">
-        <dc:Bounds x="180" y="80" width="350" height="200" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_0eop2rh_di" bpmnElement="Flow_0eop2rh">
-        <di:waypoint x="250" y="129" />
-        <di:waypoint x="250" y="110" />
-        <di:waypoint x="270" y="110" />
-        <di:waypoint x="270" y="140" />
+      <bpmndi:BPMNEdge id="Flow_1qkzp3e_di" bpmnElement="Flow_1qkzp3e">
+        <di:waypoint x="590" y="170" />
+        <di:waypoint x="836" y="170" />
+        <di:waypoint x="836" y="250" />
+        <di:waypoint x="902" y="250" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_09hcill_di" bpmnElement="Flow_09hcill">
-        <di:waypoint x="270" y="140" />
-        <di:waypoint x="270" y="110" />
-        <di:waypoint x="355" y="110" />
-        <di:waypoint x="355" y="129" />
+      <bpmndi:BPMNEdge id="Flow_1nm6swh_di" bpmnElement="Flow_1nm6swh">
+        <di:waypoint x="260" y="12" />
+        <di:waypoint x="260" y="-59" />
+        <di:waypoint x="280" y="-59" />
+        <di:waypoint x="280" y="-90" />
+        <di:waypoint x="260" y="-90" />
+        <di:waypoint x="260" y="-70" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Event_0psjldi_di" bpmnElement="Event_0psjldi">
-        <dc:Bounds x="232" y="128.66666666666669" width="36" height="36" />
+      <bpmndi:BPMNShape id="Event_14ieze8_di" bpmnElement="Event_14ieze8">
+        <dc:Bounds x="242" y="12" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0gx64cw_di" bpmnElement="Event_0gx64cw">
-        <dc:Bounds x="337" y="128.66666666666669" width="36" height="36" />
+      <bpmndi:BPMNShape id="Event_0clpmzn_di" bpmnElement="Event_0clpmzn">
+        <dc:Bounds x="902" y="232" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="ServiceTask_1676898961404_di" bpmnElement="ServiceTask_1676898961404">
-        <dc:Bounds x="220" y="140" width="100" height="80" />
+      <bpmndi:BPMNShape id="SubProcess_1668697087055_di" bpmnElement="SubProcess_1668697087055" isExpanded="true">
+        <dc:Bounds x="130" y="-70" width="460" height="250" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="SubProcess_1676898942078_di" bpmnElement="SubProcess_1676898942078" isExpanded="true">
-        <dc:Bounds x="165" y="370" width="395" height="300" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_1p22tbj_di" bpmnElement="Flow_1p22tbj">
-        <di:waypoint x="235" y="419" />
-        <di:waypoint x="235" y="390" />
-        <di:waypoint x="365" y="390" />
-        <di:waypoint x="365" y="410" />
+      <bpmndi:BPMNEdge id="Flow_00nxad7_di" bpmnElement="Flow_00nxad7">
+        <di:waypoint x="188" y="30" />
+        <di:waypoint x="230" y="30" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_07y9cpi_di" bpmnElement="Flow_07y9cpi">
-        <di:waypoint x="365" y="410" />
-        <di:waypoint x="365" y="390" />
-        <di:waypoint x="340" y="390" />
-        <di:waypoint x="340" y="419" />
+      <bpmndi:BPMNShape id="Event_09fgek9_di" bpmnElement="Event_09fgek9">
+        <dc:Bounds x="152" y="12" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1668697110943_di" bpmnElement="ServiceTask_1668697110943">
+        <dc:Bounds x="230" y="-10" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1lqpcj6_di" bpmnElement="Event_1lqpcj6">
+        <dc:Bounds x="532" y="122" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1676639699810_di" bpmnElement="SubProcess_1676639699810" isExpanded="true">
+        <dc:Bounds x="110" y="310" width="850" height="290" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0ip2dmh_di" bpmnElement="Flow_0ip2dmh">
+        <di:waypoint x="180" y="359" />
+        <di:waypoint x="180" y="320" />
+        <di:waypoint x="315" y="320" />
+        <di:waypoint x="315" y="360" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Event_0h2ynkx_di" bpmnElement="Event_0h2ynkx">
-        <dc:Bounds x="217" y="418.6666666666667" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0nx6ssb_di" bpmnElement="Event_0nx6ssb">
-        <dc:Bounds x="322" y="418.6666666666667" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="SubProcess_1676898947688_di" bpmnElement="SubProcess_1676898947688" isExpanded="true">
-        <dc:Bounds x="190" y="410" width="350" height="200" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_1tr2bwd_di" bpmnElement="Flow_1tr2bwd">
-        <di:waypoint x="208" y="460" />
-        <di:waypoint x="208" y="440" />
-        <di:waypoint x="260" y="440" />
-        <di:waypoint x="260" y="470" />
+      <bpmndi:BPMNEdge id="Flow_06p2fd9_di" bpmnElement="Flow_06p2fd9">
+        <di:waypoint x="315" y="360" />
+        <di:waypoint x="315" y="320" />
+        <di:waypoint x="285" y="320" />
+        <di:waypoint x="285" y="359" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1vtffko_di" bpmnElement="Flow_1vtffko">
-        <di:waypoint x="260" y="470" />
-        <di:waypoint x="260" y="440" />
-        <di:waypoint x="308" y="440" />
-        <di:waypoint x="308" y="460" />
+      <bpmndi:BPMNShape id="Event_0p1ctsi_di" bpmnElement="Event_0p1ctsi">
+        <dc:Bounds x="162" y="358.6666666666667" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_13dm6mf_di" bpmnElement="Event_13dm6mf">
+        <dc:Bounds x="267" y="358.6666666666667" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1676639704495_di" bpmnElement="SubProcess_1676639704495" isExpanded="true">
+        <dc:Bounds x="140" y="360" width="350" height="200" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1k2mns8_di" bpmnElement="Flow_1k2mns8">
+        <di:waypoint x="158" y="410" />
+        <di:waypoint x="158" y="390" />
+        <di:waypoint x="230" y="390" />
+        <di:waypoint x="230" y="440" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Event_188nlzo_di" bpmnElement="Event_188nlzo">
-        <dc:Bounds x="190" y="460" width="36" height="36" />
+      <bpmndi:BPMNEdge id="Flow_05fm8ge_di" bpmnElement="Flow_05fm8ge">
+        <di:waypoint x="280" y="480" />
+        <di:waypoint x="300" y="480" />
+        <di:waypoint x="300" y="428" />
+        <di:waypoint x="276" y="428" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0t1dknc_di" bpmnElement="Event_0t1dknc">
+        <dc:Bounds x="140" y="410" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1hqjkwg_di" bpmnElement="Event_1hqjkwg">
-        <dc:Bounds x="290" y="460" width="36" height="36" />
+      <bpmndi:BPMNShape id="Event_1f4x1mp_di" bpmnElement="Event_1f4x1mp">
+        <dc:Bounds x="240" y="410" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="ServiceTask_1676898973745_di" bpmnElement="ServiceTask_1676898973745">
-        <dc:Bounds x="210" y="470" width="100" height="80" />
+      <bpmndi:BPMNShape id="ServiceTask_1676639723523_di" bpmnElement="ServiceTask_1676639723523">
+        <dc:Bounds x="180" y="440" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
