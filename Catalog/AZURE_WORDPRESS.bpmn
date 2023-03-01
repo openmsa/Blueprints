@@ -304,6 +304,10 @@
                                   <camunda:entry key="name">WORDPRESS_DB_NAME</camunda:entry>
                                   <camunda:entry key="val">wordpress</camunda:entry>
                                 </camunda:map>
+                                <camunda:map>
+                                  <camunda:entry key="name">APP_PORT_MAPPING</camunda:entry>
+                                  <camunda:entry key="val">mysql:3306</camunda:entry>
+                                </camunda:map>
                               </camunda:list>
                             </camunda:entry>
                           </camunda:map>
@@ -426,6 +430,10 @@
                                 <camunda:map>
                                   <camunda:entry key="name">MYSQL_PASSWORD</camunda:entry>
                                   <camunda:entry key="val">wordpress-pass</camunda:entry>
+                                </camunda:map>
+                                <camunda:map>
+                                  <camunda:entry key="name">APP_PORT_MAPPING</camunda:entry>
+                                  <camunda:entry key="val">wordpress:80</camunda:entry>
                                 </camunda:map>
                               </camunda:list>
                             </camunda:entry>
