@@ -3,7 +3,7 @@
     <map>
         <entry>
             <key>DISPLAYNAME</key>
-            <value>Multi Cloud (DEMO / WIP)</value>
+            <value>Multi Cloudd (DEMO / WIP)</value>
         </entry>
         <entry>
             <key>PREVIEW</key>
@@ -39,7 +39,7 @@
         </entry>
         <entry>
             <key>DESCRIPTION</key>
-            <value>An hybrid infrastructure combining AWS and AZURE cloud</value>
+            <value>An multi clouds infrastructure combining AWS and AZURE providers</value>
         </entry>
         <entry>
             <key>PROVIDERS</key>
@@ -47,7 +47,7 @@
         </entry>
         <entry>
             <key>APPLICATIONS</key>
-            <value>nginx</value>
+            <value>wordpress</value>
         </entry>
         <entry>
             <key>REPOSITORY</key>
