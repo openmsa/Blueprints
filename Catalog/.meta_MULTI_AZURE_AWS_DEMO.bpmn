@@ -3,11 +3,11 @@
     <map>
         <entry>
             <key>DISPLAYNAME</key>
-            <value>Hybrid Cloud (DEMO / WIP)</value>
+            <value>Multi Cloud (DEMO / WIP)</value>
         </entry>
         <entry>
             <key>PREVIEW</key>
-            <value>Blueprints/Catalog/thumbnail/HYBRID_AZURE_AWS.png</value>
+            <value>Blueprints/Catalog/thumbnail/MULTI_AZURE_AWS.png</value>
         </entry>
         <entry>
             <key>OWNER</key>
