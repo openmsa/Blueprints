@@ -96,6 +96,9 @@
                   <camunda:entry key="ubiqubeId">
                     <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
                   </camunda:entry>
+                  <camunda:entry key="processExecutor">
+                    <camunda:value>PLACEHOLDER_EXECUTOR_ID</camunda:value>
+                  </camunda:entry>
                   <camunda:entry key="serviceName">
                     <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
                   </camunda:entry>
@@ -325,6 +328,9 @@
                 <camunda:map>
                   <camunda:entry key="ubiqubeId">
                     <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processExecutor">
+                    <camunda:value>PLACEHOLDER_EXECUTOR_ID</camunda:value>
                   </camunda:entry>
                   <camunda:entry key="serviceName">
                     <camunda:value>Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:value>
