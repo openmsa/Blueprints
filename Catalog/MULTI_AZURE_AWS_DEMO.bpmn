@@ -119,7 +119,9 @@
                       <camunda:entry key="use_org_cloud_credentials">
                         <camunda:value>true</camunda:value>
                       </camunda:entry>
-                      <camunda:entry key="is_demo_env" />
+                      <camunda:entry key="is_demo_env">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
                       <camunda:entry key="access_k8s_dashboard" />
                       <camunda:entry key="cluster_status" />
                       <camunda:entry key="deploy_prometheus_grafana" />
@@ -159,7 +161,9 @@
                           <camunda:entry key="use_org_cloud_credentials">
                             <camunda:value>true</camunda:value>
                           </camunda:entry>
-                          <camunda:entry key="is_demo_env" />
+                          <camunda:entry key="is_demo_env">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
                           <camunda:entry key="access_k8s_dashboard" />
                           <camunda:entry key="cluster_status" />
                           <camunda:entry key="deploy_prometheus_grafana" />
@@ -552,7 +556,9 @@
                       <camunda:entry key="use_org_cloud_credentials">
                         <camunda:value>true</camunda:value>
                       </camunda:entry>
-                      <camunda:entry key="is_demo_env" />
+                      <camunda:entry key="is_demo_env">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
                       <camunda:entry key="access_k8s_dashboard" />
                       <camunda:entry key="cluster_status" />
                       <camunda:entry key="deploy_prometheus_grafana" />
@@ -592,7 +598,9 @@
                           <camunda:entry key="use_org_cloud_credentials">
                             <camunda:value>true</camunda:value>
                           </camunda:entry>
-                          <camunda:entry key="is_demo_env" />
+                          <camunda:entry key="is_demo_env">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
                           <camunda:entry key="access_k8s_dashboard" />
                           <camunda:entry key="cluster_status" />
                           <camunda:entry key="deploy_prometheus_grafana" />
