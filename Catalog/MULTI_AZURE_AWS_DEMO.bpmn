@@ -207,6 +207,9 @@
                       <camunda:entry key="destination_deployment">mysql</camunda:entry>
                       <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:entry>
                       <camunda:entry key="azure_region">Central India</camunda:entry>
+                      <camunda:entry key="is_demo_env">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
                     </camunda:map>
                   </camunda:entry>
                   <camunda:entry key="resumeOnFail">false</camunda:entry>
@@ -228,6 +231,9 @@
                           <camunda:entry key="destination_deployment">mysql</camunda:entry>
                           <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_AKS_Cluster__AZURE_/Provision_an_AKS_Cluster__AZURE_</camunda:entry>
                           <camunda:entry key="azure_region">Central India</camunda:entry>
+                          <camunda:entry key="is_demo_env">
+                           <camunda:value>true</camunda:value>
+                          </camunda:entry>
                         </camunda:map>
                       </camunda:entry>
                     </camunda:map>
