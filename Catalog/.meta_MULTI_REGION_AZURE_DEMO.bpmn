@@ -7,7 +7,7 @@
         </entry>
         <entry>
             <key>PREVIEW</key>
-            <value>Blueprints/Catalog/thumbnail/MULTI_REGION_AZURE.png</value>
+            <value>Blueprints/Catalog/thumbnail/MULTI_REGION_AZURE_DEMO.png</value>
         </entry>
         <entry>
             <key>OWNER</key>
@@ -39,7 +39,7 @@
         </entry>
         <entry>
             <key>DESCRIPTION</key>
-            <value>An multi clouds infrastructure combining AWS and AZURE providers</value>
+            <value>Prepare future multi-cloud deployments with a blueprint defining multiple regions</value>
         </entry>
         <entry>
             <key>PROVIDERS</key>
