@@ -294,32 +294,10 @@
               </camunda:inputParameter>
             </camunda:inputOutput>
           </bpmn:extensionElements>
-          <bpmn:incoming>Flow_1fsghw7</bpmn:incoming>
-          <bpmn:incoming>Flow_1i22h5x</bpmn:incoming>
-          <bpmn:incoming>Flow_0ftiu3t</bpmn:incoming>
-          <bpmn:incoming>Flow_1px8e9e</bpmn:incoming>
-          <bpmn:incoming>Flow_0madtul</bpmn:incoming>
-          <bpmn:incoming>Flow_013qo0b</bpmn:incoming>
-          <bpmn:incoming>Flow_1hn2kr2</bpmn:incoming>
-          <bpmn:incoming>Flow_0v1plio</bpmn:incoming>
-          <bpmn:incoming>Flow_0vq25g6</bpmn:incoming>
-          <bpmn:incoming>Flow_0v8i7gh</bpmn:incoming>
-          <bpmn:incoming>Flow_03z1i7j</bpmn:incoming>
           <bpmn:incoming>Flow_0ib55ta</bpmn:incoming>
           <bpmn:outgoing>Flow_1nbfvs0</bpmn:outgoing>
         </bpmn:serviceTask>
-        <bpmn:sequenceFlow id="Flow_1fsghw7" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
         <bpmn:sequenceFlow id="Flow_1nbfvs0" sourceRef="ServiceTask_1680079387058" targetRef="Event_1lqpcj6" />
-        <bpmn:sequenceFlow id="Flow_1i22h5x" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
-        <bpmn:sequenceFlow id="Flow_0ftiu3t" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
-        <bpmn:sequenceFlow id="Flow_1px8e9e" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
-        <bpmn:sequenceFlow id="Flow_0madtul" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
-        <bpmn:sequenceFlow id="Flow_013qo0b" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
-        <bpmn:sequenceFlow id="Flow_1hn2kr2" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
-        <bpmn:sequenceFlow id="Flow_0v1plio" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
-        <bpmn:sequenceFlow id="Flow_0vq25g6" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
-        <bpmn:sequenceFlow id="Flow_0v8i7gh" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
-        <bpmn:sequenceFlow id="Flow_03z1i7j" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
         <bpmn:serviceTask id="ServiceTask_1668697132942" name="wordpress" camunda:type="external" camunda:topic="msa_workflow">
           <bpmn:extensionElements>
             <camunda:inputOutput>
@@ -422,17 +400,6 @@
           </bpmn:extensionElements>
           <bpmn:incoming>Flow_0f4ua2h</bpmn:incoming>
           <bpmn:outgoing>Flow_0ib55ta</bpmn:outgoing>
-          <bpmn:outgoing>Flow_03z1i7j</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0v8i7gh</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0vq25g6</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0v1plio</bpmn:outgoing>
-          <bpmn:outgoing>Flow_1hn2kr2</bpmn:outgoing>
-          <bpmn:outgoing>Flow_013qo0b</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0madtul</bpmn:outgoing>
-          <bpmn:outgoing>Flow_1px8e9e</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0ftiu3t</bpmn:outgoing>
-          <bpmn:outgoing>Flow_1fsghw7</bpmn:outgoing>
-          <bpmn:outgoing>Flow_1i22h5x</bpmn:outgoing>
         </bpmn:serviceTask>
         <bpmn:sequenceFlow id="Flow_0ib55ta" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
       </bpmn:subProcess>
