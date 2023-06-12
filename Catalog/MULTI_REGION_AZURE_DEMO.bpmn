@@ -294,10 +294,12 @@
               </camunda:inputParameter>
             </camunda:inputOutput>
           </bpmn:extensionElements>
-          <bpmn:incoming>Flow_0ib55ta</bpmn:incoming>
+          <bpmn:incoming>Flow_1fsghw7</bpmn:incoming>
+          <bpmn:incoming>Flow_1i22h5x</bpmn:incoming>
           <bpmn:outgoing>Flow_1nbfvs0</bpmn:outgoing>
         </bpmn:serviceTask>
-        <bpmn:sequenceFlow id="Flow_1nbfvs0" sourceRef="ServiceTask_1680079387058" targetRef="Event_1lqpcj6" />
+        <bpmn:sequenceFlow id="Flow_1fsghw7" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
+        <bpmn:sequenceFlow id="Flow_1i22h5x" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
         <bpmn:serviceTask id="ServiceTask_1668697132942" name="wordpress" camunda:type="external" camunda:topic="msa_workflow">
           <bpmn:extensionElements>
             <camunda:inputOutput>
@@ -400,6 +402,7 @@
           </bpmn:extensionElements>
           <bpmn:incoming>Flow_0f4ua2h</bpmn:incoming>
           <bpmn:outgoing>Flow_0ib55ta</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1i22h5x</bpmn:outgoing>
         </bpmn:serviceTask>
         <bpmn:sequenceFlow id="Flow_0ib55ta" sourceRef="ServiceTask_1668697132942" targetRef="ServiceTask_1680079387058" />
       </bpmn:subProcess>
