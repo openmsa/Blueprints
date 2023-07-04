@@ -3,11 +3,11 @@
     <map>
         <entry>
             <key>DISPLAYNAME</key>
-            <value>Hybrid Cloud - Azure and Kubernetes</value>
+            <value>On premise MSActivator and external monitoring system</value>
         </entry>
         <entry>
             <key>PREVIEW</key>
-            <value>Blueprints/Catalog/thumbnail/MULTI_REGION_AZURE.png</value>
+            <value>Blueprints/Catalog/thumbnail/HYBRID_MSA_MONITORING.png</value>
         </entry>
         <entry>
             <key>OWNER</key>
@@ -39,15 +39,15 @@
         </entry>
         <entry>
             <key>DESCRIPTION</key>
-            <value>Hybrid cloud deployment across Azure and private kubernetes cluster</value>
+            <value>Hybrid deployment with an MSActivator deployed on premise Kubernetes and prometheus/grafana as external monitoring tool</value>
         </entry>
         <entry>
             <key>PROVIDERS</key>
-            <value>AZURE,AZURE</value>
+            <value>K8,AWS</value>
         </entry>
         <entry>
             <key>APPLICATIONS</key>
-            <value>wordpress,mysql</value>
+            <value>MSA,Prometheus/Gafrana,Monitoring</value>
         </entry>
         <entry>
             <key>REPOSITORY</key>
