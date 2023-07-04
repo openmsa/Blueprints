@@ -3,11 +3,11 @@
     <map>
         <entry>
             <key>DISPLAYNAME</key>
-            <value>Multi Cloud - Azure and AWS</value>
+            <value>HA geo-distributed databases - Redis clusters</value>
         </entry>
         <entry>
             <key>PREVIEW</key>
-            <value>Blueprints/Catalog/thumbnail/MULTI_REGION_AZURE.png</value>
+            <value>Blueprints/Catalog/thumbnail/MULTI_GEO_DB_DEMO.png</value>
         </entry>
         <entry>
             <key>OWNER</key>
@@ -39,7 +39,7 @@
         </entry>
         <entry>
             <key>DESCRIPTION</key>
-            <value>Multi cloud deployment across Azure and AWS</value>
+            <value>High availability and scalability databases, geo-distributed in two data centers</value>
         </entry>
         <entry>
             <key>PROVIDERS</key>
