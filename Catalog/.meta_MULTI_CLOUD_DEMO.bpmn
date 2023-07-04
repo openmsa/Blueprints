@@ -43,11 +43,11 @@
         </entry>
         <entry>
             <key>PROVIDERS</key>
-            <value>AZURE,AZURE</value>
+            <value>AZURE,AWS</value>
         </entry>
         <entry>
             <key>APPLICATIONS</key>
-            <value>wordpress,mysql</value>
+            <value>redis,HA,</value>
         </entry>
         <entry>
             <key>REPOSITORY</key>
