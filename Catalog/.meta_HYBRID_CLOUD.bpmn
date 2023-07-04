@@ -43,7 +43,7 @@
         </entry>
         <entry>
             <key>PROVIDERS</key>
-            <value>K8,AWS</value>
+            <value>Kubernetes,AWS</value>
         </entry>
         <entry>
             <key>APPLICATIONS</key>
