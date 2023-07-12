@@ -566,60 +566,10 @@
               </camunda:inputParameter>
             </camunda:inputOutput>
           </bpmn:extensionElements>
-          <bpmn:incoming>Flow_1qm3f9j</bpmn:incoming>
-          <bpmn:incoming>Flow_0nr48xj</bpmn:incoming>
-          <bpmn:incoming>Flow_0oax6ck</bpmn:incoming>
-          <bpmn:incoming>Flow_0ooqh8k</bpmn:incoming>
-          <bpmn:incoming>Flow_1g84kdl</bpmn:incoming>
-          <bpmn:incoming>Flow_0j64fla</bpmn:incoming>
-          <bpmn:incoming>Flow_086r6wn</bpmn:incoming>
-          <bpmn:incoming>Flow_1xxjw1b</bpmn:incoming>
-          <bpmn:incoming>Flow_0rxlkq1</bpmn:incoming>
-          <bpmn:incoming>Flow_009qh2b</bpmn:incoming>
-          <bpmn:incoming>Flow_10rck4m</bpmn:incoming>
-          <bpmn:incoming>Flow_1likvqs</bpmn:incoming>
-          <bpmn:incoming>Flow_19sev5p</bpmn:incoming>
-          <bpmn:incoming>Flow_0bpxmg0</bpmn:incoming>
-          <bpmn:incoming>Flow_05x4nue</bpmn:incoming>
-          <bpmn:incoming>Flow_071cqat</bpmn:incoming>
-          <bpmn:incoming>Flow_14btn3o</bpmn:incoming>
-          <bpmn:incoming>Flow_0bq69d9</bpmn:incoming>
-          <bpmn:incoming>Flow_0p6xhis</bpmn:incoming>
-          <bpmn:incoming>Flow_18wwwsh</bpmn:incoming>
-          <bpmn:incoming>Flow_00z7mtz</bpmn:incoming>
-          <bpmn:incoming>Flow_0c1j1g3</bpmn:incoming>
-          <bpmn:incoming>Flow_0txni0y</bpmn:incoming>
-          <bpmn:incoming>Flow_0poecym</bpmn:incoming>
-          <bpmn:incoming>Flow_0ybk11n</bpmn:incoming>
           <bpmn:incoming>Flow_1iqj70i</bpmn:incoming>
           <bpmn:outgoing>Flow_0ugo4jh</bpmn:outgoing>
         </bpmn:serviceTask>
-        <bpmn:sequenceFlow id="Flow_1qm3f9j" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
         <bpmn:sequenceFlow id="Flow_0ugo4jh" sourceRef="ServiceTask_1688473200514" targetRef="Event_0c46cwy" />
-        <bpmn:sequenceFlow id="Flow_0nr48xj" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0oax6ck" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0ooqh8k" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_1g84kdl" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0j64fla" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_086r6wn" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_1xxjw1b" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0rxlkq1" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_009qh2b" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_10rck4m" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_1likvqs" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_19sev5p" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0bpxmg0" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_05x4nue" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_071cqat" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_14btn3o" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0bq69d9" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0p6xhis" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_18wwwsh" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_00z7mtz" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0c1j1g3" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0txni0y" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0poecym" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
-        <bpmn:sequenceFlow id="Flow_0ybk11n" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
         <bpmn:serviceTask id="ServiceTask_1688473299708" name="prometheus-stack" camunda:type="external" camunda:topic="msa_workflow" $type="bpmn:ServiceTask">
           <bpmn:extensionElements>
             <camunda:inputOutput>
@@ -757,31 +707,6 @@
           </bpmn:extensionElements>
           <bpmn:incoming>Flow_0ontx5w</bpmn:incoming>
           <bpmn:outgoing>Flow_1iqj70i</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0ybk11n</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0poecym</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0txni0y</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0c1j1g3</bpmn:outgoing>
-          <bpmn:outgoing>Flow_00z7mtz</bpmn:outgoing>
-          <bpmn:outgoing>Flow_18wwwsh</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0p6xhis</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0bq69d9</bpmn:outgoing>
-          <bpmn:outgoing>Flow_14btn3o</bpmn:outgoing>
-          <bpmn:outgoing>Flow_071cqat</bpmn:outgoing>
-          <bpmn:outgoing>Flow_05x4nue</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0bpxmg0</bpmn:outgoing>
-          <bpmn:outgoing>Flow_19sev5p</bpmn:outgoing>
-          <bpmn:outgoing>Flow_1likvqs</bpmn:outgoing>
-          <bpmn:outgoing>Flow_10rck4m</bpmn:outgoing>
-          <bpmn:outgoing>Flow_009qh2b</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0rxlkq1</bpmn:outgoing>
-          <bpmn:outgoing>Flow_1xxjw1b</bpmn:outgoing>
-          <bpmn:outgoing>Flow_086r6wn</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0j64fla</bpmn:outgoing>
-          <bpmn:outgoing>Flow_1g84kdl</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0ooqh8k</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0oax6ck</bpmn:outgoing>
-          <bpmn:outgoing>Flow_0nr48xj</bpmn:outgoing>
-          <bpmn:outgoing>Flow_1qm3f9j</bpmn:outgoing>
         </bpmn:serviceTask>
         <bpmn:sequenceFlow id="Flow_1iqj70i" sourceRef="ServiceTask_1688473299708" targetRef="ServiceTask_1688473200514" />
       </bpmn:subProcess>
