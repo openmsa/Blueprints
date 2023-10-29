@@ -39,7 +39,7 @@
         </entry>
         <entry>
             <key>DESCRIPTION</key>
-            <value>Deploying a simple virtual machine on 3DS Outscale</value>
+            <value>Deploying a simple compute instance on OpenStack</value>
         </entry>
         <entry>
             <key>PROVIDERS</key>
