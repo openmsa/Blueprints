@@ -150,7 +150,7 @@
                 <camunda:entry key="processVariables">
                   <camunda:map>
                     <camunda:entry key="is_demo_env">
-                      <camunda:value>true</camunda:value>
+                      <camunda:value>false</camunda:value>
                     </camunda:entry>
                     <camunda:entry key="device" />
                     <camunda:entry key="outscale_region" />
@@ -276,7 +276,7 @@
                     <camunda:entry key="processVariables">
                       <camunda:map>
                         <camunda:entry key="is_demo_env">
-                          <camunda:value>true</camunda:value>
+                          <camunda:value>false</camunda:value>
                         </camunda:entry>
                         <camunda:entry key="device" />
                         <camunda:entry key="outscale_region" />
