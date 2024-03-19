@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://w://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definition" exporter="Camunda Modeler" exporterVersion="4.2.0">
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
   <bpmn:process id="PLACEHOLDER_PROCESS_ID" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1" name="">
       <bpmn:outgoing>Flow_1rwzvoi</bpmn:outgoing>
@@ -31,15 +31,15 @@
                               <camunda:entry key="logo">Process/cloudclapp-wf/CCLA_Adapters/logos/aws_eks.logo</camunda:entry>
                               <camunda:entry key="workflow">
                                 <camunda:map>
-                                  <camunda:entry key="env">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda
-                                  <camunda:entry key="appsDeployment">Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Provision_Apps_EKS_Cluster</camu
+                                  <camunda:entry key="env">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:entry>
+                                  <camunda:entry key="appsDeployment">Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Provision_Apps_EKS_Cluster</camunda:entry>
                                   <camunda:entry key="scanApp">Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:entry>
                                   <camunda:entry key="scanWebApp">Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:entry>
                                   <camunda:entry key="complianceScan">Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:entry>
                                   <camunda:entry key="meshWF">Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:entry>
-                                  <camunda:entry key="terraformAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform<
+                                  <camunda:entry key="terraformAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:entry>
                                   <camunda:entry key="helmAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:entry>
-                                  <camunda:entry key="manifestAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</ca
+                                  <camunda:entry key="manifestAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:entry>
                                   <camunda:entry key="discovery">Process/cloudclapp-wf/Discovery/Discovery</camunda:entry>
                                 </camunda:map>
                               </camunda:entry>
@@ -57,7 +57,7 @@
                               <camunda:entry key="workflow">
                                 <camunda:map>
                                   <camunda:entry key="env">Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Provision_an_EC2_Env__AWS_</camunda:entry>
-                                  <camunda:entry key="appsDeployment">Process/cloudclapp-wf/Provision_VM_Apps_EC2_Vpc__AWS_/Provision_VM_Apps_EC2_Vpc__
+                                  <camunda:entry key="appsDeployment">Process/cloudclapp-wf/Provision_VM_Apps_EC2_Vpc__AWS_/Provision_VM_Apps_EC2_Vpc__AWS</camunda:entry>
                                   <camunda:entry key="scanApp">Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:entry>
                                   <camunda:entry key="scanWebApp">Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:entry>
                                 </camunda:map>
@@ -72,7 +72,7 @@
                         </camunda:map>
                       </camunda:entry>
                       <camunda:entry key="quota_check" />
-                      <camunda:entry key="greener_regions_url">https://sustainability.aboutamazon.com/environment/the-cloud?energyType=true#renewable-e
+                      <camunda:entry key="greener_regions_url">https://sustainability.aboutamazon.com/environment/the-cloud?energyType=true#renewable-energy-map</camunda:entry>
                       <camunda:entry key="credentials_required">
                         <camunda:list>
                           <camunda:value>aws_access_key</camunda:value>
@@ -105,7 +105,7 @@
                 <camunda:entry key="type">REGION</camunda:entry>
                 <camunda:entry key="data">
                   <camunda:map>
-                    <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:entr
+                    <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:entry>
                     <camunda:entry key="aws_region">ap-southeast-2</camunda:entry>
                   </camunda:map>
                 </camunda:entry>
@@ -274,7 +274,7 @@
                       <camunda:entry key="ssl_key" />
                       <camunda:entry key="ssl_cert" />
                       <camunda:entry key="useTag" />
-                      <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:en
+                      <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:entry>
                     </camunda:map>
                   </camunda:entry>
                   <camunda:entry key="resumeOnFail">false</camunda:entry>
@@ -285,8 +285,8 @@
                   <camunda:entry key="type">K8_CLUSTER</camunda:entry>
                   <camunda:entry key="data">
                     <camunda:map>
-                      <camunda:entry key="processName">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Process_Provision_New_fresh_ENV</camunda:en
-                      <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:en
+                      <camunda:entry key="processName">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Process_Provision_New_fresh_ENV</camunda:entry>
+                      <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:entry>
                       <camunda:entry key="processVariables">
                         <camunda:map>
                           <camunda:entry key="aws_region">ap-southeast-2</camunda:entry>
@@ -305,7 +305,7 @@
                           <camunda:entry key="ssl_key" />
                           <camunda:entry key="ssl_cert" />
                           <camunda:entry key="useTag" />
-                          <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camund
+                          <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:entry>
                         </camunda:map>
                       </camunda:entry>
                     </camunda:map>
@@ -566,7 +566,7 @@
                                 <camunda:entry key="app_port" />
                                 <camunda:entry key="app_node_port" />
                                 <camunda:entry key="app_volumes">true</camunda:entry>
-                                <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-nginx-logo.png</camunda:entry
+                                <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-nginx-logo.png</camunda:entry>
                                 <camunda:entry key="app_access" />
                                 <camunda:entry key="app_workflow">appsDeployment</camunda:entry>
                               </camunda:map>
@@ -714,7 +714,7 @@
                         <camunda:map>
                           <camunda:entry key="app_name">mysql</camunda:entry>
                           <camunda:entry key="app_image">mysql</camunda:entry>
-                          <camunda:entry key="short_description">MySQL is a widely used, open-source relational database management system (RDBMS).</ca
+                          <camunda:entry key="short_description">MySQL is a widely used, open-source relational database management system (RDBMS).</camunda:entry>
                           <camunda:entry key="version" />
                           <camunda:entry key="app_replicas">1</camunda:entry>
                           <camunda:entry key="app_port" />
@@ -738,13 +738,13 @@
                               <camunda:map>
                                 <camunda:entry key="app_name">mysql</camunda:entry>
                                 <camunda:entry key="app_image">mysql</camunda:entry>
-                                <camunda:entry key="short_description">MySQL is a widely used, open-source relational database management system (RDBMS
+                                <camunda:entry key="short_description">MySQL is a widely used, open-source relational database management system (RDBMS).</camunda:entry>
                                 <camunda:entry key="version" />
                                 <camunda:entry key="app_replicas">1</camunda:entry>
                                 <camunda:entry key="app_port" />
                                 <camunda:entry key="app_node_port" />
                                 <camunda:entry key="app_volumes">true</camunda:entry>
-                                <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-mysql-logo.png</camunda:entry
+                                <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-mysql-logo.png</camunda:entry>
                                 <camunda:entry key="app_access" />
                                 <camunda:entry key="app_workflow">appsDeployment</camunda:entry>
                               </camunda:map>
@@ -884,7 +884,7 @@
                         <camunda:map>
                           <camunda:entry key="app_name">wordpress</camunda:entry>
                           <camunda:entry key="app_image">wordpress</camunda:entry>
-                          <camunda:entry key="short_description">The WordPress rich content management system can utilize plugins, widgets, and themes.
+                          <camunda:entry key="short_description">The WordPress rich content management system can utilize plugins, widgets, and themes.</camunda:entry>
                           <camunda:entry key="version" />
                           <camunda:entry key="app_replicas">1</camunda:entry>
                           <camunda:entry key="app_port" />
@@ -908,13 +908,13 @@
                               <camunda:map>
                                 <camunda:entry key="app_name">wordpress</camunda:entry>
                                 <camunda:entry key="app_image">wordpress</camunda:entry>
-                                <camunda:entry key="short_description">The WordPress rich content management system can utilize plugins, widgets, and t
+                                <camunda:entry key="short_description">The WordPress rich content management system can utilize plugins, widgets, and themes.</camunda:entry>
                                 <camunda:entry key="version" />
                                 <camunda:entry key="app_replicas">1</camunda:entry>
                                 <camunda:entry key="app_port" />
                                 <camunda:entry key="app_node_port" />
                                 <camunda:entry key="app_volumes">true</camunda:entry>
-                                <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-wordpress-logo.png</camunda:e
+                                <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-wordpress-logo.png</camunda:entry>
                                 <camunda:entry key="app_access" />
                                 <camunda:entry key="app_workflow">appsDeployment</camunda:entry>
                               </camunda:map>
