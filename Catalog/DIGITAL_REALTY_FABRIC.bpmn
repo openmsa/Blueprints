@@ -462,7 +462,7 @@
                     <camunda:entry key="resource_pool" />
                     <camunda:entry key="is_demo_env">true</camunda:entry>
                     <camunda:entry key="device">0032040</camunda:entry>
-                    <camunda:entry key="name" />
+                    <camunda:entry key="name">Test-VM</camunda:entry>
                     <camunda:entry key="vcpu_count">1</camunda:entry>
                     <camunda:entry key="memory">1024</camunda:entry>
                     <camunda:entry key="label">VMware</camunda:entry>
@@ -540,7 +540,7 @@
                         <camunda:entry key="resource_pool" />
                         <camunda:entry key="is_demo_env">true</camunda:entry>
                         <camunda:entry key="device">0032040</camunda:entry>
-                        <camunda:entry key="name" />
+                        <camunda:entry key="name">Test-VM</camunda:entry>
                         <camunda:entry key="vcpu_count">1</camunda:entry>
                         <camunda:entry key="memory">1024</camunda:entry>
                         <camunda:entry key="label">VMware</camunda:entry>
