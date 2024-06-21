@@ -93,7 +93,7 @@
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_09dqpmh</bpmn:incoming>
       <bpmn:outgoing>Flow_0vdy23q</bpmn:outgoing>
-      <bpmn:outgoing>Flow_01poplz</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0523ecn</bpmn:outgoing>
       <bpmn:startEvent id="Event_07f3mio">
         <bpmn:outgoing>Flow_14uj24s</bpmn:outgoing>
       </bpmn:startEvent>
@@ -437,7 +437,7 @@
         </camunda:inputOutput>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_10w8uv3</bpmn:incoming>
-      <bpmn:incoming>Flow_0iupuir</bpmn:incoming>
+      <bpmn:incoming>Flow_10006zg</bpmn:incoming>
       <bpmn:outgoing>Flow_03jp0rt</bpmn:outgoing>
       <bpmn:startEvent id="Event_10qo5dg">
         <bpmn:outgoing>Flow_025memn</bpmn:outgoing>
@@ -621,7 +621,9 @@
     </bpmn:subProcess>
     <bpmn:sequenceFlow id="Flow_10w8uv3" sourceRef="StartEvent_1" targetRef="SubProcess_1715760152247" />
     <bpmn:sequenceFlow id="Flow_03jp0rt" sourceRef="SubProcess_1715760152247" targetRef="EndEvent_1" />
-    <bpmn:serviceTask id="ServiceTask_1716540197434" name="Create Virtual Router (DLR Fabric Management)" camunda:type="external" camunda:topic="msa_workflow">
+    <bpmn:sequenceFlow id="Flow_0523ecn" sourceRef="SubProcess_1715760098436" targetRef="ServiceTask_1716457907320" />
+    <bpmn:sequenceFlow id="Flow_10006zg" sourceRef="ServiceTask_1716457907320" targetRef="SubProcess_1715760152247" />
+    <bpmn:serviceTask id="ServiceTask_1716457907320" name="Create Virtual Router (DLR Fabric Management)" camunda:type="external" camunda:topic="msa_workflow">
       <bpmn:extensionElements>
         <camunda:inputOutput>
           <camunda:inputParameter name="workflow_data">
@@ -668,6 +670,47 @@
                       </camunda:map>
                     </camunda:list>
                   </camunda:entry>
+                  <camunda:entry key="port">
+                    <camunda:value>ZtFgw8j6PAd7Zia9Ba8hr7</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="Connection">
+                    <camunda:list>
+                      <camunda:map>
+                        <camunda:entry key="object_id">
+                          <camunda:value>0000</camunda:value>
+                        </camunda:entry>
+                        <camunda:entry key="name">
+                          <camunda:value>VR to port</camunda:value>
+                        </camunda:entry>
+                        <camunda:entry key="speed">
+                          <camunda:value>100</camunda:value>
+                        </camunda:entry>
+                        <camunda:entry key="description">
+                          <camunda:value>Connection from VR</camunda:value>
+                        </camunda:entry>
+                        <camunda:entry key="gateway_type">
+                          <camunda:value>port</camunda:value>
+                        </camunda:entry>
+                      </camunda:map>
+                      <camunda:map>
+                        <camunda:entry key="object_id">
+                          <camunda:value>0000</camunda:value>
+                        </camunda:entry>
+                        <camunda:entry key="name">
+                          <camunda:value>VR to AWS</camunda:value>
+                        </camunda:entry>
+                        <camunda:entry key="speed">
+                          <camunda:value>100</camunda:value>
+                        </camunda:entry>
+                        <camunda:entry key="description">
+                          <camunda:value>Connection from VR</camunda:value>
+                        </camunda:entry>
+                        <camunda:entry key="gateway_type">
+                          <camunda:value>amazon_aws</camunda:value>
+                        </camunda:entry>
+                      </camunda:map>
+                    </camunda:list>
+                  </camunda:entry>
                 </camunda:map>
               </camunda:entry>
               <camunda:entry key="resumeOnFail">
@@ -680,9 +723,7 @@
           </camunda:inputParameter>
           <camunda:inputParameter name="msa_workflow_data">
             <camunda:map>
-              <camunda:entry key="type">
-                <camunda:value>MSA_WORKFLOW</camunda:value>
-              </camunda:entry>
+              <camunda:entry key="type">MSA_WORKFLOW</camunda:entry>
               <camunda:entry key="data">
                 <camunda:map />
               </camunda:entry>
@@ -696,25 +737,31 @@
           </camunda:inputParameter>
         </camunda:inputOutput>
       </bpmn:extensionElements>
-      <bpmn:incoming>Flow_01poplz</bpmn:incoming>
-      <bpmn:outgoing>Flow_0iupuir</bpmn:outgoing>
+      <bpmn:incoming>Flow_0523ecn</bpmn:incoming>
+      <bpmn:outgoing>Flow_10006zg</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:sequenceFlow id="Flow_0iupuir" sourceRef="ServiceTask_1716540197434" targetRef="SubProcess_1715760152247" />
-    <bpmn:sequenceFlow id="Flow_01poplz" sourceRef="SubProcess_1715760098436" targetRef="ServiceTask_1716540197434" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="PLACEHOLDER_PROCESS_ID">
+      <bpmndi:BPMNEdge id="Flow_10006zg_di" bpmnElement="Flow_10006zg">
+        <di:waypoint x="750" y="220" />
+        <di:waypoint x="800" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0523ecn_di" bpmnElement="Flow_0523ecn">
+        <di:waypoint x="610" y="220" />
+        <di:waypoint x="650" y="220" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_03jp0rt_di" bpmnElement="Flow_03jp0rt">
-        <di:waypoint x="1018" y="110" />
-        <di:waypoint x="1018" y="93" />
-        <di:waypoint x="1038" y="93" />
-        <di:waypoint x="1038" y="80" />
+        <di:waypoint x="975" y="120" />
+        <di:waypoint x="975" y="80" />
         <di:waypoint x="1018" y="80" />
         <di:waypoint x="1018" y="100" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_10w8uv3_di" bpmnElement="Flow_10w8uv3">
         <di:waypoint x="136" y="118" />
-        <di:waypoint x="844" y="118" />
+        <di:waypoint x="468" y="118" />
+        <di:waypoint x="468" y="128" />
+        <di:waypoint x="801" y="128" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0vdy23q_di" bpmnElement="Flow_0vdy23q">
         <di:waypoint x="609" y="118" />
@@ -726,22 +773,14 @@
         <di:waypoint x="158" y="80" />
         <di:waypoint x="158" y="110" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0iupuir_di" bpmnElement="Flow_0iupuir">
-        <di:waypoint x="750" y="230" />
-        <di:waypoint x="843" y="230" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_01poplz_di" bpmnElement="Flow_01poplz">
-        <di:waypoint x="610" y="230" />
-        <di:waypoint x="650" y="230" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="100" y="100" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0rpe2j4_di" bpmnElement="EndEvent_1">
         <dc:Bounds x="1000" y="100" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="ServiceTask_1716540239161_di" bpmnElement="ServiceTask_1716540197434">
-        <dc:Bounds x="650" y="190" width="100" height="80" />
+      <bpmndi:BPMNShape id="ServiceTask_1718960083792_di" bpmnElement="ServiceTask_1716457907320">
+        <dc:Bounds x="650" y="180" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="SubProcess_1715760098436_di" bpmnElement="SubProcess_1715760098436" isExpanded="true">
         <dc:Bounds x="60" y="110" width="550" height="300" />
@@ -904,28 +943,28 @@
         <dc:Bounds x="340" y="190" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="SubProcess_1715760152247_di" bpmnElement="SubProcess_1715760152247" isExpanded="true">
-        <dc:Bounds x="843" y="110" width="350" height="200" />
+        <dc:Bounds x="800" y="120" width="350" height="200" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0y2d8g3_di" bpmnElement="Flow_0y2d8g3">
-        <di:waypoint x="913" y="180" />
-        <di:waypoint x="913" y="140" />
-        <di:waypoint x="961" y="140" />
-        <di:waypoint x="961" y="160" />
+        <di:waypoint x="870" y="190" />
+        <di:waypoint x="870" y="150" />
+        <di:waypoint x="918" y="150" />
+        <di:waypoint x="918" y="170" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_025memn_di" bpmnElement="Flow_025memn">
-        <di:waypoint x="861" y="160" />
-        <di:waypoint x="861" y="140" />
-        <di:waypoint x="913" y="140" />
-        <di:waypoint x="913" y="180" />
+        <di:waypoint x="818" y="170" />
+        <di:waypoint x="818" y="150" />
+        <di:waypoint x="870" y="150" />
+        <di:waypoint x="870" y="190" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_10qo5dg_di" bpmnElement="Event_10qo5dg">
-        <dc:Bounds x="843" y="160" width="36" height="36" />
+        <dc:Bounds x="800" y="170" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_140v95m_di" bpmnElement="Event_140v95m">
-        <dc:Bounds x="943" y="160" width="36" height="36" />
+        <dc:Bounds x="900" y="170" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ServiceTask_1715760159600_di" bpmnElement="ServiceTask_1715760159600">
-        <dc:Bounds x="863" y="180" width="100" height="80" />
+        <dc:Bounds x="820" y="190" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
