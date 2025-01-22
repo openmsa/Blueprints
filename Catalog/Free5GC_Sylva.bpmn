@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <bpmn:process id="PLACEHOLDER_PROCESS_ID" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="">
+      <bpmn:outgoing>Flow_0k8lrnw</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EndEvent_1" name="">
+      <bpmn:incoming>Flow_1wqaiqj</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:subProcess id="SubProcess_1688025192924" name="Kubernetes">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="provider_data">
+            <camunda:map>
+              <camunda:entry key="type">PROVIDER</camunda:entry>
+              <camunda:entry key="data">
+                <camunda:map>
+                  <camunda:entry key="label">Kubernetes</camunda:entry>
+                  <camunda:entry key="value">
+                    <camunda:map>
+                      <camunda:entry key="cloudVendor">kubernetes</camunda:entry>
+                      <camunda:entry key="displayName">Kubernetes</camunda:entry>
+                      <camunda:entry key="category">Private Cloud</camunda:entry>
+                      <camunda:entry key="logo">Process/cloudclapp-wf/CCLA_Adapters/logos/kubernetes.logo</camunda:entry>
+                      <camunda:entry key="helper" />
+                      <camunda:entry key="services">
+                        <camunda:map>
+                          <camunda:entry key="kubernetes">
+                            <camunda:map>
+                              <camunda:entry key="displayName" />
+                              <camunda:entry key="logo">Process/cloudclapp-wf/CCLA_Adapters/logos/kubernetes.logo</camunda:entry>
+                              <camunda:entry key="workflow">
+                                <camunda:map>
+                                  <camunda:entry key="envImport">Process/cloudclapp-wf/Import_a_K8_platform/Import_a_K8_platform</camunda:entry>
+                                  <camunda:entry key="appsDeployment">Process/cloudclapp-wf/Provision_Apps_Native_K8s/Provision_Apps_Native_K8s</camunda:entry>
+                                  <camunda:entry key="scanApp">Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:entry>
+                                  <camunda:entry key="scanWebApp">Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:entry>
+                                  <camunda:entry key="complianceScan">Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:entry>
+                                  <camunda:entry key="meshWF">Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:entry>
+                                  <camunda:entry key="terraformAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:entry>
+                                  <camunda:entry key="helmAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:entry>
+                                  <camunda:entry key="manifestAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:entry>
+                                </camunda:map>
+                              </camunda:entry>
+                              <camunda:entry key="imageType">docker</camunda:entry>
+                            </camunda:map>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="quota_check" />
+                      <camunda:entry key="greener_regions_url" />
+                      <camunda:entry key="credentials_required" />
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="workflowPath">Process/cloudclapp-wf/Import_a_K8_platform/Import_a_K8_platform</camunda:entry>
+                </camunda:map>
+              </camunda:entry>
+              <camunda:entry key="extraProps" />
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0k8lrnw</bpmn:incoming>
+      <bpmn:outgoing>Flow_1wqaiqj</bpmn:outgoing>
+      <bpmn:startEvent id="Event_04t1fwv">
+        <bpmn:outgoing>Flow_12ebowh</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:endEvent id="Event_00p5ixx">
+        <bpmn:incoming>Flow_0bv99nq</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:subProcess id="SubProcess_1688025200339" name="">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="region_data">
+              <camunda:map>
+                <camunda:entry key="type">REGION</camunda:entry>
+                <camunda:entry key="data">
+                  <camunda:map>
+                    <camunda:entry key="workflowPath">Process/cloudclapp-wf/Import_a_K8_platform/Import_a_K8_platform</camunda:entry>
+                  </camunda:map>
+                </camunda:entry>
+                <camunda:entry key="extraProps" />
+              </camunda:map>
+            </camunda:inputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_12ebowh</bpmn:incoming>
+        <bpmn:outgoing>Flow_0bv99nq</bpmn:outgoing>
+        <bpmn:startEvent id="Event_16b72jt">
+          <bpmn:outgoing>Flow_1ljyey0</bpmn:outgoing>
+        </bpmn:startEvent>
+        <bpmn:endEvent id="Event_0sstnds">
+          <bpmn:incoming>Flow_1gkhnuh</bpmn:incoming>
+          <bpmn:incoming>Flow_1hgacj7</bpmn:incoming>
+          <bpmn:incoming>Flow_1wd21lb</bpmn:incoming>
+          <bpmn:incoming>Flow_19cv4nk</bpmn:incoming>
+          <bpmn:incoming>Flow_062wdn2</bpmn:incoming>
+          <bpmn:incoming>Flow_1n9fgsi</bpmn:incoming>
+          <bpmn:incoming>Flow_0hnae6n</bpmn:incoming>
+          <bpmn:incoming>Flow_1xlba1a</bpmn:incoming>
+          <bpmn:incoming>Flow_0acjtyn</bpmn:incoming>
+          <bpmn:incoming>Flow_1ya9nqp</bpmn:incoming>
+        </bpmn:endEvent>
+        <bpmn:serviceTask id="ServiceTask_1688025207854" name="K8 Cluster" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
+                  <camunda:entry key="processExecutor">PLACEHOLDER_EXECUTOR_ID</camunda:entry>
+                  <camunda:entry key="serviceName">Process/cloudclapp-wf/Import_a_K8_platform/Import_a_K8_platform</camunda:entry>
+                  <camunda:entry key="processName">Process/cloudclapp-wf/Import_a_K8_platform/Process_Import_K8</camunda:entry>
+                  <camunda:entry key="processType">CREATE</camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="kube_host">10.255.3.6</camunda:entry>
+                      <camunda:entry key="kube_port">6443</camunda:entry>
+                      <camunda:entry key="kube_ca_data">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdGMyVnkKZG1WeUxXTmhRREUyT0RZeE1qVTROekl3SGhjTk1qTXdOakEzTURneE56VXlXaGNOTXpNd05qQTBNRGd4TnpVeQpXakFqTVNFd0h3WURWUVFEREJock0zTXRjMlZ5ZG1WeUxXTmhRREUyT0RZeE1qVTROekl3V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFUVzFCbzJhZ0JxQlBRemkyVjZlOWliaDl3SWlwbHQzektQQzE3WHhQN0QKd3hPWE03SndDUURiRUlsRWwwNXQxR0hQQWtLNzNqSWplbUdXT1drdzBzVnhvMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVTduUlRQZjYzTXVqQXp3YXZZSlcxCkpJdzh2SlV3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUlnSXV3QnVOdUhtZGlVaFl6bWxrbkxqMGdENkFZQkMrWE8KOU80VzFyb1h6VzRDSVFEYjEyTDZaMEFYcVNkVTdnK2RBd2wrSlJES0UwNHdZMWE4TmJBYXFiMU1ndz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K</camunda:entry>
+                      <camunda:entry key="kube_token">eyJhbGciOiJSUzI1NiIsImtpZCI6ImU0M3p1eVZ4djdxLXloa0xoUU1XMDd1Rkh2N3VuUVMwNDFaWDdmLUNmcXMifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImNjbGEtdG9rZW4iLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiY2NsYS1zZXJ2aWNlLWFjY291bnQiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIxODBiZWYyNi1mMTRkLTRlMzQtOGNlZi1jMjAwYmUzODJhZGIiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6ZGVmYXVsdDpjY2xhLXNlcnZpY2UtYWNjb3VudCJ9.AVfxQ2NF_0srXsrFjXdXbcLkrjAgo88ydeiQsEzHmxe_IiDAYYf8IQMwZdDwj1ntxCjNbEVNIMYg4QFpBL7g-n4s8qa-MBVJztCW8DinB9h0F2Sp3d5HCrRKu5xQrHhP1YA6pf77h9y-ShMa6ncC4NIKvQ93Q44Ezf0DKvUDXkfdII6S_yyrwxuBWj2LD62sN8NBSsMDeASnefkg8IVBxDq4E5qfY-3EOf66HqcIX9q9I-XF9pt6DsUngUS3y9RFSWGpiIEgqrZZwGpHIVubMaihm52-4xMU2uYlnOxMEGoiHrp7CXLFRA1v0XbozcUBcI3GV8pPdZgmCyffY2c4rQ</camunda:entry>
+                      <camunda:entry key="workflowPath">Process/cloudclapp-wf/Import_a_K8_platform/Import_a_K8_platform</camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">false</camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="k8_cluster_data">
+                <camunda:map>
+                  <camunda:entry key="type">K8_CLUSTER</camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="processName">Process/cloudclapp-wf/Import_a_K8_platform/Process_Import_K8</camunda:entry>
+                      <camunda:entry key="workflowPath">Process/cloudclapp-wf/Import_a_K8_platform/Import_a_K8_platform</camunda:entry>
+                      <camunda:entry key="processVariables">
+                        <camunda:map>
+                          <camunda:entry key="kube_host">10.255.3.6</camunda:entry>
+                          <camunda:entry key="kube_port">6443</camunda:entry>
+                          <camunda:entry key="kube_ca_data">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdGMyVnkKZG1WeUxXTmhRREUyT0RZeE1qVTROekl3SGhjTk1qTXdOakEzTURneE56VXlXaGNOTXpNd05qQTBNRGd4TnpVeQpXakFqTVNFd0h3WURWUVFEREJock0zTXRjMlZ5ZG1WeUxXTmhRREUyT0RZeE1qVTROekl3V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFUVzFCbzJhZ0JxQlBRemkyVjZlOWliaDl3SWlwbHQzektQQzE3WHhQN0QKd3hPWE03SndDUURiRUlsRWwwNXQxR0hQQWtLNzNqSWplbUdXT1drdzBzVnhvMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVTduUlRQZjYzTXVqQXp3YXZZSlcxCkpJdzh2SlV3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUlnSXV3QnVOdUhtZGlVaFl6bWxrbkxqMGdENkFZQkMrWE8KOU80VzFyb1h6VzRDSVFEYjEyTDZaMEFYcVNkVTdnK2RBd2wrSlJES0UwNHdZMWE4TmJBYXFiMU1ndz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K</camunda:entry>
+                          <camunda:entry key="kube_token">eyJhbGciOiJSUzI1NiIsImtpZCI6ImU0M3p1eVZ4djdxLXloa0xoUU1XMDd1Rkh2N3VuUVMwNDFaWDdmLUNmcXMifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImNjbGEtdG9rZW4iLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiY2NsYS1zZXJ2aWNlLWFjY291bnQiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIxODBiZWYyNi1mMTRkLTRlMzQtOGNlZi1jMjAwYmUzODJhZGIiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6ZGVmYXVsdDpjY2xhLXNlcnZpY2UtYWNjb3VudCJ9.AVfxQ2NF_0srXsrFjXdXbcLkrjAgo88ydeiQsEzHmxe_IiDAYYf8IQMwZdDwj1ntxCjNbEVNIMYg4QFpBL7g-n4s8qa-MBVJztCW8DinB9h0F2Sp3d5HCrRKu5xQrHhP1YA6pf77h9y-ShMa6ncC4NIKvQ93Q44Ezf0DKvUDXkfdII6S_yyrwxuBWj2LD62sN8NBSsMDeASnefkg8IVBxDq4E5qfY-3EOf66HqcIX9q9I-XF9pt6DsUngUS3y9RFSWGpiIEgqrZZwGpHIVubMaihm52-4xMU2uYlnOxMEGoiHrp7CXLFRA1v0XbozcUBcI3GV8pPdZgmCyffY2c4rQ</camunda:entry>
+                          <camunda:entry key="workflowPath">Process/cloudclapp-wf/Import_a_K8_platform/Import_a_K8_platform</camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps">
+                    <camunda:map>
+                      <camunda:entry key="cloudVendor" />
+                      <camunda:entry key="cloudService" />
+                    </camunda:map>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_1ljyey0</bpmn:incoming>
+          <bpmn:outgoing>Flow_1wbjwgx</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_1ljyey0" sourceRef="Event_16b72jt" targetRef="ServiceTask_1688025207854" />
+        <bpmn:sequenceFlow id="Flow_1gkhnuh" sourceRef="ServiceTask_1688025550147" targetRef="Event_0sstnds" />
+        <bpmn:sequenceFlow id="Flow_1wbjwgx" sourceRef="ServiceTask_1688025207854" targetRef="ServiceTask_1688025550147" />
+        <bpmn:sequenceFlow id="Flow_1hgacj7" sourceRef="ServiceTask_1688025550147" targetRef="Event_0sstnds" />
+        <bpmn:sequenceFlow id="Flow_1wd21lb" sourceRef="ServiceTask_1688025550147" targetRef="Event_0sstnds" />
+        <bpmn:sequenceFlow id="Flow_19cv4nk" sourceRef="ServiceTask_1688025550147" targetRef="Event_0sstnds" />
+        <bpmn:sequenceFlow id="Flow_062wdn2" sourceRef="ServiceTask_1688025550147" targetRef="Event_0sstnds" />
+        <bpmn:sequenceFlow id="Flow_1n9fgsi" sourceRef="ServiceTask_1688025550147" targetRef="Event_0sstnds" />
+        <bpmn:sequenceFlow id="Flow_0hnae6n" sourceRef="ServiceTask_1688025550147" targetRef="Event_0sstnds" />
+        <bpmn:sequenceFlow id="Flow_1xlba1a" sourceRef="ServiceTask_1688025550147" targetRef="Event_0sstnds" />
+        <bpmn:sequenceFlow id="Flow_0acjtyn" sourceRef="ServiceTask_1688025550147" targetRef="Event_0sstnds" />
+        <bpmn:serviceTask id="ServiceTask_1688025550147" name="free5gc" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_Helm/Process_Deploy_Helm_App</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="env_infrastructure_me">
+                        <camunda:value>${JSON(ServiceTask_1688025207854).prop("variables").prop("cluster_me_ext_ref").value()}</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_name">
+                        <camunda:value>newcnf</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="deployment_desc">
+                        <camunda:value>newcnf</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="repo_path">
+                        <camunda:value>/opt/fmc_repository/Datafiles/ccla_app_repo/free5gc</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="params_file">
+                        <camunda:value>/opt/fmc_repository/Datafiles/ccla_app_repo/free5gc/values.yaml</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="apps_to_deploy">
+                        <camunda:list>
+                          <camunda:map>
+                            <camunda:entry key="app_name">
+                              <camunda:value>free5gc</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_image">
+                              <camunda:value>free5gc:HELM_CHARTS</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_type">
+                              <camunda:value>HELM_CHARTS</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_workflow">
+                              <camunda:value>helmApp</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="short_description" />
+                            <camunda:entry key="logo_url" />
+                            <camunda:entry key="type">
+                              <camunda:value>manifestApp</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="app_repo_name">
+                              <camunda:value>/opt/fmc_repository/Datafiles/ccla_app_repo/free5gc</camunda:value>
+                            </camunda:entry>
+                            <camunda:entry key="is_private">
+                              <camunda:value>true</camunda:value>
+                            </camunda:entry>
+                          </camunda:map>
+                        </camunda:list>
+                      </camunda:entry>
+                      <camunda:entry key="use_private_docker">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="copy_api_call">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="destination_path">
+                        <camunda:value>Datafiles/CCLA/ccla_app_repo/7/K8/default/free5gc</camunda:value>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processExecutor">
+                    <camunda:value>PLACEHOLDER_EXECUTOR_ID</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="application_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>APP_DEPLOYMENT</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="application">
+                        <camunda:map>
+                          <camunda:entry key="app_name">
+                            <camunda:value>free5gc</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_image">
+                            <camunda:value>free5gc:HELM_CHARTS</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_type">
+                            <camunda:value>HELM_CHARTS</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_workflow">
+                            <camunda:value>helmApp</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="short_description" />
+                          <camunda:entry key="logo_url" />
+                          <camunda:entry key="type">
+                            <camunda:value>manifestApp</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="app_repo_name">
+                            <camunda:value>/opt/fmc_repository/Datafiles/ccla_app_repo/free5gc</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="is_private">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="context">
+                        <camunda:map>
+                          <camunda:entry key="env_infrastructure_me" />
+                          <camunda:entry key="deployment_name" />
+                          <camunda:entry key="deployment_desc" />
+                          <camunda:entry key="repo_path">
+                            <camunda:value>/opt/fmc_repository/Datafiles/ccla_app_repo/free5gc</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="params_file">
+                            <camunda:value>/opt/fmc_repository/Datafiles/ccla_app_repo/free5gc/values.yaml</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="apps_to_deploy">
+                            <camunda:list>
+                              <camunda:map>
+                                <camunda:entry key="app_name">
+                                  <camunda:value>free5gc</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_image">
+                                  <camunda:value>free5gc:HELM_CHARTS</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_type">
+                                  <camunda:value>HELM_CHARTS</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_workflow">
+                                  <camunda:value>helmApp</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="short_description" />
+                                <camunda:entry key="logo_url" />
+                                <camunda:entry key="type">
+                                  <camunda:value>manifestApp</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="app_repo_name">
+                                  <camunda:value>/opt/fmc_repository/Datafiles/ccla_app_repo/free5gc</camunda:value>
+                                </camunda:entry>
+                                <camunda:entry key="is_private">
+                                  <camunda:value>true</camunda:value>
+                                </camunda:entry>
+                              </camunda:map>
+                            </camunda:list>
+                          </camunda:entry>
+                          <camunda:entry key="use_private_docker">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="copy_api_call" />
+                          <camunda:entry key="destination_path" />
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps" />
+                  <camunda:entry key="displayName">
+                    <camunda:value>free5gc</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_1wbjwgx</bpmn:incoming>
+          <bpmn:outgoing>Flow_1ya9nqp</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0acjtyn</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1xlba1a</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0hnae6n</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1n9fgsi</bpmn:outgoing>
+          <bpmn:outgoing>Flow_062wdn2</bpmn:outgoing>
+          <bpmn:outgoing>Flow_19cv4nk</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1wd21lb</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1hgacj7</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1gkhnuh</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_1ya9nqp" sourceRef="ServiceTask_1688025550147" targetRef="Event_0sstnds" />
+      </bpmn:subProcess>
+      <bpmn:sequenceFlow id="Flow_12ebowh" sourceRef="Event_04t1fwv" targetRef="SubProcess_1688025200339" />
+      <bpmn:sequenceFlow id="Flow_0bv99nq" sourceRef="SubProcess_1688025200339" targetRef="Event_00p5ixx" />
+    </bpmn:subProcess>
+    <bpmn:sequenceFlow id="Flow_0k8lrnw" sourceRef="StartEvent_1" targetRef="SubProcess_1688025192924" />
+    <bpmn:sequenceFlow id="Flow_1wqaiqj" sourceRef="SubProcess_1688025192924" targetRef="EndEvent_1" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="PLACEHOLDER_PROCESS_ID">
+      <bpmndi:BPMNEdge id="Flow_1wqaiqj_di" bpmnElement="Flow_1wqaiqj">
+        <di:waypoint x="936" y="420" />
+        <di:waypoint x="1000" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0k8lrnw_di" bpmnElement="Flow_0k8lrnw">
+        <di:waypoint x="136" y="118" />
+        <di:waypoint x="220" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="100" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0rpe2j4_di" bpmnElement="EndEvent_1">
+        <dc:Bounds x="1000" y="402" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1688025192924_di" bpmnElement="SubProcess_1688025192924" isExpanded="true">
+        <dc:Bounds x="220" y="105" width="716" height="370" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0bv99nq_di" bpmnElement="Flow_0bv99nq">
+        <di:waypoint x="358" y="165" />
+        <di:waypoint x="358" y="148" />
+        <di:waypoint x="378" y="148" />
+        <di:waypoint x="378" y="135" />
+        <di:waypoint x="358" y="135" />
+        <di:waypoint x="358" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12ebowh_di" bpmnElement="Flow_12ebowh">
+        <di:waypoint x="258" y="155" />
+        <di:waypoint x="258" y="135" />
+        <di:waypoint x="278" y="135" />
+        <di:waypoint x="278" y="148" />
+        <di:waypoint x="258" y="148" />
+        <di:waypoint x="258" y="166" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_04t1fwv_di" bpmnElement="Event_04t1fwv">
+        <dc:Bounds x="240" y="155" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_00p5ixx_di" bpmnElement="Event_00p5ixx">
+        <dc:Bounds x="340" y="155" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1688025200339_di" bpmnElement="SubProcess_1688025200339" isExpanded="true">
+        <dc:Bounds x="250" y="165" width="640" height="270" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1ljyey0_di" bpmnElement="Flow_1ljyey0">
+        <di:waypoint x="306" y="233" />
+        <di:waypoint x="320" y="233" />
+        <di:waypoint x="320" y="305" />
+        <di:waypoint x="338" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gkhnuh_di" bpmnElement="Flow_1gkhnuh">
+        <di:waypoint x="560" y="305" />
+        <di:waypoint x="440" y="305" />
+        <di:waypoint x="440" y="233" />
+        <di:waypoint x="406" y="233" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wbjwgx_di" bpmnElement="Flow_1wbjwgx">
+        <di:waypoint x="438" y="305" />
+        <di:waypoint x="560" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1hgacj7_di" bpmnElement="Flow_1hgacj7">
+        <di:waypoint x="560" y="305" />
+        <di:waypoint x="440" y="305" />
+        <di:waypoint x="440" y="233" />
+        <di:waypoint x="406" y="233" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wd21lb_di" bpmnElement="Flow_1wd21lb">
+        <di:waypoint x="560" y="305" />
+        <di:waypoint x="440" y="305" />
+        <di:waypoint x="440" y="233" />
+        <di:waypoint x="406" y="233" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_19cv4nk_di" bpmnElement="Flow_19cv4nk">
+        <di:waypoint x="560" y="305" />
+        <di:waypoint x="480" y="305" />
+        <di:waypoint x="480" y="233" />
+        <di:waypoint x="406" y="233" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_062wdn2_di" bpmnElement="Flow_062wdn2">
+        <di:waypoint x="560" y="305" />
+        <di:waypoint x="480" y="305" />
+        <di:waypoint x="480" y="233" />
+        <di:waypoint x="406" y="233" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1n9fgsi_di" bpmnElement="Flow_1n9fgsi">
+        <di:waypoint x="560" y="305" />
+        <di:waypoint x="480" y="305" />
+        <di:waypoint x="480" y="233" />
+        <di:waypoint x="406" y="233" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hnae6n_di" bpmnElement="Flow_0hnae6n">
+        <di:waypoint x="560" y="305" />
+        <di:waypoint x="480" y="305" />
+        <di:waypoint x="480" y="233" />
+        <di:waypoint x="406" y="233" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1xlba1a_di" bpmnElement="Flow_1xlba1a">
+        <di:waypoint x="560" y="305" />
+        <di:waypoint x="480" y="305" />
+        <di:waypoint x="480" y="233" />
+        <di:waypoint x="406" y="233" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0acjtyn_di" bpmnElement="Flow_0acjtyn">
+        <di:waypoint x="560" y="305" />
+        <di:waypoint x="480" y="305" />
+        <di:waypoint x="480" y="233" />
+        <di:waypoint x="406" y="233" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ya9nqp_di" bpmnElement="Flow_1ya9nqp">
+        <di:waypoint x="560" y="305" />
+        <di:waypoint x="480" y="305" />
+        <di:waypoint x="480" y="233" />
+        <di:waypoint x="406" y="233" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_16b72jt_di" bpmnElement="Event_16b72jt">
+        <dc:Bounds x="270" y="215" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0sstnds_di" bpmnElement="Event_0sstnds">
+        <dc:Bounds x="370" y="215" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1688025207854_di" bpmnElement="ServiceTask_1688025207854">
+        <dc:Bounds x="338" y="265" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1688025561033_di" bpmnElement="ServiceTask_1688025550147">
+        <dc:Bounds x="560" y="265" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
