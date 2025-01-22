@@ -3,7 +3,7 @@
     <map>
         <entry>
             <key>DISPLAYNAME</key>
-            <value>Private 5G</value>
+            <value>Private 5G - Sylva</value>
         </entry>
         <entry>
             <key>PREVIEW</key>
@@ -39,7 +39,7 @@
         </entry>
         <entry>
             <key>DESCRIPTION</key>
-            <value>Deploying Free5GC, a CNF package, on a native k8s cluster</value>
+            <value>Deploying Free5GC, a CNF package, on a native k8s cluster (Sylva)</value>
         </entry>
         <entry>
             <key>PROVIDERS</key>
