@@ -643,7 +643,7 @@
               <camunda:entry key="processVariables">
                 <camunda:map>
                   <camunda:entry key="device_id">
-                    <camunda:value>0032109</camunda:value>
+                    <camunda:value>006193</camunda:value>
                   </camunda:entry>
                   <camunda:entry key="Virtual_Router">
                     <camunda:list>
