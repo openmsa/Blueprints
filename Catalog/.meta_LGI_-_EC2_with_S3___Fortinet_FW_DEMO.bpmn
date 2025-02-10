@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata>
+    <map>
+        <entry>
+            <key>DISPLAYNAME</key>
+            <value>LGI_-_EC2_with_S3___Fortinet_FW - Demo mode</value>
+        </entry>
+        <entry>
+            <key>PREVIEW</key>
+            <value>Blueprints/Catalog/thumbnail/LGI_-_EC2_with_S3___Fortinet_FW_DEMO.png</value>
+        </entry>
+        <entry>
+            <key>OWNER</key>
+            <value>ncroot</value>
+        </entry>
+        <entry>
+            <key>PROVIDERS</key>
+            <value>aws</value>
+        </entry>
+        <entry>
+            <key>CLOUD_TYPE</key>
+            <value>mono-cloud</value>
+        </entry>
+        <entry>
+            <key>REPOSITORY</key>
+            <value>opt</value>
+        </entry>
+        <entry>
+            <key>TAG</key>
+        </entry>
+        <entry>
+            <key>FILE_TYPE</key>
+            <value>text</value>
+        </entry>
+        <entry>
+            <key>TYPE</key>
+            <value>BLUEPRINT</value>
+        </entry>
+        <entry>
+            <key>COMMENT</key>
+        </entry>
+    </map>
+</metadata>
