@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <bpmn:process id="PLACEHOLDER_PROCESS_ID" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="">
+      <bpmn:outgoing>Flow_1bitauy</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EndEvent_1" name="">
+      <bpmn:incoming>Flow_12di9qs</bpmn:incoming>
+      <bpmn:incoming>Flow_13j6gtm</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:subProcess id="SubProcess_1717057268212" name="AWS">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="provider_data">
+            <camunda:map>
+              <camunda:entry key="type">PROVIDER</camunda:entry>
+              <camunda:entry key="data">
+                <camunda:map>
+                  <camunda:entry key="label">AWS</camunda:entry>
+                  <camunda:entry key="value">
+                    <camunda:map>
+                      <camunda:entry key="cloudVendor">aws</camunda:entry>
+                      <camunda:entry key="displayName">AWS</camunda:entry>
+                      <camunda:entry key="category">Public Cloud</camunda:entry>
+                      <camunda:entry key="logo">Process/cloudclapp-wf/CCLA_Adapters/logos/aws.logo</camunda:entry>
+                      <camunda:entry key="helper">https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html</camunda:entry>
+                      <camunda:entry key="services">
+                        <camunda:map>
+                          <camunda:entry key="eks">
+                            <camunda:map>
+                              <camunda:entry key="displayName">Elastic Kubernetes Service (EKS)</camunda:entry>
+                              <camunda:entry key="logo">Process/cloudclapp-wf/CCLA_Adapters/logos/aws_eks.logo</camunda:entry>
+                              <camunda:entry key="workflow">
+                                <camunda:map>
+                                  <camunda:entry key="env">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:entry>
+                                  <camunda:entry key="appsDeployment">Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Provision_Apps_EKS_Cluster</camunda:entry>
+                                  <camunda:entry key="scanApp">Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:entry>
+                                  <camunda:entry key="scanWebApp">Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:entry>
+                                  <camunda:entry key="complianceScan">Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:entry>
+                                  <camunda:entry key="meshWF">Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:entry>
+                                  <camunda:entry key="terraformAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:entry>
+                                  <camunda:entry key="helmAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:entry>
+                                  <camunda:entry key="manifestAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:entry>
+                                  <camunda:entry key="discovery">Process/cloudclapp-wf/Discovery/Discovery</camunda:entry>
+                                </camunda:map>
+                              </camunda:entry>
+                              <camunda:entry key="variables" />
+                              <camunda:entry key="microservices" />
+                              <camunda:entry key="imageType">docker</camunda:entry>
+                              <camunda:entry key="model_id" />
+                              <camunda:entry key="manufacturer_id" />
+                            </camunda:map>
+                          </camunda:entry>
+                          <camunda:entry key="ec2">
+                            <camunda:map>
+                              <camunda:entry key="displayName">Elastic Compute Cloud (EC2)</camunda:entry>
+                              <camunda:entry key="logo">Process/cloudclapp-wf/CCLA_Adapters/logos/aws_ec2.logo</camunda:entry>
+                              <camunda:entry key="workflow">
+                                <camunda:map>
+                                  <camunda:entry key="env">Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Provision_an_EC2_Env__AWS_</camunda:entry>
+                                  <camunda:entry key="appsDeployment">Process/cloudclapp-wf/Provision_VM_Apps_EC2_Vpc__AWS_/Provision_VM_Apps_EC2_Vpc__AWS</camunda:entry>
+                                  <camunda:entry key="scanApp">Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:entry>
+                                  <camunda:entry key="scanWebApp">Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:entry>
+                                </camunda:map>
+                              </camunda:entry>
+                              <camunda:entry key="variables" />
+                              <camunda:entry key="microservices" />
+                              <camunda:entry key="imageType">vm</camunda:entry>
+                              <camunda:entry key="model_id" />
+                              <camunda:entry key="manufacturer_id" />
+                            </camunda:map>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="quota_check" />
+                      <camunda:entry key="greener_regions_url">https://sustainability.aboutamazon.com/environment/the-cloud?energyType=true#renewable-energy-map</camunda:entry>
+                      <camunda:entry key="credentials_required">
+                        <camunda:list>
+                          <camunda:value>aws_access_key</camunda:value>
+                          <camunda:value>aws_secret_key</camunda:value>
+                        </camunda:list>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:entry>
+                </camunda:map>
+              </camunda:entry>
+              <camunda:entry key="extraProps" />
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1bitauy</bpmn:incoming>
+      <bpmn:outgoing>Flow_12di9qs</bpmn:outgoing>
+      <bpmn:outgoing>Flow_13j6gtm</bpmn:outgoing>
+      <bpmn:startEvent id="Event_0jkc290">
+        <bpmn:outgoing>Flow_182i69s</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:endEvent id="Event_01ks9lj">
+        <bpmn:incoming>Flow_0uox6wr</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:subProcess id="SubProcess_1717057276579" name="Europe (London) - eu-west-2">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="region_data">
+              <camunda:map>
+                <camunda:entry key="type">REGION</camunda:entry>
+                <camunda:entry key="data">
+                  <camunda:map>
+                    <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:entry>
+                    <camunda:entry key="aws_region">eu-west-2</camunda:entry>
+                  </camunda:map>
+                </camunda:entry>
+                <camunda:entry key="extraProps" />
+              </camunda:map>
+            </camunda:inputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_182i69s</bpmn:incoming>
+        <bpmn:outgoing>Flow_0uox6wr</bpmn:outgoing>
+        <bpmn:startEvent id="Event_08frn2a">
+          <bpmn:outgoing>Flow_0ie8kba</bpmn:outgoing>
+          <bpmn:outgoing>Flow_0eh2ict</bpmn:outgoing>
+          <bpmn:outgoing>Flow_058rfpi</bpmn:outgoing>
+        </bpmn:startEvent>
+        <bpmn:endEvent id="Event_192bfkr">
+          <bpmn:incoming>Flow_0k547kj</bpmn:incoming>
+          <bpmn:incoming>Flow_1ihxiow</bpmn:incoming>
+          <bpmn:incoming>Flow_1olecqn</bpmn:incoming>
+        </bpmn:endEvent>
+        <bpmn:serviceTask id="ServiceTask_1717064095942" name="S3 Bucket" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
+                  <camunda:entry key="serviceName">Process/workflows/S3_WF/S3_WF</camunda:entry>
+                  <camunda:entry key="processName">Process/workflows/S3_WF/Process_Create_S3</camunda:entry>
+                  <camunda:entry key="processType">CREATE</camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map />
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">false</camunda:entry>
+                  <camunda:entry key="processExecutor">PLACEHOLDER_EXECUTOR_ID</camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="msa_workflow_data">
+                <camunda:map>
+                  <camunda:entry key="type">MSA_WORKFLOW</camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map />
+                  </camunda:entry>
+                  <camunda:entry key="extraProps">
+                    <camunda:map>
+                      <camunda:entry key="cloudVendor" />
+                      <camunda:entry key="cloudService" />
+                    </camunda:map>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_0ie8kba</bpmn:incoming>
+          <bpmn:outgoing>Flow_0k547kj</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_0k547kj" sourceRef="ServiceTask_1717064095942" targetRef="Event_192bfkr" />
+        <bpmn:sequenceFlow id="Flow_0ie8kba" sourceRef="Event_08frn2a" targetRef="ServiceTask_1717064095942" />
+        <bpmn:serviceTask id="ServiceTask_1717133644264" name="VM" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processExecutor">
+                    <camunda:value>PLACEHOLDER_EXECUTOR_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Provision_an_EC2_Env__AWS_</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Process_Provision_New_fresh_ENV</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="is_demo_env">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="create_vpc" />
+                      <camunda:entry key="device">
+                        <camunda:value>001433</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="VPC">
+                        <camunda:value>vpc-0399ba36c13557099</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="security_group">
+                        <camunda:value>sg-0fa8e17bb80304372</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="subnet">
+                        <camunda:value>subnet-0b309ce2f90dfa872</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="aws_region">
+                        <camunda:value>eu-west-2</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="image_name">
+                        <camunda:value>ami-06373f703eb245f45</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="instance_name">
+                        <camunda:value>EC2-S3</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="instance_type">
+                        <camunda:value>t2.medium</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="push_to_s3">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="aws_access_key_id" />
+                      <camunda:entry key="aws_secret_access_key" />
+                      <camunda:entry key="use_org_cloud_credentials">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="label">
+                        <camunda:value>AWS</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="value">
+                        <camunda:map>
+                          <camunda:entry key="cloudVendor">
+                            <camunda:value>aws</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="displayName">
+                            <camunda:value>AWS</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="category">
+                            <camunda:value>Public Cloud</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo">
+                            <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws.logo</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="helper">
+                            <camunda:value>https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="services">
+                            <camunda:map>
+                              <camunda:entry key="eks">
+                                <camunda:map>
+                                  <camunda:entry key="displayName">
+                                    <camunda:value>Elastic Kubernetes Service (EKS)</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="logo">
+                                    <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws_eks.logo</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="workflow">
+                                    <camunda:map>
+                                      <camunda:entry key="env">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="appsDeployment">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Provision_Apps_EKS_Cluster</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="scanApp">
+                                        <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="scanWebApp">
+                                        <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="complianceScan">
+                                        <camunda:value>Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="meshWF">
+                                        <camunda:value>Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="terraformAppsDeployment">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="helmAppsDeployment">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="manifestAppsDeployment">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="discovery">
+                                        <camunda:value>Process/cloudclapp-wf/Discovery/Discovery</camunda:value>
+                                      </camunda:entry>
+                                    </camunda:map>
+                                  </camunda:entry>
+                                  <camunda:entry key="variables" />
+                                  <camunda:entry key="microservices" />
+                                  <camunda:entry key="imageType">
+                                    <camunda:value>docker</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="model_id" />
+                                  <camunda:entry key="manufacturer_id" />
+                                </camunda:map>
+                              </camunda:entry>
+                              <camunda:entry key="ec2">
+                                <camunda:map>
+                                  <camunda:entry key="displayName">
+                                    <camunda:value>Elastic Compute Cloud (EC2)</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="logo">
+                                    <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws_ec2.logo</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="workflow">
+                                    <camunda:map>
+                                      <camunda:entry key="env">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Provision_an_EC2_Env__AWS_</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="appsDeployment">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_VM_Apps_EC2_Vpc__AWS_/Provision_VM_Apps_EC2_Vpc__AWS</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="scanApp">
+                                        <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="scanWebApp">
+                                        <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
+                                      </camunda:entry>
+                                    </camunda:map>
+                                  </camunda:entry>
+                                  <camunda:entry key="variables" />
+                                  <camunda:entry key="microservices" />
+                                  <camunda:entry key="imageType">
+                                    <camunda:value>vm</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="model_id" />
+                                  <camunda:entry key="manufacturer_id" />
+                                </camunda:map>
+                              </camunda:entry>
+                            </camunda:map>
+                          </camunda:entry>
+                          <camunda:entry key="quota_check" />
+                          <camunda:entry key="greener_regions_url">
+                            <camunda:value>https://sustainability.aboutamazon.com/environment/the-cloud?energyType=true#renewable-energy-map</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="credentials_required">
+                            <camunda:list>
+                              <camunda:value>aws_access_key</camunda:value>
+                              <camunda:value>aws_secret_key</camunda:value>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="workflowPath">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:value>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="vm_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>VM</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="processName">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Process_Provision_New_fresh_ENV</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="workflowPath">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Provision_an_EC2_Env__AWS_</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="processVariables">
+                        <camunda:map>
+                          <camunda:entry key="is_demo_env">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="create_vpc" />
+                          <camunda:entry key="device">
+                            <camunda:value>001433</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="VPC">
+                            <camunda:value>vpc-0399ba36c13557099</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="security_group">
+                            <camunda:value>sg-0fa8e17bb80304372</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="subnet">
+                            <camunda:value>subnet-0b309ce2f90dfa872</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="aws_region">
+                            <camunda:value>eu-west-2</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="image_name">
+                            <camunda:value>ami-06373f703eb245f45</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="instance_name">
+                            <camunda:value>EC2-S3</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="instance_type">
+                            <camunda:value>t2.medium</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="push_to_s3">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="aws_access_key_id" />
+                          <camunda:entry key="aws_secret_access_key" />
+                          <camunda:entry key="use_org_cloud_credentials">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="label">
+                            <camunda:value>AWS</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="value">
+                            <camunda:map>
+                              <camunda:entry key="cloudVendor">
+                                <camunda:value>aws</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="displayName">
+                                <camunda:value>AWS</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="category">
+                                <camunda:value>Public Cloud</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="logo">
+                                <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws.logo</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="helper">
+                                <camunda:value>https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="services">
+                                <camunda:map>
+                                  <camunda:entry key="eks">
+                                    <camunda:map>
+                                      <camunda:entry key="displayName">
+                                        <camunda:value>Elastic Kubernetes Service (EKS)</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="logo">
+                                        <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws_eks.logo</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="workflow">
+                                        <camunda:map>
+                                          <camunda:entry key="env">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="appsDeployment">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Provision_Apps_EKS_Cluster</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="scanApp">
+                                            <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="scanWebApp">
+                                            <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="complianceScan">
+                                            <camunda:value>Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="meshWF">
+                                            <camunda:value>Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="terraformAppsDeployment">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="helmAppsDeployment">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="manifestAppsDeployment">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="discovery">
+                                            <camunda:value>Process/cloudclapp-wf/Discovery/Discovery</camunda:value>
+                                          </camunda:entry>
+                                        </camunda:map>
+                                      </camunda:entry>
+                                      <camunda:entry key="variables" />
+                                      <camunda:entry key="microservices" />
+                                      <camunda:entry key="imageType">
+                                        <camunda:value>docker</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="model_id" />
+                                      <camunda:entry key="manufacturer_id" />
+                                    </camunda:map>
+                                  </camunda:entry>
+                                  <camunda:entry key="ec2">
+                                    <camunda:map>
+                                      <camunda:entry key="displayName">
+                                        <camunda:value>Elastic Compute Cloud (EC2)</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="logo">
+                                        <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws_ec2.logo</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="workflow">
+                                        <camunda:map>
+                                          <camunda:entry key="env">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Provision_an_EC2_Env__AWS_</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="appsDeployment">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_VM_Apps_EC2_Vpc__AWS_/Provision_VM_Apps_EC2_Vpc__AWS</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="scanApp">
+                                            <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="scanWebApp">
+                                            <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
+                                          </camunda:entry>
+                                        </camunda:map>
+                                      </camunda:entry>
+                                      <camunda:entry key="variables" />
+                                      <camunda:entry key="microservices" />
+                                      <camunda:entry key="imageType">
+                                        <camunda:value>vm</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="model_id" />
+                                      <camunda:entry key="manufacturer_id" />
+                                    </camunda:map>
+                                  </camunda:entry>
+                                </camunda:map>
+                              </camunda:entry>
+                              <camunda:entry key="quota_check" />
+                              <camunda:entry key="greener_regions_url">
+                                <camunda:value>https://sustainability.aboutamazon.com/environment/the-cloud?energyType=true#renewable-energy-map</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="credentials_required">
+                                <camunda:list>
+                                  <camunda:value>aws_access_key</camunda:value>
+                                  <camunda:value>aws_secret_key</camunda:value>
+                                </camunda:list>
+                              </camunda:entry>
+                            </camunda:map>
+                          </camunda:entry>
+                          <camunda:entry key="workflowPath">
+                            <camunda:value>Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps">
+                    <camunda:map>
+                      <camunda:entry key="cloudVendor" />
+                      <camunda:entry key="cloudService" />
+                    </camunda:map>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_0eh2ict</bpmn:incoming>
+          <bpmn:outgoing>Flow_1ihxiow</bpmn:outgoing>
+          <bpmn:outgoing>Flow_1q110p1</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_0eh2ict" sourceRef="Event_08frn2a" targetRef="ServiceTask_1717133644264" />
+        <bpmn:sequenceFlow id="Flow_1ihxiow" sourceRef="ServiceTask_1717133644264" targetRef="Event_192bfkr" />
+        <bpmn:serviceTask id="ServiceTask_1717133695461" name="VM" camunda:type="external" camunda:topic="msa_workflow">
+          <bpmn:extensionElements>
+            <camunda:inputOutput>
+              <camunda:inputParameter name="workflow_data">
+                <camunda:map>
+                  <camunda:entry key="ubiqubeId">
+                    <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processExecutor">
+                    <camunda:value>PLACEHOLDER_EXECUTOR_ID</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="serviceName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Provision_an_EC2_Env__AWS_</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processName">
+                    <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Process_Provision_New_fresh_ENV</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processType">
+                    <camunda:value>CREATE</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="is_demo_env">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="create_vpc" />
+                      <camunda:entry key="device">
+                        <camunda:value>001433</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="VPC">
+                        <camunda:value>vpc-0399ba36c13557099</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="security_group">
+                        <camunda:value>sg-0fa8e17bb80304372</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="subnet">
+                        <camunda:value>subnet-0b309ce2f90dfa872</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="aws_region">
+                        <camunda:value>eu-west-2</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="image_name">
+                        <camunda:value>ami-0a0f51856105ec67b</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="instance_name">
+                        <camunda:value>Ec2-Fortinet</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="instance_type">
+                        <camunda:value>t3.small</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="push_to_s3" />
+                      <camunda:entry key="aws_access_key_id" />
+                      <camunda:entry key="aws_secret_access_key" />
+                      <camunda:entry key="use_org_cloud_credentials">
+                        <camunda:value>true</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="label">
+                        <camunda:value>AWS</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="value">
+                        <camunda:map>
+                          <camunda:entry key="cloudVendor">
+                            <camunda:value>aws</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="displayName">
+                            <camunda:value>AWS</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="category">
+                            <camunda:value>Public Cloud</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="logo">
+                            <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws.logo</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="helper">
+                            <camunda:value>https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="services">
+                            <camunda:map>
+                              <camunda:entry key="eks">
+                                <camunda:map>
+                                  <camunda:entry key="displayName">
+                                    <camunda:value>Elastic Kubernetes Service (EKS)</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="logo">
+                                    <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws_eks.logo</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="workflow">
+                                    <camunda:map>
+                                      <camunda:entry key="env">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="appsDeployment">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Provision_Apps_EKS_Cluster</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="scanApp">
+                                        <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="scanWebApp">
+                                        <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="complianceScan">
+                                        <camunda:value>Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="meshWF">
+                                        <camunda:value>Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="terraformAppsDeployment">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="helmAppsDeployment">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="manifestAppsDeployment">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="discovery">
+                                        <camunda:value>Process/cloudclapp-wf/Discovery/Discovery</camunda:value>
+                                      </camunda:entry>
+                                    </camunda:map>
+                                  </camunda:entry>
+                                  <camunda:entry key="variables" />
+                                  <camunda:entry key="microservices" />
+                                  <camunda:entry key="imageType">
+                                    <camunda:value>docker</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="model_id" />
+                                  <camunda:entry key="manufacturer_id" />
+                                </camunda:map>
+                              </camunda:entry>
+                              <camunda:entry key="ec2">
+                                <camunda:map>
+                                  <camunda:entry key="displayName">
+                                    <camunda:value>Elastic Compute Cloud (EC2)</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="logo">
+                                    <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws_ec2.logo</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="workflow">
+                                    <camunda:map>
+                                      <camunda:entry key="env">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Provision_an_EC2_Env__AWS_</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="appsDeployment">
+                                        <camunda:value>Process/cloudclapp-wf/Provision_VM_Apps_EC2_Vpc__AWS_/Provision_VM_Apps_EC2_Vpc__AWS</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="scanApp">
+                                        <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="scanWebApp">
+                                        <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
+                                      </camunda:entry>
+                                    </camunda:map>
+                                  </camunda:entry>
+                                  <camunda:entry key="variables" />
+                                  <camunda:entry key="microservices" />
+                                  <camunda:entry key="imageType">
+                                    <camunda:value>vm</camunda:value>
+                                  </camunda:entry>
+                                  <camunda:entry key="model_id" />
+                                  <camunda:entry key="manufacturer_id" />
+                                </camunda:map>
+                              </camunda:entry>
+                            </camunda:map>
+                          </camunda:entry>
+                          <camunda:entry key="quota_check" />
+                          <camunda:entry key="greener_regions_url">
+                            <camunda:value>https://sustainability.aboutamazon.com/environment/the-cloud?energyType=true#renewable-energy-map</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="credentials_required">
+                            <camunda:list>
+                              <camunda:value>aws_access_key</camunda:value>
+                              <camunda:value>aws_secret_key</camunda:value>
+                            </camunda:list>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                      <camunda:entry key="workflowPath">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:value>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="resumeOnFail">
+                    <camunda:value>false</camunda:value>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+              <camunda:inputParameter name="vm_data">
+                <camunda:map>
+                  <camunda:entry key="type">
+                    <camunda:value>VM</camunda:value>
+                  </camunda:entry>
+                  <camunda:entry key="data">
+                    <camunda:map>
+                      <camunda:entry key="processName">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Process_Provision_New_fresh_ENV</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="workflowPath">
+                        <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Provision_an_EC2_Env__AWS_</camunda:value>
+                      </camunda:entry>
+                      <camunda:entry key="processVariables">
+                        <camunda:map>
+                          <camunda:entry key="is_demo_env">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="create_vpc" />
+                          <camunda:entry key="device">
+                            <camunda:value>001433</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="VPC">
+                            <camunda:value>vpc-0399ba36c13557099</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="security_group">
+                            <camunda:value>sg-0fa8e17bb80304372</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="subnet">
+                            <camunda:value>subnet-0b309ce2f90dfa872</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="aws_region">
+                            <camunda:value>eu-west-2</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="image_name">
+                            <camunda:value>ami-0a0f51856105ec67b</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="instance_name">
+                            <camunda:value>Ec2-Fortinet</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="instance_type">
+                            <camunda:value>t3.small</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="push_to_s3" />
+                          <camunda:entry key="aws_access_key_id" />
+                          <camunda:entry key="aws_secret_access_key" />
+                          <camunda:entry key="use_org_cloud_credentials">
+                            <camunda:value>true</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="label">
+                            <camunda:value>AWS</camunda:value>
+                          </camunda:entry>
+                          <camunda:entry key="value">
+                            <camunda:map>
+                              <camunda:entry key="cloudVendor">
+                                <camunda:value>aws</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="displayName">
+                                <camunda:value>AWS</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="category">
+                                <camunda:value>Public Cloud</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="logo">
+                                <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws.logo</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="helper">
+                                <camunda:value>https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="services">
+                                <camunda:map>
+                                  <camunda:entry key="eks">
+                                    <camunda:map>
+                                      <camunda:entry key="displayName">
+                                        <camunda:value>Elastic Kubernetes Service (EKS)</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="logo">
+                                        <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws_eks.logo</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="workflow">
+                                        <camunda:map>
+                                          <camunda:entry key="env">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="appsDeployment">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Provision_Apps_EKS_Cluster</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="scanApp">
+                                            <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="scanWebApp">
+                                            <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="complianceScan">
+                                            <camunda:value>Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="meshWF">
+                                            <camunda:value>Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="terraformAppsDeployment">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="helmAppsDeployment">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="manifestAppsDeployment">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="discovery">
+                                            <camunda:value>Process/cloudclapp-wf/Discovery/Discovery</camunda:value>
+                                          </camunda:entry>
+                                        </camunda:map>
+                                      </camunda:entry>
+                                      <camunda:entry key="variables" />
+                                      <camunda:entry key="microservices" />
+                                      <camunda:entry key="imageType">
+                                        <camunda:value>docker</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="model_id" />
+                                      <camunda:entry key="manufacturer_id" />
+                                    </camunda:map>
+                                  </camunda:entry>
+                                  <camunda:entry key="ec2">
+                                    <camunda:map>
+                                      <camunda:entry key="displayName">
+                                        <camunda:value>Elastic Compute Cloud (EC2)</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="logo">
+                                        <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/aws_ec2.logo</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="workflow">
+                                        <camunda:map>
+                                          <camunda:entry key="env">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_an_EC2_Env__AWS_/Provision_an_EC2_Env__AWS_</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="appsDeployment">
+                                            <camunda:value>Process/cloudclapp-wf/Provision_VM_Apps_EC2_Vpc__AWS_/Provision_VM_Apps_EC2_Vpc__AWS</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="scanApp">
+                                            <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
+                                          </camunda:entry>
+                                          <camunda:entry key="scanWebApp">
+                                            <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
+                                          </camunda:entry>
+                                        </camunda:map>
+                                      </camunda:entry>
+                                      <camunda:entry key="variables" />
+                                      <camunda:entry key="microservices" />
+                                      <camunda:entry key="imageType">
+                                        <camunda:value>vm</camunda:value>
+                                      </camunda:entry>
+                                      <camunda:entry key="model_id" />
+                                      <camunda:entry key="manufacturer_id" />
+                                    </camunda:map>
+                                  </camunda:entry>
+                                </camunda:map>
+                              </camunda:entry>
+                              <camunda:entry key="quota_check" />
+                              <camunda:entry key="greener_regions_url">
+                                <camunda:value>https://sustainability.aboutamazon.com/environment/the-cloud?energyType=true#renewable-energy-map</camunda:value>
+                              </camunda:entry>
+                              <camunda:entry key="credentials_required">
+                                <camunda:list>
+                                  <camunda:value>aws_access_key</camunda:value>
+                                  <camunda:value>aws_secret_key</camunda:value>
+                                </camunda:list>
+                              </camunda:entry>
+                            </camunda:map>
+                          </camunda:entry>
+                          <camunda:entry key="workflowPath">
+                            <camunda:value>Process/cloudclapp-wf/Provision_an_EKS_Cluster__AWS_/Provision_an_EKS_Cluster__AWS_</camunda:value>
+                          </camunda:entry>
+                        </camunda:map>
+                      </camunda:entry>
+                    </camunda:map>
+                  </camunda:entry>
+                  <camunda:entry key="extraProps">
+                    <camunda:map>
+                      <camunda:entry key="cloudVendor" />
+                      <camunda:entry key="cloudService" />
+                    </camunda:map>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:inputParameter>
+            </camunda:inputOutput>
+          </bpmn:extensionElements>
+          <bpmn:incoming>Flow_058rfpi</bpmn:incoming>
+          <bpmn:incoming>Flow_1q110p1</bpmn:incoming>
+          <bpmn:outgoing>Flow_1olecqn</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="Flow_058rfpi" sourceRef="Event_08frn2a" targetRef="ServiceTask_1717133695461" />
+        <bpmn:sequenceFlow id="Flow_1olecqn" sourceRef="ServiceTask_1717133695461" targetRef="Event_192bfkr" />
+        <bpmn:sequenceFlow id="Flow_1q110p1" sourceRef="ServiceTask_1717133644264" targetRef="ServiceTask_1717133695461" />
+      </bpmn:subProcess>
+      <bpmn:sequenceFlow id="Flow_182i69s" sourceRef="Event_0jkc290" targetRef="SubProcess_1717057276579" />
+      <bpmn:sequenceFlow id="Flow_0uox6wr" sourceRef="SubProcess_1717057276579" targetRef="Event_01ks9lj" />
+    </bpmn:subProcess>
+    <bpmn:sequenceFlow id="Flow_1bitauy" sourceRef="StartEvent_1" targetRef="SubProcess_1717057268212" />
+    <bpmn:sequenceFlow id="Flow_12di9qs" sourceRef="SubProcess_1717057268212" targetRef="EndEvent_1" />
+    <bpmn:sequenceFlow id="Flow_13j6gtm" sourceRef="SubProcess_1717057268212" targetRef="EndEvent_1" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="PLACEHOLDER_PROCESS_ID">
+      <bpmndi:BPMNEdge id="Flow_13j6gtm_di" bpmnElement="Flow_13j6gtm">
+        <di:waypoint x="720" y="118" />
+        <di:waypoint x="1000" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12di9qs_di" bpmnElement="Flow_12di9qs">
+        <di:waypoint x="720" y="118" />
+        <di:waypoint x="1000" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1bitauy_di" bpmnElement="Flow_1bitauy">
+        <di:waypoint x="136" y="118" />
+        <di:waypoint x="150" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="100" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0rpe2j4_di" bpmnElement="EndEvent_1">
+        <dc:Bounds x="1000" y="100" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1717057268212_di" bpmnElement="SubProcess_1717057268212" isExpanded="true">
+        <dc:Bounds x="150" y="50" width="570" height="400" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0uox6wr_di" bpmnElement="Flow_0uox6wr">
+        <di:waypoint x="425" y="90" />
+        <di:waypoint x="425" y="70" />
+        <di:waypoint x="445" y="70" />
+        <di:waypoint x="445" y="82" />
+        <di:waypoint x="425" y="82" />
+        <di:waypoint x="425" y="99" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_182i69s_di" bpmnElement="Flow_182i69s">
+        <di:waypoint x="320" y="99" />
+        <di:waypoint x="320" y="82" />
+        <di:waypoint x="340" y="82" />
+        <di:waypoint x="340" y="70" />
+        <di:waypoint x="320" y="70" />
+        <di:waypoint x="320" y="90" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0jkc290_di" bpmnElement="Event_0jkc290">
+        <dc:Bounds x="302" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_01ks9lj_di" bpmnElement="Event_01ks9lj">
+        <dc:Bounds x="407" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1717057276579_di" bpmnElement="SubProcess_1717057276579" isExpanded="true">
+        <dc:Bounds x="250" y="90" width="370" height="310" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1q110p1_di" bpmnElement="Flow_1q110p1">
+        <di:waypoint x="330" y="230" />
+        <di:waypoint x="330" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1olecqn_di" bpmnElement="Flow_1olecqn">
+        <di:waypoint x="330" y="290" />
+        <di:waypoint x="330" y="230" />
+        <di:waypoint x="388" y="230" />
+        <di:waypoint x="388" y="176" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_058rfpi_di" bpmnElement="Flow_058rfpi">
+        <di:waypoint x="288" y="176" />
+        <di:waypoint x="288" y="230" />
+        <di:waypoint x="330" y="230" />
+        <di:waypoint x="330" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ihxiow_di" bpmnElement="Flow_1ihxiow">
+        <di:waypoint x="330" y="150" />
+        <di:waypoint x="330" y="120" />
+        <di:waypoint x="388" y="120" />
+        <di:waypoint x="388" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0eh2ict_di" bpmnElement="Flow_0eh2ict">
+        <di:waypoint x="288" y="140" />
+        <di:waypoint x="288" y="120" />
+        <di:waypoint x="330" y="120" />
+        <di:waypoint x="330" y="150" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ie8kba_di" bpmnElement="Flow_0ie8kba">
+        <di:waypoint x="306" y="158" />
+        <di:waypoint x="390" y="158" />
+        <di:waypoint x="390" y="230" />
+        <di:waypoint x="480" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0k547kj_di" bpmnElement="Flow_0k547kj">
+        <di:waypoint x="480" y="230" />
+        <di:waypoint x="440" y="230" />
+        <di:waypoint x="440" y="158" />
+        <di:waypoint x="406" y="158" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_08frn2a_di" bpmnElement="Event_08frn2a">
+        <dc:Bounds x="270" y="140" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_192bfkr_di" bpmnElement="Event_192bfkr">
+        <dc:Bounds x="370" y="140" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1717071240200_di" bpmnElement="ServiceTask_1717064095942">
+        <dc:Bounds x="480" y="190" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1717133644264_di" bpmnElement="ServiceTask_1717133644264">
+        <dc:Bounds x="280" y="150" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1717133695461_di" bpmnElement="ServiceTask_1717133695461">
+        <dc:Bounds x="280" y="290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
