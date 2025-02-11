@@ -134,8 +134,8 @@
               <camunda:inputParameter name="workflow_data">
                 <camunda:map>
                   <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
-                  <camunda:entry key="serviceName">Process/workflows/S3_WF/S3_WF</camunda:entry>
-                  <camunda:entry key="processName">Process/workflows/S3_WF/Process_Create_S3</camunda:entry>
+                  <camunda:entry key="serviceName">Process/cloudclapp-wf/S3_WF/S3_WF</camunda:entry>
+                  <camunda:entry key="processName">Process/cloudclapp-wf/S3_WF/Process_Create_S3</camunda:entry>
                   <camunda:entry key="processType">CREATE</camunda:entry>
                   <camunda:entry key="processVariables">
                     <camunda:map />
