@@ -3,11 +3,11 @@
     <map>
         <entry>
             <key>DISPLAYNAME</key>
-            <value>Edge to SSE - Fortinet & Zscaler</value>
+            <value>Edge to SSE - Fortinet / Zscaler</value>
         </entry>
         <entry>
             <key>PREVIEW</key>
-            <value>Blueprints/Catalog/thumbnail/VMWARE_VM_BP.png</value>
+            <value>Blueprints/Catalog/thumbnail/SASE/EDGE_SSE_Fortinet_Zscaler.png</value>
         </entry>
         <entry>
             <key>OWNER</key>
@@ -39,7 +39,7 @@
         </entry>
         <entry>
             <key>DESCRIPTION</key>
-            <value>Deploying a simple virtual machine on VMware VSphere</value>
+            <value>Deploying Fortinet CPEs at the EDGE to Zscaler SSE</value>
         </entry>
         <entry>
             <key>PROVIDERS</key>
