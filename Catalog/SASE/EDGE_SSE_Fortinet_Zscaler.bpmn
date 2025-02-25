@@ -2,100 +2,87 @@
 <bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
   <bpmn:process id="PLACEHOLDER_PROCESS_ID" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1" name="">
-      <bpmn:outgoing>Flow_1jxhc4b</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1dj45om</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:endEvent id="EndEvent_1" name="">
-      <bpmn:incoming>Flow_1gotb0o</bpmn:incoming>
+      <bpmn:incoming>Flow_0ytrjv7</bpmn:incoming>
+      <bpmn:incoming>Flow_0owd5vl</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:subProcess id="SubProcess_1698585379740" name="VMware" $type="bpmn:SubProcess">
+    <bpmn:dataStoreReference id="ServiceTask_1740394122934" name="SOFTWARE_CLIENT" iconType="SOFTWARE_CLIENT" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">
+            <camunda:map>
+              <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
+              <camunda:entry key="processExecutor">PLACEHOLDER_EXECUTOR_ID</camunda:entry>
+              <camunda:entry key="serviceName" />
+              <camunda:entry key="processName" />
+              <camunda:entry key="processType">CREATE</camunda:entry>
+              <camunda:entry key="processVariables" />
+              <camunda:entry key="resumeOnFail">false</camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="msa_workflow_data">
+            <camunda:map>
+              <camunda:entry key="type">SOFTWARE_CLIENT</camunda:entry>
+              <camunda:entry key="data">
+                <camunda:map />
+              </camunda:entry>
+              <camunda:entry key="extraProps">
+                <camunda:map>
+                  <camunda:entry key="cloudVendor" />
+                  <camunda:entry key="cloudService" />
+                </camunda:map>
+              </camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+    </bpmn:dataStoreReference>
+    <bpmn:subProcess id="SubProcess_1740394258259" name="Zscaler">
       <bpmn:extensionElements>
         <camunda:inputOutput>
           <camunda:inputParameter name="provider_data">
             <camunda:map>
-              <camunda:entry key="type">
-                <camunda:value>PROVIDER</camunda:value>
-              </camunda:entry>
+              <camunda:entry key="type">SASE</camunda:entry>
               <camunda:entry key="data">
                 <camunda:map>
-                  <camunda:entry key="label">
-                    <camunda:value>VMware</camunda:value>
-                  </camunda:entry>
+                  <camunda:entry key="label">Zscaler</camunda:entry>
                   <camunda:entry key="value">
                     <camunda:map>
-                      <camunda:entry key="cloudVendor">
-                        <camunda:value>vmware</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="displayName">
-                        <camunda:value>VMware</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="category">
-                        <camunda:value>Private Cloud</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="logo">
-                        <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/vmware.logo</camunda:value>
-                      </camunda:entry>
-                      <camunda:entry key="helper">
-                        <camunda:value>https://www.vmware.com/uk/support/policies/register.html</camunda:value>
-                      </camunda:entry>
+                      <camunda:entry key="cloudVendor">zscaler</camunda:entry>
+                      <camunda:entry key="displayName">Zscaler</camunda:entry>
+                      <camunda:entry key="category">SASE</camunda:entry>
+                      <camunda:entry key="logo">Process/cloudclapp-wf/CCLA_Adapters/logos/zscaler.logo</camunda:entry>
+                      <camunda:entry key="helper" />
                       <camunda:entry key="services">
                         <camunda:map>
-                          <camunda:entry key="vmware">
+                          <camunda:entry key="zscaler">
                             <camunda:map>
-                              <camunda:entry key="displayName">
-                                <camunda:value>Virtual machine</camunda:value>
-                              </camunda:entry>
-                              <camunda:entry key="logo">
-                                <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/vmware.logo</camunda:value>
-                              </camunda:entry>
+                              <camunda:entry key="displayName">Zscaler</camunda:entry>
+                              <camunda:entry key="logo">Process/cloudclapp-wf/CCLA_Adapters/logos/zscaler.logo</camunda:entry>
                               <camunda:entry key="workflow">
                                 <camunda:map>
-                                  <camunda:entry key="env">
-                                    <camunda:value>Process/cloudclapp-wf/Provision_env_on_VMware/Provision_env_on_VMware</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="scanApp">
-                                    <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="scanWebApp">
-                                    <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="complianceScan">
-                                    <camunda:value>Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="meshWF">
-                                    <camunda:value>Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="terraformAppsDeployment">
-                                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="helmAppsDeployment">
-                                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="manifestAppsDeployment">
-                                    <camunda:value>Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:value>
-                                  </camunda:entry>
-                                  <camunda:entry key="discovery">
-                                    <camunda:value>Process/cloudclapp-wf/Discovery/Discovery</camunda:value>
-                                  </camunda:entry>
+                                  <camunda:entry key="env">Process/cloudclapp-wf/Provision_an_Zscaler_Cluster__Zscaler_/Provision_an_Zscaler_Cluster__Zscaler_</camunda:entry>
+                                  <camunda:entry key="appsDeployment">Process/cloudclapp-wf/Provision_Apps_EKS_Cluster/Provision_Apps_EKS_Cluster</camunda:entry>
+                                  <camunda:entry key="scanApp">Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:entry>
+                                  <camunda:entry key="scanWebApp">Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:entry>
+                                  <camunda:entry key="complianceScan">Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:entry>
+                                  <camunda:entry key="meshWF">Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:entry>
+                                  <camunda:entry key="terraformAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:entry>
+                                  <camunda:entry key="helmAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:entry>
+                                  <camunda:entry key="manifestAppsDeployment">Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:entry>
+                                  <camunda:entry key="discovery">Process/cloudclapp-wf/Discovery/Discovery</camunda:entry>
+                                  <camunda:entry key="migration">Process/cloudclapp-wf/Migration/VM_Migration/VM_Migration</camunda:entry>
+                                  <camunda:entry key="cutover">Process/cloudclapp-wf/Migration/CutOver/CutOver</camunda:entry>
                                 </camunda:map>
                               </camunda:entry>
                               <camunda:entry key="variables" />
-                              <camunda:entry key="microservices">
-                                <camunda:list>
-                                  <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/host.xml</camunda:value>
-                                  <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/network.xml</camunda:value>
-                                  <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/resource_pool.xml</camunda:value>
-                                  <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/datastore.xml</camunda:value>
-                                </camunda:list>
-                              </camunda:entry>
-                              <camunda:entry key="imageType">
-                                <camunda:value>vm</camunda:value>
-                              </camunda:entry>
-                              <camunda:entry key="model_id">
-                                <camunda:value>17010204</camunda:value>
-                              </camunda:entry>
-                              <camunda:entry key="manufacturer_id">
-                                <camunda:value>24</camunda:value>
-                              </camunda:entry>
+                              <camunda:entry key="microservices" />
+                              <camunda:entry key="imageType">docker</camunda:entry>
+                              <camunda:entry key="model_id" />
+                              <camunda:entry key="manufacturer_id" />
+                              <camunda:entry key="management_port" />
                             </camunda:map>
                           </camunda:entry>
                         </camunda:map>
@@ -103,15 +90,12 @@
                       <camunda:entry key="quota_check" />
                       <camunda:entry key="greener_regions_url" />
                       <camunda:entry key="credentials_required">
-                        <camunda:list>
-                          <camunda:value>vmware_ip</camunda:value>
-                          <camunda:value>vmware_username</camunda:value>
-                          <camunda:value>vmware_password</camunda:value>
-                        </camunda:list>
+                        <camunda:list />
                       </camunda:entry>
+                      <camunda:entry key="management_port" />
                     </camunda:map>
                   </camunda:entry>
-                  <camunda:entry key="workflowPath" />
+                  <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_Zscaler_Cluster__Zscaler_/Provision_an_Zscaler_Cluster__Zscaler_</camunda:entry>
                 </camunda:map>
               </camunda:entry>
               <camunda:entry key="extraProps" />
@@ -119,304 +103,303 @@
           </camunda:inputParameter>
         </camunda:inputOutput>
       </bpmn:extensionElements>
-      <bpmn:incoming>Flow_1jxhc4b</bpmn:incoming>
-      <bpmn:outgoing>Flow_1gotb0o</bpmn:outgoing>
-      <bpmn:startEvent id="Event_1nhdg8m">
-        <bpmn:outgoing>Flow_1xoqrgj</bpmn:outgoing>
+      <bpmn:incoming>Flow_1dj45om</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ytrjv7</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0owd5vl</bpmn:outgoing>
+      <bpmn:startEvent id="Event_0kctnip">
+        <bpmn:outgoing>Flow_1hwntl7</bpmn:outgoing>
+        <bpmn:outgoing>Flow_1h1zseh</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:endEvent id="Event_10dlb9w">
-        <bpmn:incoming>Flow_0o2r14e</bpmn:incoming>
+      <bpmn:endEvent id="Event_1ety1eu">
+        <bpmn:incoming>Flow_09tcc9r</bpmn:incoming>
+        <bpmn:incoming>Flow_1ydie08</bpmn:incoming>
+        <bpmn:incoming>Flow_1omwmau</bpmn:incoming>
+        <bpmn:incoming>Flow_1btuykh</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:serviceTask id="ServiceTask_1698585383758" name="VM" camunda:type="external" camunda:topic="msa_workflow" $type="bpmn:ServiceTask">
+      <bpmn:subProcess id="SubProcess_1740394450895" name="Paris">
         <bpmn:extensionElements>
           <camunda:inputOutput>
-            <camunda:inputParameter name="workflow_data">
+            <camunda:inputParameter name="region_data">
               <camunda:map>
-                <camunda:entry key="ubiqubeId">
-                  <camunda:value>PLACEHOLDER_UBIQUBE_ID</camunda:value>
-                </camunda:entry>
-                <camunda:entry key="processExecutor">
-                  <camunda:value>PLACEHOLDER_EXECUTOR_ID</camunda:value>
-                </camunda:entry>
-                <camunda:entry key="serviceName">
-                  <camunda:value>Process/cloudclapp-wf/Provision_env_on_VMware/Provision_env_on_VMware</camunda:value>
-                </camunda:entry>
-                <camunda:entry key="processName">
-                  <camunda:value>Process/cloudclapp-wf/Provision_env_on_VMware/Process_Create_Environment</camunda:value>
-                </camunda:entry>
-                <camunda:entry key="processType">
-                  <camunda:value>CREATE</camunda:value>
-                </camunda:entry>
-                <camunda:entry key="processVariables">
-                  <camunda:map>
-                    <camunda:entry key="datastore_name" />
-                    <camunda:entry key="network_name" />
-                    <camunda:entry key="resource_pool" />
-                    <camunda:entry key="is_demo_env" />
-                    <camunda:entry key="device" />
-                    <camunda:entry key="vcpu_count">
-                      <camunda:value> 1</camunda:value>
-                    </camunda:entry>
-                    <camunda:entry key="memory">
-                      <camunda:value>1024</camunda:value>
-                    </camunda:entry>
-                    <camunda:entry key="label">
-                      <camunda:value>VMware</camunda:value>
-                    </camunda:entry>
-                    <camunda:entry key="value">
-                      <camunda:map>
-                        <camunda:entry key="cloudVendor">
-                          <camunda:value>vmware</camunda:value>
-                        </camunda:entry>
-                        <camunda:entry key="displayName">
-                          <camunda:value>VMware</camunda:value>
-                        </camunda:entry>
-                        <camunda:entry key="category">
-                          <camunda:value>Private Cloud</camunda:value>
-                        </camunda:entry>
-                        <camunda:entry key="logo">
-                          <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/vmware.logo</camunda:value>
-                        </camunda:entry>
-                        <camunda:entry key="helper">
-                          <camunda:value>https://www.vmware.com/uk/support/policies/register.html</camunda:value>
-                        </camunda:entry>
-                        <camunda:entry key="services">
-                          <camunda:map>
-                            <camunda:entry key="vmware">
-                              <camunda:map>
-                                <camunda:entry key="displayName">
-                                  <camunda:value>Virtual machine</camunda:value>
-                                </camunda:entry>
-                                <camunda:entry key="logo">
-                                  <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/vmware.logo</camunda:value>
-                                </camunda:entry>
-                                <camunda:entry key="workflow">
-                                  <camunda:map>
-                                    <camunda:entry key="env">
-                                      <camunda:value>Process/cloudclapp-wf/Provision_env_on_VMware/Provision_env_on_VMware</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="scanApp">
-                                      <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="scanWebApp">
-                                      <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="complianceScan">
-                                      <camunda:value>Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="meshWF">
-                                      <camunda:value>Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="terraformAppsDeployment">
-                                      <camunda:value>Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="helmAppsDeployment">
-                                      <camunda:value>Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="manifestAppsDeployment">
-                                      <camunda:value>Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="discovery">
-                                      <camunda:value>Process/cloudclapp-wf/Discovery/Discovery</camunda:value>
-                                    </camunda:entry>
-                                  </camunda:map>
-                                </camunda:entry>
-                                <camunda:entry key="variables" />
-                                <camunda:entry key="microservices">
-                                  <camunda:list>
-                                    <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/host.xml</camunda:value>
-                                    <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/network.xml</camunda:value>
-                                    <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/resource_pool.xml</camunda:value>
-                                    <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/datastore.xml</camunda:value>
-                                  </camunda:list>
-                                </camunda:entry>
-                                <camunda:entry key="imageType">
-                                  <camunda:value>vm</camunda:value>
-                                </camunda:entry>
-                                <camunda:entry key="model_id">
-                                  <camunda:value>17010204</camunda:value>
-                                </camunda:entry>
-                                <camunda:entry key="manufacturer_id">
-                                  <camunda:value>24</camunda:value>
-                                </camunda:entry>
-                              </camunda:map>
-                            </camunda:entry>
-                          </camunda:map>
-                        </camunda:entry>
-                        <camunda:entry key="quota_check" />
-                        <camunda:entry key="greener_regions_url" />
-                        <camunda:entry key="credentials_required">
-                          <camunda:list>
-                            <camunda:value>vmware_ip</camunda:value>
-                            <camunda:value>vmware_username</camunda:value>
-                            <camunda:value>vmware_password</camunda:value>
-                          </camunda:list>
-                        </camunda:entry>
-                      </camunda:map>
-                    </camunda:entry>
-                    <camunda:entry key="workflowPath" />
-                  </camunda:map>
-                </camunda:entry>
-                <camunda:entry key="resumeOnFail">
-                  <camunda:value>false</camunda:value>
-                </camunda:entry>
-              </camunda:map>
-            </camunda:inputParameter>
-            <camunda:inputParameter name="vm_data">
-              <camunda:map>
-                <camunda:entry key="type">
-                  <camunda:value>VM</camunda:value>
-                </camunda:entry>
+                <camunda:entry key="type">REGION</camunda:entry>
                 <camunda:entry key="data">
                   <camunda:map>
-                    <camunda:entry key="processName">
-                      <camunda:value>Process/cloudclapp-wf/Provision_env_on_VMware/Process_Create_Environment</camunda:value>
-                    </camunda:entry>
-                    <camunda:entry key="workflowPath">
-                      <camunda:value>Process/cloudclapp-wf/Provision_env_on_VMware/Provision_env_on_VMware</camunda:value>
-                    </camunda:entry>
-                    <camunda:entry key="processVariables">
-                      <camunda:map>
-                        <camunda:entry key="datastore_name" />
-                        <camunda:entry key="network_name" />
-                        <camunda:entry key="resource_pool" />
-                        <camunda:entry key="is_demo_env" />
-                        <camunda:entry key="device" />
-                        <camunda:entry key="vcpu_count">
-                          <camunda:value> 1</camunda:value>
-                        </camunda:entry>
-                        <camunda:entry key="memory">
-                          <camunda:value>1024</camunda:value>
-                        </camunda:entry>
-                        <camunda:entry key="label">
-                          <camunda:value>VMware</camunda:value>
-                        </camunda:entry>
-                        <camunda:entry key="value">
-                          <camunda:map>
-                            <camunda:entry key="cloudVendor">
-                              <camunda:value>vmware</camunda:value>
-                            </camunda:entry>
-                            <camunda:entry key="displayName">
-                              <camunda:value>VMware</camunda:value>
-                            </camunda:entry>
-                            <camunda:entry key="category">
-                              <camunda:value>Private Cloud</camunda:value>
-                            </camunda:entry>
-                            <camunda:entry key="logo">
-                              <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/vmware.logo</camunda:value>
-                            </camunda:entry>
-                            <camunda:entry key="helper">
-                              <camunda:value>https://www.vmware.com/uk/support/policies/register.html</camunda:value>
-                            </camunda:entry>
-                            <camunda:entry key="services">
-                              <camunda:map>
-                                <camunda:entry key="vmware">
-                                  <camunda:map>
-                                    <camunda:entry key="displayName">
-                                      <camunda:value>Virtual machine</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="logo">
-                                      <camunda:value>Process/cloudclapp-wf/CCLA_Adapters/logos/vmware.logo</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="workflow">
-                                      <camunda:map>
-                                        <camunda:entry key="env">
-                                          <camunda:value>Process/cloudclapp-wf/Provision_env_on_VMware/Provision_env_on_VMware</camunda:value>
-                                        </camunda:entry>
-                                        <camunda:entry key="scanApp">
-                                          <camunda:value>Process/cloudclapp-wf/Scan_a_App_Container_/Scan_a_App_Container_</camunda:value>
-                                        </camunda:entry>
-                                        <camunda:entry key="scanWebApp">
-                                          <camunda:value>Process/cloudclapp-wf/Scan_a_WebApp/Scan_a_WebApp</camunda:value>
-                                        </camunda:entry>
-                                        <camunda:entry key="complianceScan">
-                                          <camunda:value>Process/cloudclapp-wf/Compliance_Scan/Compliance_Scan</camunda:value>
-                                        </camunda:entry>
-                                        <camunda:entry key="meshWF">
-                                          <camunda:value>Process/cloudclapp-wf/Mesh_Hybrid_Multi_Cloud/Mesh_Hybrid_Multi_Cloud</camunda:value>
-                                        </camunda:entry>
-                                        <camunda:entry key="terraformAppsDeployment">
-                                          <camunda:value>Process/cloudclapp-wf/Provision_Apps_Terraform/Provision_Apps_Terraform</camunda:value>
-                                        </camunda:entry>
-                                        <camunda:entry key="helmAppsDeployment">
-                                          <camunda:value>Process/cloudclapp-wf/Provision_Apps_Helm/Provision_Apps_Helm</camunda:value>
-                                        </camunda:entry>
-                                        <camunda:entry key="manifestAppsDeployment">
-                                          <camunda:value>Process/cloudclapp-wf/Provision_Apps_Manifest/Provision_Apps_Manifest</camunda:value>
-                                        </camunda:entry>
-                                        <camunda:entry key="discovery">
-                                          <camunda:value>Process/cloudclapp-wf/Discovery/Discovery</camunda:value>
-                                        </camunda:entry>
-                                      </camunda:map>
-                                    </camunda:entry>
-                                    <camunda:entry key="variables" />
-                                    <camunda:entry key="microservices">
-                                      <camunda:list>
-                                        <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/host.xml</camunda:value>
-                                        <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/network.xml</camunda:value>
-                                        <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/resource_pool.xml</camunda:value>
-                                        <camunda:value>CommandDefinition/VMWARE/vSphere/vCenter/datastore.xml</camunda:value>
-                                      </camunda:list>
-                                    </camunda:entry>
-                                    <camunda:entry key="imageType">
-                                      <camunda:value>vm</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="model_id">
-                                      <camunda:value>17010204</camunda:value>
-                                    </camunda:entry>
-                                    <camunda:entry key="manufacturer_id">
-                                      <camunda:value>24</camunda:value>
-                                    </camunda:entry>
-                                  </camunda:map>
-                                </camunda:entry>
-                              </camunda:map>
-                            </camunda:entry>
-                            <camunda:entry key="quota_check" />
-                            <camunda:entry key="greener_regions_url" />
-                            <camunda:entry key="credentials_required">
-                              <camunda:list>
-                                <camunda:value>vmware_ip</camunda:value>
-                                <camunda:value>vmware_username</camunda:value>
-                                <camunda:value>vmware_password</camunda:value>
-                              </camunda:list>
-                            </camunda:entry>
-                          </camunda:map>
-                        </camunda:entry>
-                        <camunda:entry key="workflowPath" />
-                      </camunda:map>
-                    </camunda:entry>
+                    <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_Zscaler_Cluster__Zscaler_/Provision_an_Zscaler_Cluster__Zscaler_</camunda:entry>
                   </camunda:map>
                 </camunda:entry>
-                <camunda:entry key="extraProps">
-                  <camunda:map>
-                    <camunda:entry key="cloudVendor" />
-                    <camunda:entry key="cloudService" />
-                  </camunda:map>
-                </camunda:entry>
+                <camunda:entry key="extraProps" />
               </camunda:map>
             </camunda:inputParameter>
           </camunda:inputOutput>
         </bpmn:extensionElements>
-        <bpmn:incoming>Flow_1xoqrgj</bpmn:incoming>
-        <bpmn:outgoing>Flow_0o2r14e</bpmn:outgoing>
-      </bpmn:serviceTask>
-      <bpmn:sequenceFlow id="Flow_1xoqrgj" sourceRef="Event_1nhdg8m" targetRef="ServiceTask_1698585383758" />
-      <bpmn:sequenceFlow id="Flow_0o2r14e" sourceRef="ServiceTask_1698585383758" targetRef="Event_10dlb9w" />
+        <bpmn:incoming>Flow_1hwntl7</bpmn:incoming>
+        <bpmn:outgoing>Flow_09tcc9r</bpmn:outgoing>
+        <bpmn:outgoing>Flow_1ydie08</bpmn:outgoing>
+        <bpmn:property id="Property_0cqsrrv" name="__targetRef_placeholder" />
+        <bpmn:dataInputAssociation id="DataInputAssociation_15ckhuh">
+          <bpmn:sourceRef>ServiceTask_1740394122934</bpmn:sourceRef>
+          <bpmn:targetRef>Property_0cqsrrv</bpmn:targetRef>
+        </bpmn:dataInputAssociation>
+        <bpmn:dataInputAssociation id="DataInputAssociation_1r88f9r">
+          <bpmn:sourceRef>ServiceTask_1740394373428</bpmn:sourceRef>
+          <bpmn:targetRef>Property_0cqsrrv</bpmn:targetRef>
+        </bpmn:dataInputAssociation>
+        <bpmn:dataInputAssociation id="DataInputAssociation_1yzdseg">
+          <bpmn:sourceRef>ServiceTask_1740394321051</bpmn:sourceRef>
+          <bpmn:targetRef>Property_0cqsrrv</bpmn:targetRef>
+        </bpmn:dataInputAssociation>
+        <bpmn:dataInputAssociation id="DataInputAssociation_1g595kq">
+          <bpmn:sourceRef>ServiceTask_1740394578659</bpmn:sourceRef>
+          <bpmn:targetRef>Property_0cqsrrv</bpmn:targetRef>
+        </bpmn:dataInputAssociation>
+        <bpmn:startEvent id="Event_0ld51js" />
+        <bpmn:endEvent id="Event_11zvomt" />
+      </bpmn:subProcess>
+      <bpmn:sequenceFlow id="Flow_1hwntl7" sourceRef="Event_0kctnip" targetRef="SubProcess_1740394450895" />
+      <bpmn:sequenceFlow id="Flow_09tcc9r" sourceRef="SubProcess_1740394450895" targetRef="Event_1ety1eu" />
+      <bpmn:sequenceFlow id="Flow_1ydie08" sourceRef="SubProcess_1740394450895" targetRef="Event_1ety1eu" />
+      <bpmn:subProcess id="SubProcess_1740394460939" name="Amsterdam">
+        <bpmn:extensionElements>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="region_data">
+              <camunda:map>
+                <camunda:entry key="type">REGION</camunda:entry>
+                <camunda:entry key="data">
+                  <camunda:map>
+                    <camunda:entry key="workflowPath">Process/cloudclapp-wf/Provision_an_Zscaler_Cluster__Zscaler_/Provision_an_Zscaler_Cluster__Zscaler_</camunda:entry>
+                  </camunda:map>
+                </camunda:entry>
+                <camunda:entry key="extraProps" />
+              </camunda:map>
+            </camunda:inputParameter>
+          </camunda:inputOutput>
+        </bpmn:extensionElements>
+        <bpmn:incoming>Flow_1h1zseh</bpmn:incoming>
+        <bpmn:outgoing>Flow_1omwmau</bpmn:outgoing>
+        <bpmn:outgoing>Flow_1btuykh</bpmn:outgoing>
+        <bpmn:startEvent id="Event_0hijymt" />
+        <bpmn:endEvent id="Event_0j7mslw" />
+      </bpmn:subProcess>
+      <bpmn:sequenceFlow id="Flow_1h1zseh" sourceRef="Event_0kctnip" targetRef="SubProcess_1740394460939" />
+      <bpmn:sequenceFlow id="Flow_1omwmau" sourceRef="SubProcess_1740394460939" targetRef="Event_1ety1eu" />
+      <bpmn:sequenceFlow id="Flow_1btuykh" sourceRef="SubProcess_1740394460939" targetRef="Event_1ety1eu" />
     </bpmn:subProcess>
-    <bpmn:sequenceFlow id="Flow_1jxhc4b" sourceRef="StartEvent_1" targetRef="SubProcess_1698585379740" />
-    <bpmn:sequenceFlow id="Flow_1gotb0o" sourceRef="SubProcess_1698585379740" targetRef="EndEvent_1" />
+    <bpmn:sequenceFlow id="Flow_1dj45om" sourceRef="StartEvent_1" targetRef="SubProcess_1740394258259" />
+    <bpmn:sequenceFlow id="Flow_0ytrjv7" sourceRef="SubProcess_1740394258259" targetRef="EndEvent_1" />
+    <bpmn:sequenceFlow id="Flow_0owd5vl" sourceRef="SubProcess_1740394258259" targetRef="EndEvent_1" />
+    <bpmn:dataStoreReference id="ServiceTask_1740394321051" name="CPE" iconType="CPE" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">
+            <camunda:map>
+              <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
+              <camunda:entry key="processExecutor">PLACEHOLDER_EXECUTOR_ID</camunda:entry>
+              <camunda:entry key="serviceName">Process/cloudclapp-wf/EDGE/Deploy_CPEs_Edge/Deploy_CPEs_Edge.xml</camunda:entry>
+              <camunda:entry key="processName">Process/cloudclapp-wf/EDGE/Deploy_CPEs_Edge/Process_Deploy_CPEs_Edge</camunda:entry>
+              <camunda:entry key="processType">CREATE</camunda:entry>
+              <camunda:entry key="processVariables">
+                <camunda:map>
+                  <camunda:entry key="cloud" />
+                </camunda:map>
+              </camunda:entry>
+              <camunda:entry key="resumeOnFail">false</camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="msa_workflow_data">
+            <camunda:map>
+              <camunda:entry key="type">CPE</camunda:entry>
+              <camunda:entry key="data">
+                <camunda:map>
+                  <camunda:entry key="processName">Process/cloudclapp-wf/EDGE/Deploy_CPEs_Edge/Process_Deploy_CPEs_Edge</camunda:entry>
+                  <camunda:entry key="workflowPath">Process/cloudclapp-wf/EDGE/Deploy_CPEs_Edge/Deploy_CPEs_Edge.xml</camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="cloud" />
+                    </camunda:map>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:entry>
+              <camunda:entry key="extraProps">
+                <camunda:map>
+                  <camunda:entry key="cloudVendor" />
+                  <camunda:entry key="cloudService" />
+                </camunda:map>
+              </camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+    </bpmn:dataStoreReference>
+    <bpmn:dataStoreReference id="ServiceTask_1740394373428" name="CPE" iconType="CPE" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">
+            <camunda:map>
+              <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
+              <camunda:entry key="processExecutor">PLACEHOLDER_EXECUTOR_ID</camunda:entry>
+              <camunda:entry key="serviceName">Process/cloudclapp-wf/EDGE/Deploy_CPEs_Edge/Deploy_CPEs_Edge.xml</camunda:entry>
+              <camunda:entry key="processName">Process/cloudclapp-wf/EDGE/Deploy_CPEs_Edge/Process_Deploy_CPEs_Edge</camunda:entry>
+              <camunda:entry key="processType">CREATE</camunda:entry>
+              <camunda:entry key="processVariables">
+                <camunda:map>
+                  <camunda:entry key="cloud" />
+                </camunda:map>
+              </camunda:entry>
+              <camunda:entry key="resumeOnFail">false</camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="msa_workflow_data">
+            <camunda:map>
+              <camunda:entry key="type">CPE</camunda:entry>
+              <camunda:entry key="data">
+                <camunda:map>
+                  <camunda:entry key="processName">Process/cloudclapp-wf/EDGE/Deploy_CPEs_Edge/Process_Deploy_CPEs_Edge</camunda:entry>
+                  <camunda:entry key="workflowPath">Process/cloudclapp-wf/EDGE/Deploy_CPEs_Edge/Deploy_CPEs_Edge.xml</camunda:entry>
+                  <camunda:entry key="processVariables">
+                    <camunda:map>
+                      <camunda:entry key="cloud" />
+                    </camunda:map>
+                  </camunda:entry>
+                </camunda:map>
+              </camunda:entry>
+              <camunda:entry key="extraProps">
+                <camunda:map>
+                  <camunda:entry key="cloudVendor" />
+                  <camunda:entry key="cloudService" />
+                </camunda:map>
+              </camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+    </bpmn:dataStoreReference>
+    <bpmn:dataStoreReference id="ServiceTask_1740394381038" name="FIREWALL" iconType="FIREWALL" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">
+            <camunda:map>
+              <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
+              <camunda:entry key="processExecutor">PLACEHOLDER_EXECUTOR_ID</camunda:entry>
+              <camunda:entry key="serviceName" />
+              <camunda:entry key="processName" />
+              <camunda:entry key="processType">CREATE</camunda:entry>
+              <camunda:entry key="processVariables" />
+              <camunda:entry key="resumeOnFail">false</camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="msa_workflow_data">
+            <camunda:map>
+              <camunda:entry key="type">FIREWALL</camunda:entry>
+              <camunda:entry key="data">
+                <camunda:map />
+              </camunda:entry>
+              <camunda:entry key="extraProps">
+                <camunda:map>
+                  <camunda:entry key="cloudVendor" />
+                  <camunda:entry key="cloudService" />
+                </camunda:map>
+              </camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+    </bpmn:dataStoreReference>
+    <bpmn:dataStoreReference id="ServiceTask_1740394425328" name="FIREWALL" iconType="FIREWALL" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">
+            <camunda:map>
+              <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
+              <camunda:entry key="processExecutor">PLACEHOLDER_EXECUTOR_ID</camunda:entry>
+              <camunda:entry key="serviceName" />
+              <camunda:entry key="processName" />
+              <camunda:entry key="processType">CREATE</camunda:entry>
+              <camunda:entry key="processVariables" />
+              <camunda:entry key="resumeOnFail">false</camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="msa_workflow_data">
+            <camunda:map>
+              <camunda:entry key="type">FIREWALL</camunda:entry>
+              <camunda:entry key="data">
+                <camunda:map />
+              </camunda:entry>
+              <camunda:entry key="extraProps">
+                <camunda:map>
+                  <camunda:entry key="cloudVendor" />
+                  <camunda:entry key="cloudService" />
+                </camunda:map>
+              </camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+    </bpmn:dataStoreReference>
+    <bpmn:dataStoreReference id="ServiceTask_1740394578659" name="SOFTWARE_CLIENT" iconType="SOFTWARE_CLIENT" camunda:type="external" camunda:topic="msa_workflow">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="workflow_data">
+            <camunda:map>
+              <camunda:entry key="ubiqubeId">PLACEHOLDER_UBIQUBE_ID</camunda:entry>
+              <camunda:entry key="processExecutor">PLACEHOLDER_EXECUTOR_ID</camunda:entry>
+              <camunda:entry key="serviceName" />
+              <camunda:entry key="processName" />
+              <camunda:entry key="processType">CREATE</camunda:entry>
+              <camunda:entry key="processVariables" />
+              <camunda:entry key="resumeOnFail">false</camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="msa_workflow_data">
+            <camunda:map>
+              <camunda:entry key="type">SOFTWARE_CLIENT</camunda:entry>
+              <camunda:entry key="data">
+                <camunda:map />
+              </camunda:entry>
+              <camunda:entry key="extraProps">
+                <camunda:map>
+                  <camunda:entry key="cloudVendor" />
+                  <camunda:entry key="cloudService" />
+                </camunda:map>
+              </camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+    </bpmn:dataStoreReference>
+    <bpmn:group id="Group_1740394394697" categoryValueRef="CategoryValue_1cfg6f8" />
+    <bpmn:group id="Group_1740394501023" categoryValueRef="CategoryValue_1mlxelz" />
+    <bpmn:group id="Group_1740394606734" categoryValueRef="CategoryValue_0px0xma" />
   </bpmn:process>
+  <bpmn:category id="Category_0w9wwcy">
+    <bpmn:categoryValue id="CategoryValue_1cfg6f8" value="Customer Edge 2" />
+  </bpmn:category>
+  <bpmn:category id="Category_0gqzdz0">
+    <bpmn:categoryValue id="CategoryValue_1mlxelz" value="Customer Edge 1" />
+  </bpmn:category>
+  <bpmn:category id="Category_092p4pa">
+    <bpmn:categoryValue id="CategoryValue_0px0xma" value="Remote SSE Users" />
+  </bpmn:category>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="PLACEHOLDER_PROCESS_ID">
-      <bpmndi:BPMNEdge id="Flow_1jxhc4b_di" bpmnElement="Flow_1jxhc4b">
-        <di:waypoint x="118" y="100" />
-        <di:waypoint x="118" y="40" />
-        <di:waypoint x="265" y="40" />
-        <di:waypoint x="265" y="60" />
+      <bpmndi:BPMNEdge id="Flow_0owd5vl_di" bpmnElement="Flow_0owd5vl">
+        <di:waypoint x="1018" y="18" />
+        <di:waypoint x="1018" y="-2" />
+        <di:waypoint x="1038" y="-2" />
+        <di:waypoint x="1038" y="29" />
+        <di:waypoint x="1018" y="29" />
+        <di:waypoint x="1018" y="100" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1gotb0o_di" bpmnElement="Flow_1gotb0o">
-        <di:waypoint x="440" y="118" />
-        <di:waypoint x="1000" y="118" />
+      <bpmndi:BPMNEdge id="Flow_0ytrjv7_di" bpmnElement="Flow_0ytrjv7">
+        <di:waypoint x="1018" y="18" />
+        <di:waypoint x="1018" y="-2" />
+        <di:waypoint x="1038" y="-2" />
+        <di:waypoint x="1038" y="29" />
+        <di:waypoint x="1018" y="29" />
+        <di:waypoint x="1018" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dj45om_di" bpmnElement="Flow_1dj45om">
+        <di:waypoint x="136" y="118" />
+        <di:waypoint x="630" y="118" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="100" y="100" width="36" height="36" />
@@ -424,31 +407,140 @@
       <bpmndi:BPMNShape id="Event_0rpe2j4_di" bpmnElement="EndEvent_1">
         <dc:Bounds x="1000" y="100" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="SubProcess_1698585379740_di" bpmnElement="SubProcess_1698585379740" isExpanded="true">
-        <dc:Bounds x="90" y="60" width="350" height="200" />
+      <bpmndi:BPMNShape id="ServiceTask_1740394578659_di" bpmnElement="ServiceTask_1740394578659">
+        <dc:Bounds x="1065" y="420" width="50" height="60" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1047" y="476" width="85" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_1xoqrgj_di" bpmnElement="Flow_1xoqrgj">
-        <di:waypoint x="126" y="128" />
-        <di:waypoint x="140" y="128" />
-        <di:waypoint x="140" y="170" />
-        <di:waypoint x="158" y="170" />
+      <bpmndi:BPMNShape id="ServiceTask_1740394381038_di" bpmnElement="ServiceTask_1740394381038">
+        <dc:Bounds x="475" y="385" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="474" y="438" width="52" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1740394122934_di" bpmnElement="ServiceTask_1740394122934">
+        <dc:Bounds x="315" y="380" width="50" height="60" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="297" y="436" width="85" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1740394373428_di" bpmnElement="ServiceTask_1740394373428">
+        <dc:Bounds x="395" y="505" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="409" y="558" width="21" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1740394321051_di" bpmnElement="ServiceTask_1740394321051">
+        <dc:Bounds x="325" y="205" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="339" y="258" width="21" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1740394425328_di" bpmnElement="ServiceTask_1740394425328">
+        <dc:Bounds x="485" y="93" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="484" y="146" width="52" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1740394258259_di" bpmnElement="SubProcess_1740394258259" isExpanded="true">
+        <dc:Bounds x="630" y="18" width="560" height="310" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1btuykh_di" bpmnElement="Flow_1btuykh">
+        <di:waypoint x="971" y="103" />
+        <di:waypoint x="971" y="46.66666666666667" />
+        <di:waypoint x="895" y="46.66666666666667" />
+        <di:waypoint x="895" y="67" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0o2r14e_di" bpmnElement="Flow_0o2r14e">
-        <di:waypoint x="208" y="130" />
-        <di:waypoint x="208" y="110" />
-        <di:waypoint x="230" y="110" />
-        <di:waypoint x="230" y="90" />
-        <di:waypoint x="208" y="90" />
-        <di:waypoint x="208" y="110" />
+      <bpmndi:BPMNEdge id="Flow_1omwmau_di" bpmnElement="Flow_1omwmau">
+        <di:waypoint x="971" y="103" />
+        <di:waypoint x="971" y="46.66666666666667" />
+        <di:waypoint x="895" y="46.66666666666667" />
+        <di:waypoint x="895" y="67" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Event_1nhdg8m_di" bpmnElement="Event_1nhdg8m">
-        <dc:Bounds x="90" y="110" width="36" height="36" />
+      <bpmndi:BPMNEdge id="Flow_1h1zseh_di" bpmnElement="Flow_1h1zseh">
+        <di:waypoint x="808" y="85" />
+        <di:waypoint x="840" y="85" />
+        <di:waypoint x="840" y="159" />
+        <di:waypoint x="930" y="159" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ydie08_di" bpmnElement="Flow_1ydie08">
+        <di:waypoint x="767" y="101" />
+        <di:waypoint x="767" y="46.66666666666667" />
+        <di:waypoint x="895" y="46.66666666666667" />
+        <di:waypoint x="895" y="67" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09tcc9r_di" bpmnElement="Flow_09tcc9r">
+        <di:waypoint x="767" y="101" />
+        <di:waypoint x="767" y="46.66666666666667" />
+        <di:waypoint x="895" y="46.66666666666667" />
+        <di:waypoint x="895" y="67" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1hwntl7_di" bpmnElement="Flow_1hwntl7">
+        <di:waypoint x="790" y="67" />
+        <di:waypoint x="790" y="46.66666666666667" />
+        <di:waypoint x="767" y="46.66666666666667" />
+        <di:waypoint x="767" y="101" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0kctnip_di" bpmnElement="Event_0kctnip">
+        <dc:Bounds x="772" y="66.66666666666667" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_10dlb9w_di" bpmnElement="Event_10dlb9w">
-        <dc:Bounds x="190" y="110" width="36" height="36" />
+      <bpmndi:BPMNShape id="Event_1ety1eu_di" bpmnElement="Event_1ety1eu">
+        <dc:Bounds x="877" y="66.66666666666667" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="ServiceTask_1698585383758_di" bpmnElement="ServiceTask_1698585383758">
-        <dc:Bounds x="158" y="130" width="100" height="80" />
+      <bpmndi:BPMNShape id="SubProcess_1740394450895_di" bpmnElement="SubProcess_1740394450895" isExpanded="true">
+        <dc:Bounds x="660" y="101" width="213" height="129" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0ld51js_di" bpmnElement="Event_0ld51js">
+        <dc:Bounds x="712" y="127.66666666666667" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_11zvomt_di" bpmnElement="Event_11zvomt">
+        <dc:Bounds x="817" y="127.66666666666667" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_1740394460939_di" bpmnElement="SubProcess_1740394460939" isExpanded="true">
+        <dc:Bounds x="930" y="103" width="203" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0hijymt_di" bpmnElement="Event_0hijymt">
+        <dc:Bounds x="972" y="147.66666666666669" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0j7mslw_di" bpmnElement="Event_0j7mslw">
+        <dc:Bounds x="1077" y="147.66666666666669" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="DataInputAssociation_15ckhuh_di" bpmnElement="DataInputAssociation_15ckhuh">
+        <di:waypoint x="365" y="410" />
+        <di:waypoint x="500" y="410" />
+        <di:waypoint x="697" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataInputAssociation_1r88f9r_di" bpmnElement="DataInputAssociation_1r88f9r">
+        <di:waypoint x="445" y="518" />
+        <di:waypoint x="630" y="430" />
+        <di:waypoint x="734" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataInputAssociation_1yzdseg_di" bpmnElement="DataInputAssociation_1yzdseg">
+        <di:waypoint x="375" y="226" />
+        <di:waypoint x="660" y="184" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataInputAssociation_1g595kq_di" bpmnElement="DataInputAssociation_1g595kq">
+        <di:waypoint x="1065" y="430" />
+        <di:waypoint x="820" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Group_1740394606734_di" bpmnElement="Group_1740394606734">
+        <dc:Bounds x="990" y="365" width="200" height="170" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1060" y="372" width="61" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Group_1740394394697_di" bpmnElement="Group_1740394394697">
+        <dc:Bounds x="270" y="345" width="300" height="250" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="378" y="352" width="85" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Group_1740394501023_di" bpmnElement="Group_1740394501023">
+        <dc:Bounds x="270" y="45" width="300" height="230" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="378" y="52" width="85" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
