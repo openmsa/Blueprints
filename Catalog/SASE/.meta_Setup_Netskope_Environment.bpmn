@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata>
+    <map>
+        <entry>
+            <key>DISPLAYNAME</key>
+            <value>Setup a Netskope Environment</value>
+        </entry>
+        <entry>
+            <key>PREVIEW</key>
+            <value>Blueprints/Catalog/thumbnail/SASE/Sample_Netskope.png</value>
+        </entry>
+        <entry>
+            <key>OWNER</key>
+            <value>Ubiqube</value>
+        </entry>
+        <entry>
+            <key>ORG_ID</key>
+            <value>1</value>
+        </entry>
+        <entry>
+            <key>CLOUD_TYPE</key>
+            <value>monocloud</value>
+        </entry>
+        <entry>
+            <key>DATE_MODIFICATION</key>
+            <value>1745928689123</value>
+        </entry>
+        <entry>
+            <key>DESCRIPTION</key>
+            <value>Seting up an environment to be able to use it as SASE Netskope environment</value>
+        </entry>
+        <entry>
+            <key>PROVIDERS</key>
+            <value>Netskope</value>
+        </entry>
+        <entry>
+            <key>REPOSITORY</key>
+            <value>Blueprints</value>
+        </entry>
+        <entry>
+            <key>DATE_CREATION</key>
+            <value>1745928689123</value>
+        </entry>
+        <entry>
+            <key>TYPE</key>
+            <value>BLUEPRINT</value>
+        </entry>
+        <entry>
+            <key>TAGS</key>
+            <value>Netskope,SASE</value>
+        </entry>
+    </map>
+</metadata>
