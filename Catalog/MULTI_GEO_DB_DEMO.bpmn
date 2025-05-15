@@ -260,7 +260,7 @@
                               <camunda:value>1</camunda:value>
                             </camunda:entry>
                             <camunda:entry key="logo_url">
-                              <camunda:value>https://d1q6f0aelx0por.cloudfront.net/product-logos/library-redis-logo.png</camunda:value>
+                              <camunda:value>https://djeqr6to3dedg.cloudfront.net/repo-logos/library/redis/live/logo-1720462263103.png</camunda:value>
                             </camunda:entry>
                             <camunda:entry key="app_port">
                               <camunda:value>6379</camunda:value>
@@ -294,7 +294,7 @@
                           <camunda:entry key="short_description">Redis is an open source key-value store that functions as a data structure server.</camunda:entry>
                           <camunda:entry key="version" />
                           <camunda:entry key="app_replicas">1</camunda:entry>
-                          <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-redis-logo.png</camunda:entry>
+                          <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/redis/live/logo-1720462263103.png</camunda:entry>
                           <camunda:entry key="app_port" />
                           <camunda:entry key="app_node_port" />
                           <camunda:entry key="app_access" />
@@ -315,7 +315,7 @@
                                 <camunda:entry key="short_description">Redis is an open source key-value store that functions as a data structure server.</camunda:entry>
                                 <camunda:entry key="version" />
                                 <camunda:entry key="app_replicas">1</camunda:entry>
-                                <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-redis-logo.png</camunda:entry>
+                                <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/redis/live/logo-1720462263103.png</camunda:entry>
                                 <camunda:entry key="app_port" />
                                 <camunda:entry key="app_node_port" />
                                 <camunda:entry key="app_access" />
@@ -670,7 +670,7 @@
                             <camunda:entry key="app_replicas">3</camunda:entry>
                             <camunda:entry key="app_port">6379</camunda:entry>
                             <camunda:entry key="app_node_port">30020</camunda:entry>
-                            <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-redis-logo.png</camunda:entry>
+                            <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/redis/live/logo-1720462263103.png</camunda:entry>
                             <camunda:entry key="app_access" />
                           </camunda:map>
                         </camunda:list>
@@ -695,7 +695,7 @@
                           <camunda:entry key="app_replicas">1</camunda:entry>
                           <camunda:entry key="app_port" />
                           <camunda:entry key="app_node_port" />
-                          <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-redis-logo.png</camunda:entry>
+                          <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/redis/live/logo-1720462263103.png</camunda:entry>
                           <camunda:entry key="app_access" />
                         </camunda:map>
                       </camunda:entry>
@@ -716,7 +716,7 @@
                                 <camunda:entry key="app_replicas">1</camunda:entry>
                                 <camunda:entry key="app_port" />
                                 <camunda:entry key="app_node_port" />
-                                <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-redis-logo.png</camunda:entry>
+                                <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/redis/live/logo-1720462263103.png</camunda:entry>
                                 <camunda:entry key="app_access" />
                               </camunda:map>
                             </camunda:list>

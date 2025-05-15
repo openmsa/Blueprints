@@ -286,7 +286,7 @@
                             <camunda:entry key="app_name">wordpress</camunda:entry>
                             <camunda:entry key="app_image">wordpress</camunda:entry>
                             <camunda:entry key="short_description">The WordPress rich content management system can utilize plugins, widgets, and themes.</camunda:entry>
-                            <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-wordpress-logo.png</camunda:entry>
+                            <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/wordpress/live/logo-1720462319468.png</camunda:entry>
                             <camunda:entry key="app_replicas">1</camunda:entry>
                             <camunda:entry key="app_port">80</camunda:entry>
                             <camunda:entry key="app_node_port">30000</camunda:entry>
@@ -332,7 +332,7 @@
                           <camunda:entry key="app_name">wordpress</camunda:entry>
                           <camunda:entry key="app_image">wordpress</camunda:entry>
                           <camunda:entry key="short_description">The WordPress rich content management system can utilize plugins, widgets, and themes.</camunda:entry>
-                          <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-wordpress-logo.png</camunda:entry>
+                          <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/wordpress/live/logo-1720462319468.png</camunda:entry>
                         </camunda:map>
                       </camunda:entry>
                       <camunda:entry key="context">
@@ -348,7 +348,7 @@
                                 <camunda:entry key="app_name">wordpress</camunda:entry>
                                 <camunda:entry key="app_image">wordpress</camunda:entry>
                                 <camunda:entry key="short_description">The WordPress rich content management system can utilize plugins, widgets, and themes.</camunda:entry>
-                                <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-wordpress-logo.png</camunda:entry>
+                                <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/wordpress/live/logo-1720462319468.png</camunda:entry>
                                 <camunda:entry key="app_replicas">1</camunda:entry>
                                 <camunda:entry key="app_port">80</camunda:entry>
                               </camunda:map>
@@ -415,7 +415,7 @@
                             <camunda:entry key="app_name">mysql</camunda:entry>
                             <camunda:entry key="app_image">mysql</camunda:entry>
                             <camunda:entry key="short_description">MySQL is a widely used, open-source relational database management system (RDBMS).</camunda:entry>
-                            <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-mysql-logo.png</camunda:entry>
+                            <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/mysql/live/logo-1720462237323.png</camunda:entry>
                             <camunda:entry key="app_replicas">1</camunda:entry>
                             <camunda:entry key="app_port">3306</camunda:entry>
                             <camunda:entry key="vars">
@@ -456,7 +456,7 @@
                           <camunda:entry key="app_name">mysql</camunda:entry>
                           <camunda:entry key="app_image">mysql</camunda:entry>
                           <camunda:entry key="short_description">MySQL is a widely used, open-source relational database management system (RDBMS).</camunda:entry>
-                          <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-mysql-logo.png</camunda:entry>
+                          <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/mysql/live/logo-1720462237323.png</camunda:entry>
                         </camunda:map>
                       </camunda:entry>
                       <camunda:entry key="context">
@@ -472,7 +472,7 @@
                                 <camunda:entry key="app_name">mysql</camunda:entry>
                                 <camunda:entry key="app_image">mysql</camunda:entry>
                                 <camunda:entry key="short_description">MySQL is a widely used, open-source relational database management system (RDBMS).</camunda:entry>
-                                <camunda:entry key="logo_url">https://d1q6f0aelx0por.cloudfront.net/product-logos/library-mysql-logo.png</camunda:entry>
+                                <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/mysql/live/logo-1720462237323.png</camunda:entry>
                                 <camunda:entry key="app_replicas">1</camunda:entry>
                                 <camunda:entry key="app_port">3306</camunda:entry>
                               </camunda:map>

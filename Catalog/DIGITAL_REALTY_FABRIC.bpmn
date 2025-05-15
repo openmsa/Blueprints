@@ -270,7 +270,7 @@
                             <camunda:entry key="app_port">80</camunda:entry>
                             <camunda:entry key="app_node_port">30000</camunda:entry>
                             <camunda:entry key="app_volumes">true</camunda:entry>
-                            <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/nginx/live/logo.png</camunda:entry>
+                            <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/nginx/live/logo-1720462242584.png</camunda:entry>
                             <camunda:entry key="app_access" />
                             <camunda:entry key="app_workflow">appsDeployment</camunda:entry>
                           </camunda:map>
@@ -297,7 +297,7 @@
                           <camunda:entry key="app_port" />
                           <camunda:entry key="app_node_port" />
                           <camunda:entry key="app_volumes">true</camunda:entry>
-                          <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/nginx/live/logo.png</camunda:entry>
+                          <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/nginx/live/logo-1720462242584.png</camunda:entry>
                           <camunda:entry key="app_access" />
                           <camunda:entry key="app_workflow">appsDeployment</camunda:entry>
                         </camunda:map>
@@ -321,7 +321,7 @@
                                 <camunda:entry key="app_port" />
                                 <camunda:entry key="app_node_port" />
                                 <camunda:entry key="app_volumes">true</camunda:entry>
-                                <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/nginx/live/logo.png</camunda:entry>
+                                <camunda:entry key="logo_url">https://djeqr6to3dedg.cloudfront.net/repo-logos/library/nginx/live/logo-1720462242584.png</camunda:entry>
                                 <camunda:entry key="app_access" />
                                 <camunda:entry key="app_workflow">appsDeployment</camunda:entry>
                               </camunda:map>
